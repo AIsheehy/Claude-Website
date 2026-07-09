@@ -84,21 +84,28 @@
 }
 
 .trustList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.1rem 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem 1.6rem;
   margin-top: 2.25rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--border);
 }
 
+@media (min-width: 420px) {
+  .trustList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .trustItem {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   font-size: var(--step-caption);
   font-weight: 600;
   color: var(--stone);
+  line-height: 1.3;
 }
 
 .trustItem svg {

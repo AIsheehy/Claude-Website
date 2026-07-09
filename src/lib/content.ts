@@ -135,49 +135,51 @@ export type ProcessStep = {
   step: string;
   title: string;
   description: string;
+  icon: "compass" | "ruler" | "drawing" | "document" | "send" | "chat" | "check";
 };
 
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
     title: "Initial advice",
-    description:
-      "We assess your property and your goals before anything is drawn, so you know what's realistically achievable first.",
+    description: "Know what's achievable before you spend a penny.",
+    icon: "compass",
   },
   {
     step: "02",
     title: "Measured survey",
-    description:
-      "An accurate on-site survey of your existing building — the foundation everything else is drawn from.",
+    description: "An accurate site survey, done right first time.",
+    icon: "ruler",
   },
   {
     step: "03",
     title: "Planning drawings",
-    description:
-      "Existing and proposed drawings prepared to the standard your local council expects to see.",
+    description: "Drawn to the standard your council expects.",
+    icon: "drawing",
   },
   {
     step: "04",
     title: "Planning statement",
-    description:
-      "The written case for your application — the policy argument that supports what's been drawn.",
+    description: "The written policy case behind your application.",
+    icon: "document",
   },
   {
     step: "05",
     title: "Submission",
-    description: "Your full application is submitted correctly, first time, with nothing missing.",
+    description: "Submitted correctly, first time, nothing missing.",
+    icon: "send",
   },
   {
     step: "06",
     title: "Council correspondence",
-    description:
-      "Every query from your planning officer is handled directly by us. You're kept informed — not chasing.",
+    description: "Every query handled directly by us, not you.",
+    icon: "chat",
   },
   {
     step: "07",
     title: "Decision & beyond",
-    description:
-      "We see your application through to decision, and advise on next steps whatever the outcome.",
+    description: "Approved, and ready to move forward with confidence.",
+    icon: "check",
   },
 ];
 

@@ -1,67 +1,60 @@
-.timeline {
-  position: relative;
-  max-width: 760px;
-  counter-reset: step;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-.item {
-  position: relative;
-  padding-bottom: 2.25rem;
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 }
 
-.item:last-child {
-  padding-bottom: 0;
-}
-
-.itemInner {
+.card {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: flex-start;
+  height: 100%;
+  padding: 1.4rem;
+  border: 1px solid var(--border-on-dark);
+  border-radius: var(--radius-md);
+  background: var(--ink-soft);
 }
 
-.item::before {
-  content: "";
-  position: absolute;
-  left: 21px;
-  top: 46px;
-  bottom: 0;
-  width: 1px;
-  background: var(--border-on-dark);
-}
-
-.item:last-child::before {
-  display: none;
-}
-
-.marker {
+.iconWrap {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 1px solid var(--border-on-dark);
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--terracotta);
-  background: var(--ink-soft);
+  color: var(--sand);
 }
 
-.body {
-  padding-top: 0.55rem;
+.cardHead {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.step {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--step-caption);
+  font-weight: 600;
+  color: var(--sand);
 }
 
 .title {
-  font-size: var(--step-h4);
+  font-size: var(--step-body-lg);
   color: var(--paper);
 }
 
 .description {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   color: var(--text-muted-on-dark);
   font-size: var(--step-small);
-  line-height: 1.6;
-  max-width: 54ch;
+  line-height: 1.5;
 }

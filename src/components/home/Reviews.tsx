@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { IconCheck } from "@/components/icons";
 import { testimonials } from "@/lib/content";
 import styles from "./Reviews.module.css";
 
@@ -37,6 +38,10 @@ export function Reviews() {
                   sizes="(min-width: 860px) 33vw, 100vw"
                   className={styles.image}
                 />
+                <span className={styles.approvedBadge}>
+                  <IconCheck width={13} height={13} />
+                  Planning Approved
+                </span>
               </div>
               <div className={styles.body}>
                 <Stars />

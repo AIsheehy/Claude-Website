@@ -32,7 +32,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--terracotta-deep);
+  color: var(--moss);
 }
 
 .title {
@@ -61,6 +61,6 @@
 }
 
 .outcome svg {
-  color: var(--terracotta);
+  color: var(--moss);
   flex-shrink: 0;
 }

@@ -2,9 +2,14 @@
    Form & Function London — design system tokens
    Direction: premium / minimal / architectural / confident.
    Inspired by the restraint of Linear, Stripe and Vercel, warmed with
-   an editorial, drafting-table materiality (ink, paper, terracotta)
-   appropriate to a planning consultancy. No glassmorphism, no neon,
-   no illustration-heavy filler.
+   an editorial, drafting-table materiality appropriate to a planning
+   consultancy. No glassmorphism, no neon, no illustration-heavy filler.
+
+   Accent family: a single muted sage green (--terracotta, kept as the
+   variable name for minimal diff) with two tonal siblings — --moss
+   (cooler/deeper, used on light sections for secondary emphasis) and
+   --sand (warmer, used on dark sections where sage reads flat) — so
+   each section can feel distinct without leaving the same palette.
 =================================================================== */
 
 :root {
@@ -16,9 +21,13 @@
   --paper-line: #e4ddcd;         /* hairline borders on paper */
   --stone: #5c665f;              /* secondary text on paper */
   --stone-quiet: #8d8a7d;        /* tertiary / caption text */
-  --terracotta: #b3502c;         /* primary accent */
-  --terracotta-deep: #8c3d21;    /* accent hover / pressed */
-  --terracotta-tint: #f1ded2;    /* accent background wash */
+  --terracotta: #8e9b8e;         /* primary accent (sage green) */
+  --terracotta-deep: #4e5a4e;    /* accent hover / pressed / text */
+  --terracotta-tint: #e4e7e4;    /* accent background wash */
+  --moss: #475249;               /* deeper/cooler sibling accent */
+  --moss-tint: #dde3de;
+  --sand: #aea48f;               /* warm sibling for dark sections */
+  --sand-deep: #72674f;
   --white: #ffffff;
   --brick: #a3372c;              /* error / warning */
 
@@ -34,7 +43,7 @@
   --border: var(--paper-line);
   --border-on-dark: rgba(251, 249, 244, 0.14);
   --accent: var(--terracotta);
-  --focus-ring: rgba(179, 80, 44, 0.35);
+  --focus-ring: rgba(142, 155, 142, 0.4);
 
   /* ---- Type scale (fluid, mobile-first) ---- */
   --step-caption: clamp(0.75rem, 0.73rem + 0.1vw, 0.8125rem);
@@ -193,7 +202,7 @@ select {
 }
 
 .eyebrow.onDark {
-  color: #d99a76;
+  color: var(--sand);
 }
 
 .visually-hidden {

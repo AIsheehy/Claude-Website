@@ -12,7 +12,7 @@ export function PageHero({
   eyebrow,
   headline,
   lede,
-  primaryCtaLabel = "Get my free feasibility check",
+  primaryCtaLabel = "Get My Free Assessment Or Project Quote",
   trustSlot,
   formEyebrow = "Free, no-obligation assessment",
   formTitle = "Tell us about your project",

@@ -17,9 +17,9 @@ export default function Home() {
       <Reviews />
       <CaseStudies />
       <WhyUs />
-      <Faq />
       <About />
       <Contact />
+      <Faq />
     </>
   );
 }

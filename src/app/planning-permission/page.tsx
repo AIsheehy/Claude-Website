@@ -31,7 +31,7 @@ export default function PlanningPermissionPage() {
             strongest possible chance of approval.
           </>
         }
-        primaryCtaLabel="Get a free feasibility review"
+        primaryCtaLabel="Get My Free Feasibility Review Or Project Quote"
         formEyebrow="Free, no-obligation review"
         formTitle="Tell us about your project"
         trustSlot={<StatBar />}
@@ -46,12 +46,12 @@ export default function PlanningPermissionPage() {
         lede="A founder-led service built around getting applications approved, not just submitted."
         items={founderLedDifferentiators}
       />
+      <Contact />
       <Faq
         items={planningPermissionFaqs}
         title="Planning permission — the questions people ask us."
         groupName="planning-permission-faq"
       />
-      <Contact />
     </>
   );
 }

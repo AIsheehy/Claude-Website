@@ -17,8 +17,8 @@
   gap: 0.5rem;
   margin-top: 1rem;
   padding: 0.4em 0.9em;
-  background: var(--terracotta-tint);
-  color: var(--terracotta-deep);
+  background: var(--moss-tint);
+  color: var(--moss);
   border-radius: 999px;
   font-size: var(--step-caption);
   font-weight: 700;

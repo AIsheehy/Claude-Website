@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Form & Function London",
   },
   description:
-    "End-to-end planning permission for London homeowners, landlords and investors — advice, surveys, drawings and council submission handled by one team, start to finish.",
+    "End-to-end planning permission for London and Home Counties homeowners, landlords and investors — advice, surveys, drawings and council submission handled by one team, start to finish.",
 };
 
 export default function RootLayout({

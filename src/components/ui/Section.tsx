@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Container } from "./Container";
+import { Reveal } from "./Reveal";
 import styles from "./Section.module.css";
 
 export function Section({
@@ -39,10 +40,10 @@ export function SectionHead({
   onDark?: boolean;
 }) {
   return (
-    <div className={`${styles.head} ${align === "center" ? styles.headCenter : ""}`}>
+    <Reveal className={`${styles.head} ${align === "center" ? styles.headCenter : ""}`}>
       {eyebrow && <p className={`eyebrow ${onDark ? "onDark" : ""}`}>{eyebrow}</p>}
       <h2 className={onDark ? styles.titleOnDark : undefined}>{title}</h2>
       {lede && <p className={`${styles.lede} ${onDark ? styles.ledeOnDark : ""}`}>{lede}</p>}
-    </div>
+    </Reveal>
   );
 }

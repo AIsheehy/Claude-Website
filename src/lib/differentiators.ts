@@ -40,8 +40,8 @@ export const differentiators: Differentiator[] = [
       "When a planning officer has a question, it comes to us and we deal with it — you're never relaying messages between a case officer and a project manager.",
   },
   {
-    title: "London policy, borough by borough",
+    title: "Local policy, council by council",
     description:
-      "Planning policy is interpreted differently across London's councils. We work within the specifics of your borough, not a generic national playbook.",
+      "Planning policy is interpreted differently across every borough and Home Counties council we work in. We work within the specifics of your local authority, not a generic national playbook.",
   },
 ];

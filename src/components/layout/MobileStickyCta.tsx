@@ -10,7 +10,7 @@ export function MobileStickyCta() {
         Call
       </a>
       <a href="#enquire" className={styles.enquire}>
-        Get my free feasibility check
+        Get My Free Assessment
       </a>
     </div>
   );

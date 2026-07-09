@@ -32,6 +32,26 @@
   object-fit: cover;
 }
 
+.approvedBadge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35em 0.75em;
+  background: rgba(21, 33, 29, 0.78);
+  color: var(--white);
+  font-size: var(--step-caption);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-xs);
+}
+
+.approvedBadge svg {
+  color: var(--moss-tint);
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -42,7 +62,7 @@
 .stars {
   display: flex;
   gap: 0.2rem;
-  color: var(--terracotta);
+  color: var(--moss);
   margin-bottom: 1.1rem;
 }
 

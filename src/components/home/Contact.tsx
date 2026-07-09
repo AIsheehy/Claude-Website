@@ -1,21 +1,41 @@
 import { EnquiryForm } from "./EnquiryForm";
 import { Section } from "@/components/ui/Section";
-import { IconPhone, IconMail } from "@/components/icons";
+import { Reveal } from "@/components/ui/Reveal";
+import { IconPhone, IconMail, IconCheck, IconClock, IconShield } from "@/components/icons";
 import { business } from "@/lib/content";
 import styles from "./Contact.module.css";
+
+const closingStats = [
+  { icon: IconCheck, value: "98%", label: "Application approval rate" },
+  { icon: IconClock, value: "14 Days", label: "To submission from instruction" },
+  { icon: IconShield, value: "Founder-Led", label: "You deal with Michael directly" },
+];
 
 export function Contact() {
   return (
     <Section id="contact" dark>
-      <div className={styles.layout}>
+      <Reveal className={styles.layout}>
         <div className={styles.copy}>
           <p className="eyebrow onDark">Ready when you are</p>
-          <h2 className={styles.title}>Let&rsquo;s find out what&rsquo;s possible.</h2>
+          <h2 className={styles.title}>Let&rsquo;s get your project moving.</h2>
           <p className={styles.lede}>
-            Tell us about your property and what you&rsquo;re hoping to do. We&rsquo;ll give you
-            a straight, no-obligation read on what&rsquo;s achievable — then handle everything
-            else if you&rsquo;d like us to.
+            No obligation, no jargon and no pressure &mdash; just a straight, honest answer on
+            what&rsquo;s achievable, usually within hours, direct from the person who&rsquo;ll
+            actually handle your application.
           </p>
+
+          <ul className={styles.statRow}>
+            {closingStats.map((s) => (
+              <li key={s.label} className={styles.statItem}>
+                <s.icon width={18} height={18} />
+                <div>
+                  <div className={styles.statValue}>{s.value}</div>
+                  <div className={styles.statLabel}>{s.label}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+
           <div className={styles.directList}>
             <a href={business.phoneHref} className={styles.directItem}>
               <IconPhone width={18} height={18} />
@@ -29,9 +49,11 @@ export function Contact() {
         </div>
 
         <div className={styles.formCard}>
+          <p className={styles.formEyebrow}>No obligation &middot; no pressure</p>
+          <h3 className={styles.formTitle}>Get your free assessment or project quote</h3>
           <EnquiryForm compact />
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 }

@@ -144,3 +144,29 @@ export function IconScale(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IconDocument(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M7 3.5h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z" />
+      <path d="M14 3.5V8h4" />
+      <path d="M9 13h6M9 16.5h6" />
+    </svg>
+  );
+}
+
+export function IconSend(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M20.5 3.5 3 10.2l6.8 2.4M20.5 3.5 13.5 21l-3.7-8.4M20.5 3.5 9.8 12.6" />
+    </svg>
+  );
+}
+
+export function IconChat(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M4 5.5h16v11H9.5L5 20.5v-4H4Z" />
+    </svg>
+  );
+}

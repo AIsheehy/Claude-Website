@@ -15,8 +15,8 @@ export function Footer() {
           <div className={styles.brandCol}>
             <Logo dark />
             <p className={styles.tagline}>
-              End-to-end planning permission for London homeowners, landlords and property
-              investors.
+              End-to-end planning permission for London and Home Counties homeowners, landlords
+              and property investors.
             </p>
             <ul className={styles.contactList}>
               <li>

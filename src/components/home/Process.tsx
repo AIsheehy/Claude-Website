@@ -1,33 +1,58 @@
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import {
+  IconCompass,
+  IconRuler,
+  IconDrawing,
+  IconDocument,
+  IconSend,
+  IconChat,
+  IconCheck,
+} from "@/components/icons";
 import { processSteps } from "@/lib/content";
 import styles from "./Process.module.css";
 
+const iconMap = {
+  compass: IconCompass,
+  ruler: IconRuler,
+  drawing: IconDrawing,
+  document: IconDocument,
+  send: IconSend,
+  chat: IconChat,
+  check: IconCheck,
+};
+
 export function Process() {
   return (
-    <Section id="process" dark>
+    <Section id="process" dark tight>
       <SectionHead
         eyebrow="How it works"
         onDark
-        title="One team. Seven stages. Nothing left for you to manage."
-        lede="This is the entire process, start to finish — the same team handles every stage, including every conversation with the council."
+        title="One team. Seven steps. Nothing left for you to manage."
+        lede="The same team handles every stage below, start to finish."
       />
 
-      <ol className={styles.timeline}>
-        {processSteps.map((item, i) => (
-          <li key={item.step} className={styles.item}>
-            <Reveal delay={Math.min(i, 5) * 60}>
-              <div className={styles.itemInner}>
-                <span className={styles.marker}>{item.step}</span>
-                <div className={styles.body}>
-                  <h3 className={styles.title}>{item.title}</h3>
+      <div className={styles.grid}>
+        {processSteps.map((item, i) => {
+          const Icon = iconMap[item.icon];
+          return (
+            <Reveal key={item.step} delay={Math.min(i, 5) * 60}>
+              <div className={styles.card}>
+                <span className={styles.iconWrap}>
+                  <Icon width={20} height={20} />
+                </span>
+                <div>
+                  <div className={styles.cardHead}>
+                    <span className={styles.step}>{item.step}</span>
+                    <h3 className={styles.title}>{item.title}</h3>
+                  </div>
                   <p className={styles.description}>{item.description}</p>
                 </div>
               </div>
             </Reveal>
-          </li>
-        ))}
-      </ol>
+          );
+        })}
+      </div>
     </Section>
   );
 }
