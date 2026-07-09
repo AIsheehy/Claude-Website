@@ -33,6 +33,66 @@
   }
 }
 
+.heroPhoto {
+  background: var(--ink);
+}
+
+.photoWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.photoScrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(21, 33, 29, 0.88) 0%,
+    rgba(21, 33, 29, 0.72) 40%,
+    rgba(21, 33, 29, 0.4) 75%,
+    rgba(21, 33, 29, 0.22) 100%
+  );
+}
+
+@media (max-width: 959px) {
+  .photoScrim {
+    background: linear-gradient(
+      180deg,
+      rgba(21, 33, 29, 0.55) 0%,
+      rgba(21, 33, 29, 0.82) 55%,
+      rgba(21, 33, 29, 0.92) 100%
+    );
+  }
+}
+
+.onPhoto .headline,
+.onPhoto .lede,
+.onPhoto .phoneLink {
+  color: var(--text-on-dark);
+}
+
+.onPhoto .lede {
+  color: var(--text-muted-on-dark);
+}
+
+.onPhoto .phoneLink:hover {
+  color: var(--sand);
+}
+
+.onPhoto .trustList {
+  border-top-color: var(--border-on-dark);
+}
+
+.onPhoto .trustItem,
+.onPhoto .trustItem svg {
+  color: var(--text-on-dark);
+}
+
 .layout {
   position: relative;
   display: grid;

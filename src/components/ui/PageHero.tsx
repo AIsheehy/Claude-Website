@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -18,6 +19,8 @@ export function PageHero({
   formEyebrow = "Free, no-obligation assessment",
   formTitle = "Tell us about your project",
   formLede = "We’ll give you an honest read on what’s achievable before you spend a pound on drawings.",
+  image,
+  imageAlt = "A completed extension project",
 }: {
   eyebrow: string;
   headline: ReactNode;
@@ -27,16 +30,27 @@ export function PageHero({
   formEyebrow?: string;
   formTitle?: string;
   formLede?: string;
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
-    <section className={styles.hero}>
-      <GridTexture className={styles.grid} />
-      <HouseElevation className={styles.houseArt} />
+    <section className={[styles.hero, image && styles.heroPhoto].filter(Boolean).join(" ")}>
+      {image ? (
+        <div className={styles.photoWrap}>
+          <Image src={image} alt={imageAlt} fill priority sizes="100vw" className={styles.photo} />
+          <div className={styles.photoScrim} />
+        </div>
+      ) : (
+        <>
+          <GridTexture className={styles.grid} />
+          <HouseElevation className={styles.houseArt} />
+        </>
+      )}
 
       <Container>
         <div className={styles.layout}>
-          <Reveal className={styles.content}>
-            <p className="eyebrow">{eyebrow}</p>
+          <Reveal className={[styles.content, image && styles.onPhoto].filter(Boolean).join(" ")}>
+            <p className={["eyebrow", image && "onDark"].filter(Boolean).join(" ")}>{eyebrow}</p>
             <h1 className={styles.headline}>{headline}</h1>
             <p className={styles.lede}>{lede}</p>
 

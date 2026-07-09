@@ -16,9 +16,9 @@
   /* ---- Core palette ---- */
   --ink: #15211d;                /* near-black, warmed with green */
   --ink-soft: #24352e;           /* secondary dark surface */
-  --paper: #fbf9f4;              /* warm off-white background */
-  --paper-dim: #f2ede2;          /* recessed section background */
-  --paper-line: #e4ddcd;         /* hairline borders on paper */
+  --paper: #ffffff;              /* white section background */
+  --paper-dim: #efe2c4;          /* beige/tan section background — deliberately warmer + darker than --paper so alternating sections read as distinct */
+  --paper-line: #ddd0ac;         /* hairline borders on paper-dim sections */
   --stone: #5c665f;              /* secondary text on paper */
   --stone-quiet: #8d8a7d;        /* tertiary / caption text */
   --terracotta: #8e9b8e;         /* primary accent (sage green) */

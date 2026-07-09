@@ -15,6 +15,8 @@ export function Hero() {
       }
       primaryCtaLabel="Get My Free Assessment"
       trustSlot={<TrustList />}
+      image="/images/project-types/house-extensions.jpg"
+      imageAlt="A completed rear extension with glass roof lantern and bifold doors"
     />
   );
 }
