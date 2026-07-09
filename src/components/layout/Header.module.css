@@ -1,0 +1,156 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 247, 240, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 84px;
+}
+
+.logoLink {
+  display: inline-flex;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 2.1rem;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  position: relative;
+  padding-block: 0.3rem;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--brass);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s var(--ease);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.actions {
+  display: none;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.cta {
+  white-space: nowrap;
+}
+
+.burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  margin-inline-start: auto;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+  position: relative;
+}
+
+.burger span::before {
+  position: absolute;
+  top: -7px;
+}
+
+.burger span::after {
+  position: absolute;
+  top: 7px;
+}
+
+.burgerOpen {
+  background: transparent;
+}
+
+.burgerOpen::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burgerOpen::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobileMenu {
+  border-top: 1px solid var(--border);
+  background: var(--paper);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding-block: 1.5rem;
+  gap: 1.25rem;
+}
+
+.mobileNavLink {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.mobilePhone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--brass-deep);
+}
+
+.mobileCta {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .nav,
+  .actions {
+    display: flex;
+  }
+  .burger {
+    display: none;
+  }
+}
