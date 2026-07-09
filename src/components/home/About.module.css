@@ -1,3 +1,7 @@
+.section {
+  background: var(--surface-alt);
+}
+
 .layout {
   display: grid;
   grid-template-columns: 1fr;

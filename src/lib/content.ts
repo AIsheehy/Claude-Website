@@ -234,6 +234,8 @@ export type CaseStudy = {
   location: string;
   summary: string;
   outcome: string;
+  image?: string;
+  imageCaption?: string;
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -245,11 +247,14 @@ export const caseStudies: CaseStudy[] = [
     outcome: "Full planning permission granted.",
   },
   {
-    title: "Loft conversion with rear dormer",
-    location: "Surrey", // PLACEHOLDER — illustrative example, style matched to a real client area
+    // Real project — condition-discharge approval dated April 2026, Reigate & Banstead BC.
+    title: "Garage, porch & roof renewal",
+    location: "Horley, Surrey",
     summary:
-      "A hip-to-gable loft conversion with rear dormer, drawn around existing roof constraints and neighbouring amenity considerations.",
-    outcome: "Full planning permission granted.",
+      "Conversion of the garage to habitable office space, an extended porch, a new pitched roof replacing the old conservatory roof, and full window renewal — managed through to sign-off.",
+    outcome: "Approved by Reigate & Banstead Borough Council.",
+    image: "/images/case-studies/upfield-approval.jpg",
+    imageCaption: "The council's approval — real, unredacted, dated April 2026.",
   },
 ];
 

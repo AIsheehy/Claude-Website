@@ -1,0 +1,20 @@
+.band {
+  padding-block: clamp(2rem, 1.8rem + 1vw, 2.75rem);
+  background: var(--terracotta-tint);
+  border-block: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem 2rem;
+  text-align: center;
+}
+
+.text {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--step-h4);
+  color: var(--ink);
+}

@@ -5,7 +5,7 @@ import styles from "./About.module.css";
 
 export function About() {
   return (
-    <Section id="about" tight>
+    <Section id="about" tight className={styles.section}>
       <Reveal>
         <div className={styles.layout}>
           <div className={styles.heading}>

@@ -50,7 +50,7 @@ export function Contact() {
 
         <div className={styles.formCard}>
           <p className={styles.formEyebrow}>No obligation &middot; no pressure</p>
-          <h3 className={styles.formTitle}>Get your free assessment or project quote</h3>
+          <h3 className={styles.formTitle}>Get your free assessment</h3>
           <EnquiryForm compact />
         </div>
       </Reveal>

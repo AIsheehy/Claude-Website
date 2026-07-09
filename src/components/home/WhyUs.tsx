@@ -8,13 +8,15 @@ export function WhyUs({
   title = "Built to remove the risk, not just the paperwork.",
   lede = "Most of what people fear about planning permission comes from not knowing who's actually handling their case, or whether the advice they're getting is honest. Here's how we deal with both.",
   items = defaultDifferentiators,
+  alt = false,
 }: {
   title?: ReactNode;
   lede?: ReactNode;
   items?: Differentiator[];
+  alt?: boolean;
 }) {
   return (
-    <Section id="why-us">
+    <Section id="why-us" className={alt ? styles.alt : undefined}>
       <div className={styles.layout}>
         <div className={styles.intro}>
           <p className="eyebrow">Why us</p>

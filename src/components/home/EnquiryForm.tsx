@@ -104,7 +104,7 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
       )}
 
       <Button type="submit" size="lg" className={styles.submit}>
-        {status === "submitting" ? "Sending…" : "Get My Free Assessment Or Project Quote"}
+        {status === "submitting" ? "Sending…" : "Get My Free Assessment"}
       </Button>
       {status === "error" && (
         <p className={styles.errorText}>

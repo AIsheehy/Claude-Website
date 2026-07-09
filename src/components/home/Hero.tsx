@@ -13,7 +13,7 @@ export function Hero() {
           enquiry through to a granted decision.
         </>
       }
-      primaryCtaLabel="Get My Free Assessment Or Project Quote"
+      primaryCtaLabel="Get My Free Assessment"
       trustSlot={<TrustList />}
     />
   );

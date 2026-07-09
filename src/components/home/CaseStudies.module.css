@@ -22,6 +22,43 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--duration-base) var(--ease), box-shadow var(--duration-base) var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--paper-dim);
+  padding: 0.85rem;
+}
+
+.image {
+  object-fit: contain;
+  object-position: top;
+}
+
+.imageCaption {
+  margin-top: 0.6rem;
+  font-size: var(--step-caption);
+  color: var(--stone-quiet);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
 }
 
 .location {
