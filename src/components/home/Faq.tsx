@@ -1,22 +1,26 @@
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { IconChevronDown } from "@/components/icons";
-import { faqs } from "@/lib/content";
+import { faqs as defaultFaqs, FaqItem } from "@/lib/content";
 import styles from "./Faq.module.css";
 
-export function Faq() {
+export function Faq({
+  items = defaultFaqs,
+  title = "The questions people actually ask us.",
+  groupName = "faq",
+}: {
+  items?: FaqItem[];
+  title?: string;
+  groupName?: string;
+}) {
   return (
     <Section id="faq" className={styles.section}>
-      <SectionHead
-        eyebrow="Frequently asked"
-        title="The questions people actually ask us."
-        align="center"
-      />
+      <SectionHead eyebrow="Frequently asked" title={title} align="center" />
 
       <div className={styles.list}>
-        {faqs.map((item, i) => (
+        {items.map((item, i) => (
           <Reveal key={item.question} delay={Math.min(i, 4) * 60}>
-            <details className={styles.item} name="faq">
+            <details className={styles.item} name={groupName}>
               <summary className={styles.summary}>
                 <span>{item.question}</span>
                 <IconChevronDown width={18} height={18} className={styles.chevron} />

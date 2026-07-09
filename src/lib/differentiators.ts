@@ -3,6 +3,26 @@ export type Differentiator = {
   description: string;
 };
 
+// Real differentiators from the existing site — founder-led, satisfaction
+// guarantee, and range of project experience.
+export const founderLedDifferentiators: Differentiator[] = [
+  {
+    title: "Founder-led, start to finish",
+    description:
+      "Your project is handled directly by Michael, the company founder — not handed off to a case worker you've never spoken to.",
+  },
+  {
+    title: "A satisfaction guarantee that means something",
+    description:
+      "We're confident enough in the service that if you're not happy with it, you don't pay.",
+  },
+  {
+    title: "Experience across the full range of projects",
+    description:
+      "From single-room home improvements to substantial refurbishments, we've handled the kind of projects planning departments see every day.",
+  },
+];
+
 export const differentiators: Differentiator[] = [
   {
     title: "One team, not a chain of subcontractors",

@@ -22,7 +22,7 @@ export function Reviews() {
       <SectionHead
         eyebrow="Reviews"
         title="What it's actually like to work with us."
-        lede="A sample of client feedback — replace with verified reviews from your platform of choice before launch."
+        lede="Feedback from clients we've helped get their projects approved."
       />
 
       <div className={styles.grid}>

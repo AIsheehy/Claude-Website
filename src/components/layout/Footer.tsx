@@ -33,7 +33,7 @@ export function Footer() {
               </li>
               <li>
                 <IconPin width={16} height={16} />
-                {business.addressLine}
+                {business.addressFull}
               </li>
             </ul>
           </div>
@@ -57,15 +57,26 @@ export function Footer() {
               ))}
             </ul>
           </div>
+
+          <div className={styles.col}>
+            <p className={styles.colHeading}>Hours</p>
+            <ul className={styles.linkList}>
+              {business.hours.map((h) => (
+                <li key={h.days}>
+                  {h.days}
+                  <br />
+                  {h.time}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className={styles.bottom}>
           <p>
             &copy; {year} {business.name}. All rights reserved.
           </p>
-          <p className={styles.legalNote}>
-            Company number: TODO &middot; Professional indemnity insured
-          </p>
+          <p className={styles.legalNote}>Founder-led &middot; Professional indemnity insured</p>
         </div>
       </Container>
     </footer>

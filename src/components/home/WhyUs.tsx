@@ -1,24 +1,29 @@
+import { ReactNode } from "react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { differentiators } from "@/lib/differentiators";
+import { Differentiator, differentiators as defaultDifferentiators } from "@/lib/differentiators";
 import styles from "./WhyUs.module.css";
 
-export function WhyUs() {
+export function WhyUs({
+  title = "Built to remove the risk, not just the paperwork.",
+  lede = "Most of what people fear about planning permission comes from not knowing who's actually handling their case, or whether the advice they're getting is honest. Here's how we deal with both.",
+  items = defaultDifferentiators,
+}: {
+  title?: ReactNode;
+  lede?: ReactNode;
+  items?: Differentiator[];
+}) {
   return (
     <Section id="why-us">
       <div className={styles.layout}>
         <div className={styles.intro}>
           <p className="eyebrow">Why us</p>
-          <h2 className={styles.title}>Built to remove the risk, not just the paperwork.</h2>
-          <p className={styles.lede}>
-            Most of what people fear about planning permission comes from not knowing who&rsquo;s
-            actually handling their case, or whether the advice they&rsquo;re getting is honest.
-            Here&rsquo;s how we deal with both.
-          </p>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.lede}>{lede}</p>
         </div>
 
         <ol className={styles.list}>
-          {differentiators.map((item, i) => (
+          {items.map((item, i) => (
             <li key={item.title}>
               <Reveal delay={i * 80}>
                 <div className={styles.row}>

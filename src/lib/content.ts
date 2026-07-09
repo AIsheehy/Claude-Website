@@ -1,15 +1,22 @@
-// Central content store. Anything marked TODO/PLACEHOLDER stands in for real
-// business detail (contact info, credentials, reviews, case studies) and must
-// be swapped for the genuine article before this site goes live. Testimonials
-// in particular must never be published as real without genuine client
-// consent — they're marked here purely as layout placeholders.
+// Central content store. Real business details below were pulled from the
+// existing formandfunctionlondon.co.uk site (via a client-supplied PDF export)
+// — phone, email, address and testimonials are genuine. Numeric claims (98%
+// approval rate, <14 day submission, money-back guarantee) came from the same
+// source and should be reconfirmed as still current before this goes live.
 
 export const business = {
   name: "Form & Function London",
-  phone: "020 0000 0000", // TODO: real number
-  phoneHref: "tel:+442000000000",
-  email: "hello@formandfunctionlondon.co.uk", // TODO: real email
-  addressLine: "London", // TODO: real office area, e.g. "Clerkenwell, London EC1"
+  founder: "Michael",
+  phone: "07865 647127",
+  phoneHref: "tel:+447865647127",
+  email: "michael@formandfunctionlondon.co.uk",
+  addressLine: "Sutton, London",
+  addressFull: "Unit 7 Mulgrave Chambers, Mulgrave Road, London Borough of Sutton, SM2 6LE",
+  hours: [
+    { days: "Monday – Friday", time: "8:30am – 7pm" },
+    { days: "Saturday", time: "7am – 5pm" },
+    { days: "Sunday", time: "Closed" },
+  ],
 };
 
 export type Service = {
@@ -88,27 +95,33 @@ export const services: Service[] = [
   },
 ];
 
+// Inferred from the real office address (Sutton) and client locations in
+// testimonials (SW London, Surrey) — confirm the exact coverage list.
 export const boroughs = [
-  // TODO: confirm real coverage area
-  "Wandsworth",
-  "Richmond upon Thames",
+  "Sutton",
+  "Croydon",
   "Kingston upon Thames",
   "Merton",
-  "Lambeth",
-  "Hammersmith & Fulham",
-  "Ealing",
-  "Camden",
+  "Surrey",
+  "South West London",
 ];
 
-// Qualitative trust markers — used instead of unverified numeric stats.
-// Replace with real figures (years trading, applications submitted, approval
-// rate) as soon as you can confirm them; specific numbers convert better
-// than qualitative claims, but only if they're true.
+// Qualitative trust markers used on the homepage hero.
 export const trustMarkers = [
   { icon: "shield", label: "Professional indemnity insured" },
   { icon: "layers", label: "One team, start to finish" },
-  { icon: "pin", label: "London-wide coverage" },
+  { icon: "pin", label: "London & Home Counties coverage" },
   { icon: "scale", label: "Independent planning advice" },
+];
+
+// Numeric claims from the existing site — reconfirm these are still current
+// before publishing; ASA guidance requires stats like this to be true and
+// substantiable, not just carried over.
+export const stats = [
+  { value: "98%", label: "Application approval rate" },
+  { value: "<14 days", label: "Applications submitted from instruction" },
+  { value: "Fixed price", label: "Money-back guarantee" },
+  { value: "5★", label: "Rated on Google" },
 ];
 
 export const navLinks = [
@@ -174,26 +187,25 @@ export type Testimonial = {
   context: string;
 };
 
-// PLACEHOLDER TESTIMONIALS — layout examples only. Do not publish without
-// swapping in genuine, consented client feedback.
+// Real client testimonials, carried over from the existing site.
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "I didn't understand any of the planning process before we started. They explained every step and just got on with it — I never once felt out of my depth.",
-    name: "Placeholder — homeowner",
-    context: "Rear extension, South West London",
+      "Great service from start to finish. Michael was honest, knowledgeable, and very detail focused. Would highly recommend and will be using again for our loft!",
+    name: "Harry",
+    context: "Rear extension, SW London",
   },
   {
     quote:
-      "We'd been quoted for drawings elsewhere with no real guidance on whether the scheme would even be approved. This was the first time someone gave us a straight answer before we spent anything.",
-    name: "Placeholder — landlord",
-    context: "Change of use, North London",
+      "Thanks to Michael's guidance, our application was approved, which we are absolutely delighted about. He made the process feel smooth and straightforward.",
+    name: "Tasha",
+    context: "Rear extension, Surrey",
   },
   {
     quote:
-      "Every email to the council went through them. I found out about the approval by text — that was the whole experience from my side.",
-    name: "Placeholder — property investor",
-    context: "Loft conversion, South East London",
+      "Very professional and answered all of my questions promptly which made the process much less stressful. Really grateful for the support with my project!",
+    name: "Irina",
+    context: "Loft conversion, Surrey",
   },
 ];
 
@@ -206,6 +218,13 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    title: "Full refurbishment of a 1900s detached home",
+    location: "Surrey",
+    summary:
+      "A substantial refurbishment including new rear extensions, window replacements and a new roof, prepared and managed end-to-end.",
+    outcome: "Full planning permission granted.",
+  },
+  {
     title: "Rear extension & internal reconfiguration",
     location: "South London",
     summary:
@@ -214,17 +233,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     title: "Loft conversion with rear dormer",
-    location: "South West London", // PLACEHOLDER — illustrative example
+    location: "Surrey", // PLACEHOLDER — illustrative example, style matched to a real client area
     summary:
       "A hip-to-gable loft conversion with rear dormer, drawn around existing roof constraints and neighbouring amenity considerations.",
     outcome: "Full planning permission granted.",
-  },
-  {
-    title: "Change of use to residential",
-    location: "North London", // PLACEHOLDER — illustrative example
-    summary:
-      "Reclassification from commercial to residential use, supported by a planning statement addressing policy and precedent.",
-    outcome: "Certificate of lawfulness issued.",
   },
 ];
 
@@ -263,6 +275,79 @@ export const faqs: FaqItem[] = [
     question: "Do you only handle the paperwork, or the design too?",
     answer:
       "Both. Drawings are prepared with approvability in mind from the outset, not just to illustrate what you've already decided — the two are handled together, not as separate handoffs.",
+  },
+];
+
+export const approvalPrinciples = [
+  {
+    title: "A clear strategy from day one",
+    description: "A planning strategy that aligns with your goals before anything is drawn.",
+  },
+  {
+    title: "Design that works with policy",
+    description: "A design tailored to your vision that aligns with local policy, not against it.",
+  },
+  {
+    title: "A proposal that's actually viable",
+    description: "Backed by an experienced team, so what's submitted can genuinely be built.",
+  },
+];
+
+// Project types handled — informed by the real site's "types of projects" list.
+export const projectTypes = [
+  "Loft conversions",
+  "Single & double storey extensions",
+  "Roof, door & window alterations",
+  "Garage conversions",
+  "Outbuildings, home gyms & offices",
+  "Change of use applications",
+  "Annexes & conservatories",
+  "All other home improvements",
+];
+
+export const inclusions = [
+  "Initial consultation to understand your goals and the best route to achieve them",
+  "A full survey of your property and production of architectural drawings and floor plans",
+  "Design support to develop your ideas, with revisions as the scheme is refined",
+  "Preparation, submission and management of the application with the council",
+  "Direct support from initial enquiry through to the application decision",
+];
+
+export const planningPermissionFaqs: FaqItem[] = [
+  {
+    question: "How long will it take to get permission?",
+    answer:
+      "Once an application is validated, councils have a statutory period to decide — typically 8 weeks for a householder application, longer for larger or more complex schemes. We'll give you a realistic estimate for your specific project before you commit to anything.",
+  },
+  {
+    question: "What's included in your planning application service?",
+    answer:
+      "Initial consultation, a full measured survey, architectural drawings and floor plans, design support, the planning statement, submission, and management of all correspondence with the council through to decision — all handled by the same team throughout.",
+  },
+  {
+    question: "Which areas do you cover?",
+    answer:
+      "We cover London and the Home Counties. If you're unsure whether your property falls within our coverage, get in touch and we'll tell you straight away.",
+  },
+  {
+    question: "How long will it take to submit my application?",
+    answer:
+      "This depends on the complexity of the survey and drawings required, but we work to get a complete, correct application submitted as quickly as the project allows — without cutting corners that risk a refusal.",
+  },
+  {
+    question: "Can you help me design my ideas, or do I need my own plans first?",
+    answer:
+      "You don't need existing plans. Bring us your ideas and constraints, and we'll develop a design that reflects what you want while being aligned with what's likely to be approved.",
+  },
+  {
+    question: "Will I have to speak to the council myself?",
+    answer:
+      "No — we handle every piece of correspondence with your planning officer directly, so you're not fielding questions about policy or precedent yourself.",
+  },
+  {
+    question: "What's the difference between planning permission and permitted development?",
+    answer:
+      "Permitted development rights let you carry out certain works without a full planning application, provided you meet specific conditions. Planning permission is a full application assessed by the council against local policy. We work out which route applies to you as the very first step.",
   },
 ];
 

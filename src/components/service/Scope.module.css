@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.heading {
+  font-size: var(--step-h4);
+  margin-bottom: 1.25rem;
+}
