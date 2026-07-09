@@ -6,11 +6,24 @@ type ButtonProps = {
   children: ReactNode;
   href?: string;
   variant?: "primary" | "secondary" | "ghost-dark";
+  size?: "default" | "lg";
   className?: string;
+  type?: "button" | "submit";
+  onClick?: () => void;
 };
 
-export function Button({ children, href, variant = "primary", className }: ButtonProps) {
-  const classes = [styles.button, styles[variant], className].filter(Boolean).join(" ");
+export function Button({
+  children,
+  href,
+  variant = "primary",
+  size = "default",
+  className,
+  type = "button",
+  onClick,
+}: ButtonProps) {
+  const classes = [styles.button, styles[variant], size === "lg" && styles.lg, className]
+    .filter(Boolean)
+    .join(" ");
 
   if (href) {
     const isExternalOrTel = href.startsWith("tel:") || href.startsWith("http");
@@ -28,5 +41,9 @@ export function Button({ children, href, variant = "primary", className }: Butto
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button type={type} className={classes} onClick={onClick}>
+      {children}
+    </button>
+  );
 }

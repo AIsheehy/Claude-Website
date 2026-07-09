@@ -1,0 +1,83 @@
+.footer {
+  background: var(--ink);
+  color: var(--paper);
+  margin-top: auto;
+  padding-block: clamp(3rem, 2.6rem + 2vw, 4.5rem) 2rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-on-dark);
+}
+
+@media (min-width: 720px) {
+  .top {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.brandCol {
+  max-width: 320px;
+}
+
+.tagline {
+  margin-top: 1rem;
+  color: var(--text-muted-on-dark);
+  font-size: var(--step-small);
+  line-height: 1.6;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.contactList li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: var(--step-small);
+  color: var(--paper);
+}
+
+.contactList svg {
+  color: var(--terracotta);
+  flex-shrink: 0;
+}
+
+.colHeading {
+  font-size: var(--step-caption);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d99a76;
+  margin-bottom: 1.1rem;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: var(--step-small);
+  color: var(--text-muted-on-dark);
+}
+
+.linkList a:hover {
+  color: var(--paper);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1.75rem;
+  font-size: var(--step-caption);
+  color: var(--text-muted-on-dark);
+}

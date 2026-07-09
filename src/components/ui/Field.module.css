@@ -1,0 +1,52 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.label {
+  font-size: var(--step-caption);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--stone);
+}
+
+.required {
+  color: var(--terracotta);
+}
+
+.control {
+  width: 100%;
+  padding: 0.8em 0.9em;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  font-size: var(--step-small);
+  color: var(--ink);
+  transition: border-color var(--duration-base) var(--ease),
+    box-shadow var(--duration-base) var(--ease);
+}
+
+.control::placeholder {
+  color: var(--stone-quiet);
+}
+
+.control:hover {
+  border-color: #d3c9b3;
+}
+
+.control:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+textarea.control {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.error {
+  font-size: var(--step-caption);
+  color: var(--brick);
+}

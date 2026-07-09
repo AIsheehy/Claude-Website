@@ -1,0 +1,41 @@
+.section {
+  padding-block: var(--space-section);
+}
+
+.tight {
+  padding-block: calc(var(--space-section) * 0.6);
+}
+
+.dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.head {
+  max-width: 640px;
+  margin-bottom: var(--space-block);
+}
+
+.headCenter {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.head h2 {
+  margin-top: 0.6rem;
+}
+
+.titleOnDark {
+  color: var(--paper);
+}
+
+.lede {
+  margin-top: 1rem;
+  font-size: var(--step-body-lg);
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.ledeOnDark {
+  color: var(--text-muted-on-dark);
+}

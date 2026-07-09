@@ -13,7 +13,7 @@
   width: 9px;
   height: 9px;
   flex-shrink: 0;
-  background: var(--brass);
+  background: var(--terracotta);
   transform: rotate(45deg);
 }
 
@@ -33,10 +33,10 @@
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--brass-deep);
+  color: var(--terracotta-deep);
   margin-top: 0.32rem;
 }
 
 .dark .tag {
-  color: var(--brass);
+  color: var(--terracotta);
 }

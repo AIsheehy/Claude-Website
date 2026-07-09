@@ -1,0 +1,52 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.stars {
+  display: flex;
+  gap: 0.2rem;
+  color: var(--terracotta);
+  margin-bottom: 1.1rem;
+}
+
+.quote {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-size: var(--step-body-lg);
+  line-height: 1.5;
+  color: var(--ink);
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.name {
+  font-weight: 600;
+  font-size: var(--step-small);
+}
+
+.context {
+  font-size: var(--step-caption);
+  color: var(--text-muted);
+}

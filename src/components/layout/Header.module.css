@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 247, 240, 0.92);
-  backdrop-filter: blur(8px);
+  background: rgba(251, 249, 244, 0.85);
+  backdrop-filter: blur(10px) saturate(1.4);
   border-bottom: 1px solid var(--border);
 }
 
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  height: 84px;
+  height: 72px;
 }
 
 .logoLink {
@@ -27,10 +27,15 @@
 
 .navLink {
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 500;
+  color: var(--stone);
   position: relative;
   padding-block: 0.3rem;
+  transition: color var(--duration-base) var(--ease);
+}
+
+.navLink:hover {
+  color: var(--ink);
 }
 
 .navLink::after {
@@ -40,10 +45,10 @@
   right: 0;
   bottom: 0;
   height: 1px;
-  background: var(--brass);
+  background: var(--terracotta);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.2s var(--ease);
+  transition: transform var(--duration-base) var(--ease);
 }
 
 .navLink:hover::after {
@@ -137,7 +142,7 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
-  color: var(--brass-deep);
+  color: var(--terracotta-deep);
 }
 
 .mobileCta {

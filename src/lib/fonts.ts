@@ -3,8 +3,8 @@ import { Fraunces, Manrope } from "next/font/google";
 export const display = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
+  weight: "variable",
   axes: ["opsz", "SOFT", "WONK"],
-  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
 });

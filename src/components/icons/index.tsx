@@ -126,6 +126,16 @@ export function IconLayers(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function IconRoof(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M3.5 14 12 5l8.5 9" />
+      <path d="M6 13v6.5h12V13" />
+      <path d="M9.5 19.5V15h5v4.5" />
+    </svg>
+  );
+}
+
 export function IconScale(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...base} {...props}>

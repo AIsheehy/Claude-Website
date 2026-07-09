@@ -2,43 +2,51 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6em;
-  padding: 0.95em 1.7em;
-  font-size: var(--step-caption);
+  gap: 0.55em;
+  padding: 0.85em 1.4em;
+  font-size: var(--step-small);
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: -0.005em;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   white-space: nowrap;
-  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease),
-    color 0.2s var(--ease), transform 0.2s var(--ease);
+  transition: background-color var(--duration-base) var(--ease),
+    border-color var(--duration-base) var(--ease),
+    color var(--duration-base) var(--ease),
+    transform var(--duration-fast) var(--ease),
+    box-shadow var(--duration-base) var(--ease);
 }
 
 .button:active {
   transform: translateY(1px);
 }
 
+.lg {
+  padding: 1em 1.8em;
+  font-size: var(--step-body);
+}
+
 .primary {
-  background: var(--brass);
+  background: var(--terracotta);
   color: var(--white);
-  border-color: var(--brass);
+  border-color: var(--terracotta);
+  box-shadow: var(--shadow-sm);
 }
 
 .primary:hover {
-  background: var(--brass-deep);
-  border-color: var(--brass-deep);
+  background: var(--terracotta-deep);
+  border-color: var(--terracotta-deep);
+  box-shadow: var(--shadow-md);
 }
 
 .secondary {
-  background: transparent;
+  background: var(--white);
   color: var(--ink);
-  border-color: var(--ink);
+  border-color: var(--border);
 }
 
 .secondary:hover {
-  background: var(--ink);
-  color: var(--paper);
+  border-color: var(--ink);
 }
 
 .ghost-dark {
@@ -48,6 +56,6 @@
 }
 
 .ghost-dark:hover {
-  background: rgba(250, 247, 240, 0.1);
+  background: rgba(251, 249, 244, 0.08);
   border-color: var(--paper);
 }

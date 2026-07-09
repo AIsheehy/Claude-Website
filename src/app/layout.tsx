@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { display, body } from "@/lib/fonts";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <MobileStickyCta />
+      </body>
     </html>
   );
 }
