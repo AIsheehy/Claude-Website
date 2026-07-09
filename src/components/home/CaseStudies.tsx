@@ -1,6 +1,7 @@
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
+import { FeaturedCaseStudy } from "./FeaturedCaseStudy";
 import { IconCheck, IconPin } from "@/components/icons";
 import { caseStudies } from "@/lib/content";
 import styles from "./CaseStudies.module.css";
@@ -13,6 +14,10 @@ export function CaseStudies() {
         title="Real applications, real outcomes."
         lede="A snapshot of the kind of projects we take from advice through to decision."
       />
+
+      <div className={styles.featured}>
+        <FeaturedCaseStudy />
+      </div>
 
       <div className={styles.grid}>
         {caseStudies.map((cs, i) => (

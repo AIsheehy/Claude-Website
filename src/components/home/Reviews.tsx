@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { Section, SectionHead } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { testimonials } from "@/lib/content";
 import styles from "./Reviews.module.css";
@@ -28,14 +28,25 @@ export function Reviews() {
       <div className={styles.grid}>
         {testimonials.map((t, i) => (
           <Reveal key={t.name} delay={i * 90}>
-            <Card className={styles.card}>
-              <Stars />
-              <blockquote className={styles.quote}>&ldquo;{t.quote}&rdquo;</blockquote>
-              <footer className={styles.footer}>
-                <span className={styles.name}>{t.name}</span>
-                <span className={styles.context}>{t.context}</span>
-              </footer>
-            </Card>
+            <article className={styles.card}>
+              <div className={styles.imageWrap}>
+                <Image
+                  src={t.image}
+                  alt={`Completed project for ${t.name}, ${t.context}`}
+                  fill
+                  sizes="(min-width: 860px) 33vw, 100vw"
+                  className={styles.image}
+                />
+              </div>
+              <div className={styles.body}>
+                <Stars />
+                <blockquote className={styles.quote}>&ldquo;{t.quote}&rdquo;</blockquote>
+                <footer className={styles.footer}>
+                  <span className={styles.name}>{t.name}</span>
+                  <span className={styles.context}>{t.context}</span>
+                </footer>
+              </div>
+            </article>
           </Reveal>
         ))}
       </div>

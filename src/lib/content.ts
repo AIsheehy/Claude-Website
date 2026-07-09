@@ -185,29 +185,47 @@ export type Testimonial = {
   quote: string;
   name: string;
   context: string;
+  image: string;
 };
 
-// Real client testimonials, carried over from the existing site.
+// Real client testimonials and photos, carried over from the existing site.
 export const testimonials: Testimonial[] = [
   {
     quote:
       "Great service from start to finish. Michael was honest, knowledgeable, and very detail focused. Would highly recommend and will be using again for our loft!",
     name: "Harry",
     context: "Rear extension, SW London",
+    image: "/images/testimonials/harry.jpg",
   },
   {
     quote:
       "Thanks to Michael's guidance, our application was approved, which we are absolutely delighted about. He made the process feel smooth and straightforward.",
     name: "Tasha",
     context: "Rear extension, Surrey",
+    image: "/images/testimonials/tasha.jpg",
   },
   {
     quote:
       "Very professional and answered all of my questions promptly which made the process much less stressful. Really grateful for the support with my project!",
     name: "Irina",
     context: "Loft conversion, Surrey",
+    image: "/images/testimonials/irina.jpg",
   },
 ];
+
+// The one case study with full photographic + documentary proof (before/after
+// photos, real drawings, a redacted real approval letter).
+export const featuredCaseStudy = {
+  title: "Full refurbishment of a 1900s detached home",
+  location: "Surrey",
+  summary:
+    "A substantial refurbishment including new rear extensions, window replacements and a new roof — prepared and managed end-to-end, from survey through to a granted decision.",
+  outcome: "Full planning permission granted",
+  before: "/images/case-studies/surrey-before.jpg",
+  after: "/images/case-studies/surrey-after.jpg",
+  drawings: "/images/case-studies/surrey-drawings.jpg",
+  approvalLetter: "/images/case-studies/approval-letter.jpg",
+};
 
 export type CaseStudy = {
   title: string;
@@ -217,13 +235,6 @@ export type CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
-  {
-    title: "Full refurbishment of a 1900s detached home",
-    location: "Surrey",
-    summary:
-      "A substantial refurbishment including new rear extensions, window replacements and a new roof, prepared and managed end-to-end.",
-    outcome: "Full planning permission granted.",
-  },
   {
     title: "Rear extension & internal reconfiguration",
     location: "South London",
