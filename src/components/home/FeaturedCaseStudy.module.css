@@ -33,41 +33,15 @@
 }
 
 .beforeAfter {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2px;
-  margin-top: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
-  background: var(--border);
+  padding: clamp(1.75rem, 1.5rem + 1.2vw, 2.75rem);
+  padding-bottom: 0;
 }
 
-@media (min-width: 720px) {
-  .beforeAfter {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.photoWrap {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  background: var(--paper-dim);
-}
-
-.photo {
-  object-fit: cover;
-}
-
-.photoLabel {
-  position: absolute;
-  top: 0.9rem;
-  left: 0.9rem;
-  padding: 0.3em 0.8em;
-  background: rgba(21, 33, 29, 0.72);
-  color: var(--paper);
+.dragHint {
+  margin-top: 0.75rem;
   font-size: var(--step-caption);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-radius: var(--radius-xs);
+  color: var(--stone-quiet);
+  text-align: center;
 }
 
 .proof {

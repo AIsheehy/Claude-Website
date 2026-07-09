@@ -1,0 +1,76 @@
+.container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.94 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: ew-resize;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: var(--paper-dim);
+}
+
+.imageLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.image {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.badge {
+  position: absolute;
+  top: 0.9rem;
+  padding: 0.3em 0.8em;
+  background: rgba(21, 33, 29, 0.72);
+  color: var(--paper);
+  font-size: var(--step-caption);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+}
+
+.badgeBefore {
+  left: 0.9rem;
+}
+
+.badgeAfter {
+  right: 0.9rem;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px rgba(21, 33, 29, 0.25);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.handle {
+  position: absolute;
+  top: 50%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  box-shadow: var(--shadow-md);
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--border);
+}
+
+.handle:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}

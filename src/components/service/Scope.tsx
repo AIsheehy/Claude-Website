@@ -12,20 +12,15 @@ export function Scope() {
         title="Everything you need for planning approval, at one fixed price."
       />
 
-      <div className={styles.grid}>
-        <Reveal>
-          <div>
-            <h3 className={styles.heading}>Types of project we handle</h3>
-            <ProjectTypes />
-          </div>
-        </Reveal>
-        <Reveal delay={80}>
-          <div>
-            <h3 className={styles.heading}>What&rsquo;s included</h3>
-            <Inclusions />
-          </div>
-        </Reveal>
-      </div>
+      <Reveal>
+        <h3 className={styles.heading}>Types of project we handle</h3>
+        <ProjectTypes />
+      </Reveal>
+
+      <Reveal delay={80} className={styles.inclusionsBlock}>
+        <h3 className={styles.heading}>What&rsquo;s included</h3>
+        <Inclusions />
+      </Reveal>
     </Section>
   );
 }

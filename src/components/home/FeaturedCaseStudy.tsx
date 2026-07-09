@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
+import { BeforeAfterSlider } from "@/components/service/BeforeAfterSlider";
 import { IconCheck } from "@/components/icons";
 import { featuredCaseStudy as cs } from "@/lib/content";
 import styles from "./FeaturedCaseStudy.module.css";
@@ -19,26 +20,13 @@ export function FeaturedCaseStudy() {
         </div>
 
         <div className={styles.beforeAfter}>
-          <div className={styles.photoWrap}>
-            <Image
-              src={cs.before}
-              alt="The property before works began"
-              fill
-              sizes="(min-width: 720px) 50vw, 100vw"
-              className={styles.photo}
-            />
-            <span className={styles.photoLabel}>Before</span>
-          </div>
-          <div className={styles.photoWrap}>
-            <Image
-              src={cs.after}
-              alt="The completed extension and refurbishment"
-              fill
-              sizes="(min-width: 720px) 50vw, 100vw"
-              className={styles.photo}
-            />
-            <span className={styles.photoLabel}>After</span>
-          </div>
+          <BeforeAfterSlider
+            before={cs.before}
+            after={cs.after}
+            beforeAlt="The property before works began"
+            afterAlt="The completed extension and refurbishment"
+          />
+          <p className={styles.dragHint}>Drag to compare</p>
         </div>
 
         <div className={styles.proof}>

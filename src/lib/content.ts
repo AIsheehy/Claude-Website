@@ -304,16 +304,22 @@ export const approvalPrinciples = [
   },
 ];
 
-// Project types handled — informed by the real site's "types of projects" list.
-export const projectTypes = [
-  "Loft conversions",
-  "Single & double storey extensions",
-  "Roof, door & window alterations",
-  "Garage conversions",
-  "Outbuildings, home gyms & offices",
-  "Change of use applications",
-  "Annexes & conservatories",
-  "All other home improvements",
+// Project types handled — real project photography, carried over from the
+// existing site's "types of projects" gallery.
+export type ProjectType = {
+  label: string;
+  image: string;
+};
+
+export const projectTypes: ProjectType[] = [
+  { label: "Loft conversions", image: "/images/project-types/loft-conversions.jpg" },
+  { label: "Single & double storey extensions", image: "/images/project-types/house-extensions.jpg" },
+  { label: "Roof, door & window alterations", image: "/images/project-types/roof-door-window.jpg" },
+  { label: "Garage conversions", image: "/images/project-types/garage-conversions.jpg" },
+  { label: "Outbuildings, home gyms & offices", image: "/images/project-types/outbuildings.jpg" },
+  { label: "Change of use applications", image: "/images/project-types/change-of-use.jpg" },
+  { label: "Annexes & conservatories", image: "/images/project-types/annexes-conservatories.jpg" },
+  { label: "All other home improvements", image: "/images/project-types/other-improvements.jpg" },
 ];
 
 export const inclusions = [
