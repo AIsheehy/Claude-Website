@@ -21,6 +21,7 @@ export function PageHero({
   formLede = "We’ll give you an honest read on what’s achievable before you spend a pound on drawings.",
   image,
   imageAlt = "A completed extension project",
+  imageCaption,
 }: {
   eyebrow: string;
   headline: ReactNode;
@@ -32,25 +33,17 @@ export function PageHero({
   formLede?: string;
   image?: string;
   imageAlt?: string;
+  imageCaption?: string;
 }) {
   return (
-    <section className={[styles.hero, image && styles.heroPhoto].filter(Boolean).join(" ")}>
-      {image ? (
-        <div className={styles.photoWrap}>
-          <Image src={image} alt={imageAlt} fill priority sizes="100vw" className={styles.photo} />
-          <div className={styles.photoScrim} />
-        </div>
-      ) : (
-        <>
-          <GridTexture className={styles.grid} />
-          <HouseElevation className={styles.houseArt} />
-        </>
-      )}
+    <section className={styles.hero}>
+      <GridTexture className={styles.grid} />
+      {!image && <HouseElevation className={styles.houseArt} />}
 
       <Container>
         <div className={styles.layout}>
-          <Reveal className={[styles.content, image && styles.onPhoto].filter(Boolean).join(" ")}>
-            <p className={["eyebrow", image && "onDark"].filter(Boolean).join(" ")}>{eyebrow}</p>
+          <Reveal className={styles.content}>
+            <p className="eyebrow">{eyebrow}</p>
             <h1 className={styles.headline}>{headline}</h1>
             <p className={styles.lede}>{lede}</p>
 
@@ -63,6 +56,21 @@ export function PageHero({
                 {business.phone}
               </a>
             </div>
+
+            {image && (
+              <div className={styles.photoCard}>
+                <div className={styles.photoFrame}>
+                  <Image
+                    src={image}
+                    alt={imageAlt}
+                    fill
+                    sizes="(min-width: 960px) 420px, 100vw"
+                    className={styles.photoFrameImg}
+                  />
+                </div>
+                {imageCaption && <p className={styles.photoCaption}>{imageCaption}</p>}
+              </div>
+            )}
 
             {trustSlot}
           </Reveal>

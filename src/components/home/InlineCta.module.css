@@ -1,7 +1,11 @@
 .band {
   padding-block: clamp(2rem, 1.8rem + 1vw, 2.75rem);
-  background: var(--terracotta-tint);
+  background: var(--paper);
   border-block: 1px solid var(--border);
+}
+
+.beige {
+  background: var(--paper-dim);
 }
 
 .row {

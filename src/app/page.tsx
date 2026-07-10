@@ -14,7 +14,10 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <InlineCta text="Not sure which service you need? Get a free assessment and we'll tell you." />
+      <InlineCta
+        text="Not sure which service you need? Get a free assessment and we'll tell you."
+        tone="beige"
+      />
       <Process />
       <Reviews />
       <InlineCta text="Ready for the same result? Let's talk about your project." />

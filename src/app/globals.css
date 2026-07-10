@@ -14,11 +14,12 @@
 
 :root {
   /* ---- Core palette ---- */
-  --ink: #15211d;                /* near-black, warmed with green */
-  --ink-soft: #24352e;           /* secondary dark surface */
+  --ink: #15211d;                /* near-black, warmed with green — text colour, do not lighten */
+  --ink-soft: #35493d;           /* lighter secondary dark surface (Process section) */
+  --dark-surface: #2b4038;       /* lighter dark-green section background (Contact + Footer), independent of --ink so body text stays legible */
   --paper: #ffffff;              /* white section background */
-  --paper-dim: #efe2c4;          /* beige/tan section background — deliberately warmer + darker than --paper so alternating sections read as distinct */
-  --paper-line: #ddd0ac;         /* hairline borders on paper-dim sections */
+  --paper-dim: #f0ece2;          /* beige section background, subtle by design */
+  --paper-line: #e6ded0;         /* hairline borders on paper-dim sections */
   --stone: #5c665f;              /* secondary text on paper */
   --stone-quiet: #8d8a7d;        /* tertiary / caption text */
   --terracotta: #8e9b8e;         /* primary accent (sage green) */
@@ -34,7 +35,7 @@
   /* ---- Semantic ---- */
   --surface: var(--paper);
   --surface-alt: var(--paper-dim);
-  --surface-dark: var(--ink);
+  --surface-dark: var(--dark-surface);
   --surface-dark-alt: var(--ink-soft);
   --text: var(--ink);
   --text-on-dark: var(--paper);

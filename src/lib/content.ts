@@ -216,7 +216,9 @@ export const testimonials: Testimonial[] = [
 ];
 
 // The one case study with full photographic + documentary proof (before/after
-// photos, real drawings, a redacted real approval letter).
+// photos, real drawings, a redacted real approval letter). Site: 4 Upfield,
+// Horley, Surrey — this is the only case study that carries approval language;
+// the two grid case studies below deliberately stay outcome-neutral.
 export const featuredCaseStudy = {
   title: "Full refurbishment of a 1900s detached home",
   location: "Surrey",
@@ -240,21 +242,24 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    // Real project — 21 Eveline Road, CR4 3LF.
     title: "Rear extension & internal reconfiguration",
     location: "South London",
     summary:
       "A single-storey rear extension with structural wall removal and a full kitchen reconfiguration, prepared end-to-end from survey through to submission.",
-    outcome: "Full planning permission granted.",
+    outcome: "Full planning application prepared and submitted.",
+    image: "/images/case-studies/eveline-road-elevations.jpg",
+    imageCaption: "The proposed elevations prepared for the application.",
   },
   {
-    // Real project — condition-discharge approval dated April 2026, Reigate & Banstead BC.
-    title: "Garage, porch & roof renewal",
-    location: "Horley, Surrey",
+    // Real project — 14 Turvin Crescent, CM20 2FW.
+    title: "Rear balcony & new door set",
+    location: "Turvin Crescent, Harlow",
     summary:
-      "Conversion of the garage to habitable office space, an extended porch, a new pitched roof replacing the old conservatory roof, and full window renewal — managed through to sign-off.",
-    outcome: "Approved by Reigate & Banstead Borough Council.",
-    image: "/images/case-studies/upfield-approval.jpg",
-    imageCaption: "The council's approval — real, unredacted, dated April 2026.",
+      "Addition of a steel-framed rear balcony, supported on ground-level columns, together with a new door set replacing the existing first-floor window — prepared and submitted on the client's behalf.",
+    outcome: "Full planning application prepared and submitted.",
+    image: "/images/case-studies/turvin-crescent-elevations.jpg",
+    imageCaption: "The proposed elevations prepared for the application.",
   },
 ];
 
