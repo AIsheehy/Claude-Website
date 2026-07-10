@@ -11,37 +11,50 @@ const closingStats = [
   { icon: IconShield, value: "Founder-Led", label: "You deal with Michael directly" },
 ];
 
-export function Contact() {
+export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
+  const beige = tone === "beige";
   return (
-    <Section id="contact" dark>
+    <Section id="contact" dark={!beige} className={beige ? styles.beige : undefined}>
       <Reveal className={styles.layout}>
         <div className={styles.copy}>
-          <p className="eyebrow onDark">Ready when you are</p>
-          <h2 className={styles.title}>Let&rsquo;s get your project moving.</h2>
-          <p className={styles.lede}>
+          <p className={beige ? "eyebrow" : "eyebrow onDark"}>Ready when you are</p>
+          <h2 className={[styles.title, beige && styles.titleBeige].filter(Boolean).join(" ")}>
+            Let&rsquo;s get your project moving.
+          </h2>
+          <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
             No obligation, no jargon and no pressure &mdash; just a straight, honest answer on
             what&rsquo;s achievable, usually within hours, direct from the person who&rsquo;ll
             actually handle your application.
           </p>
 
-          <ul className={styles.statRow}>
+          <ul className={[styles.statRow, beige && styles.statRowBeige].filter(Boolean).join(" ")}>
             {closingStats.map((s) => (
               <li key={s.label} className={styles.statItem}>
-                <s.icon width={18} height={18} />
+                <s.icon width={18} height={18} className={beige ? styles.statIconBeige : undefined} />
                 <div>
-                  <div className={styles.statValue}>{s.value}</div>
-                  <div className={styles.statLabel}>{s.label}</div>
+                  <div className={[styles.statValue, beige && styles.statValueBeige].filter(Boolean).join(" ")}>
+                    {s.value}
+                  </div>
+                  <div className={[styles.statLabel, beige && styles.statLabelBeige].filter(Boolean).join(" ")}>
+                    {s.label}
+                  </div>
                 </div>
               </li>
             ))}
           </ul>
 
-          <div className={styles.directList}>
-            <a href={business.phoneHref} className={styles.directItem}>
+          <div className={[styles.directList, beige && styles.directListBeige].filter(Boolean).join(" ")}>
+            <a
+              href={business.phoneHref}
+              className={[styles.directItem, beige && styles.directItemBeige].filter(Boolean).join(" ")}
+            >
               <IconPhone width={18} height={18} />
               {business.phone}
             </a>
-            <a href={`mailto:${business.email}`} className={styles.directItem}>
+            <a
+              href={`mailto:${business.email}`}
+              className={[styles.directItem, beige && styles.directItemBeige].filter(Boolean).join(" ")}
+            >
               <IconMail width={18} height={18} />
               {business.email}
             </a>

@@ -28,7 +28,7 @@ export default function Home() {
         tone="dark"
       />
       <About />
-      <Contact />
+      <Contact tone="beige" />
       <Faq />
     </>
   );
