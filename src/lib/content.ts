@@ -111,7 +111,7 @@ export const trustMarkers = [
   { icon: "shield", label: "Professional indemnity insured" },
   { icon: "layers", label: "One team, start to finish" },
   { icon: "pin", label: "London & Home Counties coverage" },
-  { icon: "scale", label: "Independent planning advice" },
+  { icon: "star", label: "5-star rated on Google" },
 ];
 
 // Numeric claims from the existing site — reconfirm these are still current

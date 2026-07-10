@@ -92,16 +92,14 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
         </select>
       </Field>
 
-      {!compact && (
-        <Field label="Tell us about your project" htmlFor="message">
-          <textarea
-            id="message"
-            name="message"
-            className={controlClassName}
-            placeholder="A few lines about the property and what you're hoping to do"
-          />
-        </Field>
-      )}
+      <Field label={compact ? "Tell us how we can help" : "Tell us about your project"} htmlFor="message">
+        <textarea
+          id="message"
+          name="message"
+          className={controlClassName}
+          placeholder="A few lines about the property and what you're hoping to do"
+        />
+      </Field>
 
       <Button type="submit" size="lg" className={styles.submit}>
         {status === "submitting" ? "Sending…" : "Get My Free Assessment"}

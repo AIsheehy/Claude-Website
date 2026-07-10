@@ -31,6 +31,7 @@
   --sand-deep: #72674f;
   --white: #ffffff;
   --brick: #a3372c;              /* error / warning */
+  --accent-warm: #a15a36;        /* rust/terracotta — used sparingly for emphasis, e.g. the homepage hero eyebrow */
 
   /* ---- Semantic ---- */
   --surface: var(--paper);

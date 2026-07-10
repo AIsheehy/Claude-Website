@@ -56,6 +56,14 @@ export function IconHouse(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function IconStar(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 3.5l2.55 5.4 5.95.62-4.45 4.06 1.2 5.87L12 16.9l-5.25 2.55 1.2-5.87L3.5 9.52l5.95-.62L12 3.5Z" />
+    </svg>
+  );
+}
+
 export function IconShield(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...base} {...props}>

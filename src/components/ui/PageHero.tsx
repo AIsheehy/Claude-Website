@@ -22,6 +22,7 @@ export function PageHero({
   image,
   imageAlt = "A completed extension project",
   imageCaption,
+  eyebrowAccent = false,
 }: {
   eyebrow: string;
   headline: ReactNode;
@@ -34,6 +35,7 @@ export function PageHero({
   image?: string;
   imageAlt?: string;
   imageCaption?: string;
+  eyebrowAccent?: boolean;
 }) {
   return (
     <section className={styles.hero}>
@@ -41,9 +43,11 @@ export function PageHero({
       {!image && <HouseElevation className={styles.houseArt} />}
 
       <Container>
-        <div className={styles.layout}>
+        <div className={[styles.layout, image && styles.layoutWithPhoto].filter(Boolean).join(" ")}>
           <Reveal className={styles.content}>
-            <p className="eyebrow">{eyebrow}</p>
+            <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
+              {eyebrow}
+            </p>
             <h1 className={styles.headline}>{headline}</h1>
             <p className={styles.lede}>{lede}</p>
 
@@ -57,23 +61,23 @@ export function PageHero({
               </a>
             </div>
 
-            {image && (
-              <div className={styles.photoCard}>
-                <div className={styles.photoFrame}>
-                  <Image
-                    src={image}
-                    alt={imageAlt}
-                    fill
-                    sizes="(min-width: 960px) 420px, 100vw"
-                    className={styles.photoFrameImg}
-                  />
-                </div>
-                {imageCaption && <p className={styles.photoCaption}>{imageCaption}</p>}
-              </div>
-            )}
-
             {trustSlot}
           </Reveal>
+
+          {image && (
+            <Reveal className={styles.photoCol} delay={60}>
+              <div className={styles.photoFrame}>
+                <Image
+                  src={image}
+                  alt={imageAlt}
+                  fill
+                  sizes="(min-width: 1180px) 320px, (min-width: 960px) 100vw, 100vw"
+                  className={styles.photoFrameImg}
+                />
+              </div>
+              {imageCaption && <p className={styles.photoCaption}>{imageCaption}</p>}
+            </Reveal>
+          )}
 
           <Reveal className={styles.formPanel} delay={120}>
             <div id="enquire" className={styles.formCard}>

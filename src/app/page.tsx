@@ -19,11 +19,14 @@ export default function Home() {
         tone="beige"
       />
       <Process />
-      <Reviews />
+      <Reviews tightBottom />
       <InlineCta text="Ready for the same result? Let's talk about your project." />
       <CaseStudies />
-      <WhyUs />
-      <InlineCta text="See how straightforward this can be — get your free assessment today." />
+      <WhyUs dark tightBottom />
+      <InlineCta
+        text="See how straightforward this can be — get your free assessment today."
+        tone="dark"
+      />
       <About />
       <Contact />
       <Faq />

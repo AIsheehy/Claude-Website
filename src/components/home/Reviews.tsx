@@ -17,9 +17,9 @@ function Stars() {
   );
 }
 
-export function Reviews() {
+export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
   return (
-    <Section id="reviews">
+    <Section id="reviews" tightBottom={tightBottom}>
       <SectionHead
         eyebrow="Reviews"
         title="What it's actually like to work with us."

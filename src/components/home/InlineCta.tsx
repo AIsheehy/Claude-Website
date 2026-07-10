@@ -10,13 +10,23 @@ export function InlineCta({
 }: {
   text?: string;
   ctaLabel?: string;
-  tone?: "white" | "beige";
+  tone?: "white" | "beige" | "dark";
 }) {
   return (
-    <div className={[styles.band, tone === "beige" && styles.beige].filter(Boolean).join(" ")}>
+    <div
+      className={[
+        styles.band,
+        tone === "beige" && styles.beige,
+        tone === "dark" && styles.dark,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <Container>
         <Reveal className={styles.row}>
-          <p className={styles.text}>{text}</p>
+          <p className={[styles.text, tone === "dark" && styles.textOnDark].filter(Boolean).join(" ")}>
+            {text}
+          </p>
           <Button href="#enquire">{ctaLabel}</Button>
         </Reveal>
       </Container>

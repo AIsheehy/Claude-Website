@@ -1,8 +1,8 @@
-import { IconShield, IconLayers, IconPin, IconScale } from "@/components/icons";
+import { IconShield, IconLayers, IconPin, IconStar } from "@/components/icons";
 import { trustMarkers } from "@/lib/content";
 import styles from "./PageHero.module.css";
 
-const iconMap = { shield: IconShield, layers: IconLayers, pin: IconPin, scale: IconScale };
+const iconMap = { shield: IconShield, layers: IconLayers, pin: IconPin, star: IconStar };
 
 export function TrustList() {
   return (

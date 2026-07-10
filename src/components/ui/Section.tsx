@@ -8,15 +8,23 @@ export function Section({
   id,
   dark = false,
   tight = false,
+  tightBottom = false,
   className,
 }: {
   children: ReactNode;
   id?: string;
   dark?: boolean;
   tight?: boolean;
+  tightBottom?: boolean;
   className?: string;
 }) {
-  const classes = [styles.section, dark && styles.dark, tight && styles.tight, className]
+  const classes = [
+    styles.section,
+    dark && styles.dark,
+    tight && styles.tight,
+    tightBottom && styles.tightBottom,
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
   return (

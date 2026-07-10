@@ -26,11 +26,19 @@
   max-width: 16ch;
 }
 
+.titleOnDark {
+  color: var(--paper);
+}
+
 .lede {
   margin-top: 1.1rem;
   color: var(--text-muted);
   font-size: var(--step-body);
   max-width: 40ch;
+}
+
+.ledeOnDark {
+  color: var(--text-muted-on-dark);
 }
 
 .list {
@@ -43,6 +51,10 @@
   gap: 1.5rem;
   padding-block: 1.75rem;
   border-bottom: 1px solid var(--border);
+}
+
+.rowOnDark {
+  border-bottom-color: var(--border-on-dark);
 }
 
 .list li:first-child .row {
@@ -63,8 +75,17 @@
   -webkit-text-stroke: 1px var(--terracotta);
 }
 
+.indexOnDark {
+  color: var(--dark-surface);
+  -webkit-text-stroke: 1px var(--sand);
+}
+
 .rowTitle {
   font-size: var(--step-h4);
+}
+
+.rowTitleOnDark {
+  color: var(--paper);
 }
 
 .rowDescription {
@@ -73,4 +94,8 @@
   font-size: var(--step-small);
   line-height: 1.65;
   max-width: 56ch;
+}
+
+.rowDescriptionOnDark {
+  color: var(--text-muted-on-dark);
 }

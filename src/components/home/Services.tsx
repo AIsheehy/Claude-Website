@@ -28,7 +28,7 @@ const groups = Array.from(new Set(services.map((s) => s.group)));
 
 export function Services() {
   return (
-    <Section id="services" className={styles.section}>
+    <Section id="services" tightBottom className={styles.section}>
       <SectionHead
         eyebrow="What we do"
         title="Every stage of a planning application, under one roof."
