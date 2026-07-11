@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnquiryForm } from "@/components/home/EnquiryForm";
 import { GridTexture } from "@/components/blueprint/GridTexture";
 import { HouseElevation } from "@/components/blueprint/HouseElevation";
+import { HeroIllustration } from "@/components/blueprint/HeroIllustration";
 import { IconPhone } from "@/components/icons";
 import { business } from "@/lib/content";
 import styles from "./PageHero.module.css";
@@ -19,10 +19,8 @@ export function PageHero({
   formEyebrow = "Free, no-obligation assessment",
   formTitle = "Tell us about your project",
   formLede = "We’ll give you an honest read on what’s achievable before you spend a pound on drawings.",
-  image,
-  imageAlt = "A completed extension project",
-  imageCaption,
   eyebrowAccent = false,
+  graphic = false,
 }: {
   eyebrow: string;
   headline: ReactNode;
@@ -32,19 +30,23 @@ export function PageHero({
   formEyebrow?: string;
   formTitle?: string;
   formLede?: string;
-  image?: string;
-  imageAlt?: string;
-  imageCaption?: string;
   eyebrowAccent?: boolean;
+  graphic?: boolean;
 }) {
   return (
     <section className={styles.hero}>
       <GridTexture className={styles.grid} />
-      {!image && <HouseElevation className={styles.houseArt} />}
+      {!graphic && <HouseElevation className={styles.houseArt} />}
 
-      <Container>
-        <div className={[styles.layout, image && styles.layoutWithPhoto].filter(Boolean).join(" ")}>
-          <Reveal className={styles.content}>
+      <Container size={graphic ? "wide" : "default"}>
+        <div className={[styles.layout, graphic && styles.layoutCentered].filter(Boolean).join(" ")}>
+          {graphic && (
+            <Reveal className={styles.graphicCol}>
+              <HeroIllustration className={styles.graphicSvg} />
+            </Reveal>
+          )}
+
+          <Reveal className={[styles.content, graphic && styles.contentCentered].filter(Boolean).join(" ")}>
             <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
               {eyebrow}
             </p>
@@ -63,21 +65,6 @@ export function PageHero({
 
             {trustSlot}
           </Reveal>
-
-          {image && (
-            <Reveal className={styles.photoCol} delay={60}>
-              <div className={styles.photoFrame}>
-                <Image
-                  src={image}
-                  alt={imageAlt}
-                  fill
-                  sizes="(min-width: 1180px) 320px, (min-width: 960px) 100vw, 100vw"
-                  className={styles.photoFrameImg}
-                />
-              </div>
-              {imageCaption && <p className={styles.photoCaption}>{imageCaption}</p>}
-            </Reveal>
-          )}
 
           <Reveal className={styles.formPanel} delay={120}>
             <div id="enquire" className={styles.formCard}>

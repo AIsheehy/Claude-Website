@@ -1,0 +1,60 @@
+.band {
+  padding-block: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
+  background: var(--paper-dim);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem 3.5rem;
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 15rem;
+}
+
+/* Higher-specificity override of the sitewide .reveal fade/slide so this
+   strip gets a slightly more pronounced entrance (adds a scale) without
+   touching the shared .reveal class used everywhere else. */
+.reveal.item {
+  transform: translateY(20px) scale(0.94);
+}
+
+.reveal.isVisible.item {
+  transform: translateY(0) scale(1);
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--terracotta-deep);
+  box-shadow: var(--shadow-sm);
+}
+
+.value {
+  margin-top: 0.85rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
+  font-size: var(--step-h3);
+  color: var(--ink);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  margin-top: 0.3rem;
+  font-size: var(--step-small);
+  color: var(--text-muted);
+}

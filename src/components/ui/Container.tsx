@@ -8,9 +8,14 @@ export function Container({
 }: {
   children: ReactNode;
   className?: string;
-  size?: "default" | "narrow";
+  size?: "default" | "narrow" | "wide";
 }) {
-  const classes = [styles.container, size === "narrow" && styles.narrow, className]
+  const classes = [
+    styles.container,
+    size === "narrow" && styles.narrow,
+    size === "wide" && styles.wide,
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
   return <div className={classes}>{children}</div>;

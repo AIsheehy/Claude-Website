@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
+import { ServiceStats } from "@/components/home/ServiceStats";
 import { Process } from "@/components/home/Process";
 import { Reviews } from "@/components/home/Reviews";
 import { CaseStudies } from "@/components/home/CaseStudies";
@@ -14,11 +15,12 @@ export default function Home() {
     <>
       <Hero />
       <Services />
+      <ServiceStats />
+      <Process tightBottom />
       <InlineCta
         text="Not sure which service you need? Get a free assessment and we'll tell you."
-        tone="beige"
+        tone="dark"
       />
-      <Process />
       <Reviews tightBottom />
       <InlineCta text="Ready for the same result? Let's talk about your project." />
       <CaseStudies />
@@ -27,9 +29,9 @@ export default function Home() {
         text="See how straightforward this can be — get your free assessment today."
         tone="dark"
       />
-      <About />
       <Contact tone="beige" />
       <Faq />
+      <About />
     </>
   );
 }

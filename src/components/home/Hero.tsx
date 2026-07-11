@@ -16,6 +16,7 @@ export function Hero() {
       primaryCtaLabel="Get My Free Assessment"
       trustSlot={<TrustList />}
       eyebrowAccent
+      graphic
     />
   );
 }

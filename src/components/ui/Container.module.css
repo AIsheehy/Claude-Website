@@ -8,3 +8,7 @@
 .narrow {
   max-width: 760px;
 }
+
+.wide {
+  max-width: 1400px;
+}

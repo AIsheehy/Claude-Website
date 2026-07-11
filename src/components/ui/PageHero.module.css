@@ -33,28 +33,6 @@
   }
 }
 
-.photoFrame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--paper-dim);
-  box-shadow: var(--shadow-sm);
-}
-
-.photoFrameImg {
-  object-fit: cover;
-}
-
-.photoCaption {
-  margin-top: 0.6rem;
-  font-size: var(--step-caption);
-  letter-spacing: 0.02em;
-  color: var(--stone-quiet);
-}
-
 .layout {
   position: relative;
   display: grid;
@@ -64,36 +42,21 @@
   align-items: start;
 }
 
-.layoutWithPhoto {
-  grid-template-areas: "content" "photo" "form";
-}
-
 @media (min-width: 960px) {
   .layout {
     grid-template-columns: 1.05fr 0.95fr;
     grid-template-areas: "content form";
   }
-
-  .layoutWithPhoto {
-    grid-template-columns: 1.05fr 0.95fr;
-    grid-template-areas:
-      "content form"
-      "photo   photo";
-  }
-
-  .layoutWithPhoto .photoFrame {
-    aspect-ratio: 21 / 6;
-  }
 }
 
-@media (min-width: 1180px) {
-  .layoutWithPhoto {
-    grid-template-columns: 1fr 0.85fr 0.95fr;
-    grid-template-areas: "content photo form";
-  }
-
-  .layoutWithPhoto .photoFrame {
-    aspect-ratio: 4 / 3;
+/* Homepage-only variant: illustration on the left, copy centred, form on
+   the right. Only kicks in on genuinely wide viewports so the content and
+   form columns below never get squeezed smaller than the default layout. */
+@media (min-width: 1280px) {
+  .layoutCentered {
+    grid-template-columns: 280px 1fr 480px;
+    grid-template-areas: "graphic content form";
+    column-gap: clamp(2rem, 1.5vw + 1.5rem, 3rem);
   }
 }
 
@@ -102,9 +65,46 @@
   padding-top: 0.5rem;
 }
 
-.photoCol {
-  grid-area: photo;
-  align-self: start;
+.graphicCol {
+  display: none;
+  grid-area: graphic;
+  align-self: center;
+}
+
+/* Centering only makes sense once the graphic column is actually showing
+   (below 1280px this falls back to the plain two-column layout, unchanged). */
+@media (min-width: 1280px) {
+  .graphicCol {
+    display: block;
+  }
+
+  .contentCentered {
+    text-align: center;
+  }
+
+  .contentCentered .headline,
+  .contentCentered .lede {
+    margin-inline: auto;
+  }
+
+  .contentCentered .ctaRow {
+    justify-content: center;
+  }
+
+  .contentCentered .trustList {
+    max-width: 30rem;
+    margin-inline: auto;
+    justify-items: center;
+  }
+
+  .contentCentered .trustItem {
+    justify-content: center;
+  }
+}
+
+.graphicSvg {
+  width: 100%;
+  height: auto;
 }
 
 .formPanel {

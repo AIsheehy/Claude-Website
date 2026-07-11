@@ -22,9 +22,9 @@ const iconMap = {
   check: IconCheck,
 };
 
-export function Process() {
+export function Process({ tightBottom = false }: { tightBottom?: boolean }) {
   return (
-    <Section id="process" dark tight>
+    <Section id="process" dark tight tightBottom={tightBottom}>
       <SectionHead
         eyebrow="How it works"
         onDark
