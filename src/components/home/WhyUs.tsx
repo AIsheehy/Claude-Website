@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Differentiator, differentiators as defaultDifferentiators } from "@/lib/differentiators";
-import { IconLayers, IconArrowRight, IconChat, IconPin, IconClock, IconShield, IconHouse } from "@/components/icons";
+import { IconLayers, IconArrowRight, IconChat, IconPin, IconClock } from "@/components/icons";
 import styles from "./WhyUs.module.css";
 
 const iconMap = {
@@ -11,8 +11,6 @@ const iconMap = {
   chat: IconChat,
   pin: IconPin,
   clock: IconClock,
-  shield: IconShield,
-  house: IconHouse,
 };
 
 export function WhyUs({

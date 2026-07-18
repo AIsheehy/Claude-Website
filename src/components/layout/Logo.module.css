@@ -10,11 +10,10 @@
 }
 
 .mark {
-  width: 9px;
-  height: 9px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
-  background: var(--terracotta);
-  transform: rotate(45deg);
+  color: inherit;
 }
 
 .text {

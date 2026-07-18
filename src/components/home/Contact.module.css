@@ -74,7 +74,7 @@
 
 .statValue {
   font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--step-h4);
   color: var(--paper);
   line-height: 1.1;

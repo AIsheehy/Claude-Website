@@ -1,21 +1,20 @@
 import { ReactNode } from "react";
-import { PageHero } from "@/components/ui/PageHero";
-import { StatBar } from "@/components/ui/StatBar";
-import { Principles } from "@/components/service/Principles";
+import { Hero } from "@/components/home/Hero";
+import { Services } from "@/components/home/Services";
+import { ServiceStats } from "@/components/home/ServiceStats";
 import { Process } from "@/components/home/Process";
-import { Scope } from "@/components/service/Scope";
-import { CaseStudies } from "@/components/home/CaseStudies";
 import { Reviews } from "@/components/home/Reviews";
+import { CaseStudies } from "@/components/home/CaseStudies";
 import { WhyUs } from "@/components/home/WhyUs";
 import { Faq } from "@/components/home/Faq";
+import { About } from "@/components/home/About";
 import { Contact } from "@/components/home/Contact";
 import { InlineCta } from "@/components/home/InlineCta";
-import { planningPermissionFaqs } from "@/lib/content";
-import { founderLedDifferentiators } from "@/lib/differentiators";
 
-// Shared body for every dedicated service landing page (Planning Applications,
-// Permitted Development, Loft Conversion Drawings, Extension Drawings). Only
-// the hero eyebrow/headline/lede and page metadata differ page to page.
+// Shared body for every dedicated service landing page (Planning
+// Applications, Permitted Development, Loft Conversion Drawings, Extension
+// Drawings) — identical to the homepage below the hero. Only the hero
+// eyebrow/headline/lede differ page to page.
 export function ServicePageContent({
   eyebrow,
   headline,
@@ -27,34 +26,25 @@ export function ServicePageContent({
 }) {
   return (
     <>
-      <PageHero
-        eyebrow={eyebrow}
-        headline={headline}
-        lede={lede}
-        primaryCtaLabel="Get My Free Feasibility Review"
-        formEyebrow="Free, no-obligation review"
-        formTitle="Tell us about your project"
-        trustSlot={<StatBar />}
+      <Hero eyebrow={eyebrow} headline={headline} lede={lede} />
+      <Services />
+      <ServiceStats />
+      <Process tightBottom />
+      <InlineCta
+        text="Not sure which service you need? Get a free assessment and we'll tell you."
+        tone="dark"
       />
-      <Principles />
-      <InlineCta text="Not sure if you need permission at all? Get a free assessment first." />
-      <Process />
-      <Scope />
-      <CaseStudies />
+      <Reviews tightBottom />
       <InlineCta text="Ready for the same result? Let's talk about your project." />
-      <Reviews />
-      <WhyUs
-        title="Why work with Form & Function on your application."
-        lede="A founder-led service built around getting applications approved, not just submitted."
-        items={founderLedDifferentiators}
-        alt
+      <CaseStudies />
+      <WhyUs dark tightBottom />
+      <InlineCta
+        text="See how straightforward this can be — get your free assessment today."
+        tone="dark"
       />
-      <Contact />
-      <Faq
-        items={planningPermissionFaqs}
-        title="Planning permission — the questions people ask us."
-        groupName="planning-permission-faq"
-      />
+      <Contact tone="beige" />
+      <Faq />
+      <About />
     </>
   );
 }

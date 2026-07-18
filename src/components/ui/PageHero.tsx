@@ -3,8 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnquiryForm } from "@/components/home/EnquiryForm";
-import { GridTexture } from "@/components/blueprint/GridTexture";
-import { HouseElevation } from "@/components/blueprint/HouseElevation";
 import { HeroIllustration } from "@/components/blueprint/HeroIllustration";
 import { IconPhone } from "@/components/icons";
 import { business } from "@/lib/content";
@@ -35,9 +33,6 @@ export function PageHero({
 }) {
   return (
     <section className={styles.hero}>
-      <GridTexture className={styles.grid} />
-      {!graphic && <HouseElevation className={styles.houseArt} />}
-
       <Container size={graphic ? "wide" : "default"}>
         <div className={[styles.layout, graphic && styles.layoutCentered].filter(Boolean).join(" ")}>
           {graphic && (

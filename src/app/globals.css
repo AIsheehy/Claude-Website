@@ -5,33 +5,32 @@
    an editorial, drafting-table materiality appropriate to a planning
    consultancy. No glassmorphism, no neon, no illustration-heavy filler.
 
-   Accent family: a single muted sage green (--terracotta, kept as the
-   variable name for minimal diff) with two tonal siblings — --moss
-   (cooler/deeper, used on light sections for secondary emphasis) and
-   --sand (warmer, used on dark sections where sage reads flat) — so
-   each section can feel distinct without leaving the same palette.
+   Palette: client-supplied brand guide — Porcelain/Warm Stone/Sage/
+   Forest/Charcoal as the primary scale, with Clay/Olive/Terracotta as
+   accents. --terracotta/--moss/--sand names are kept as-is (minimal
+   diff) but now carry Sage/Olive/Clay values respectively.
 =================================================================== */
 
 :root {
-  /* ---- Core palette ---- */
-  --ink: #15211d;                /* near-black, warmed with green — text colour, do not lighten */
-  --ink-soft: #35493d;           /* lighter secondary dark surface (Process section) */
-  --dark-surface: #2b4038;       /* lighter dark-green section background (Contact + Footer), independent of --ink so body text stays legible */
-  --paper: #ffffff;              /* white section background */
-  --paper-dim: #f0ece2;          /* beige section background, subtle by design */
-  --paper-line: #e6ded0;         /* hairline borders on paper-dim sections */
-  --stone: #5c665f;              /* secondary text on paper */
-  --stone-quiet: #8d8a7d;        /* tertiary / caption text */
-  --terracotta: #8e9b8e;         /* primary accent (sage green) */
-  --terracotta-deep: #4e5a4e;    /* accent hover / pressed / text */
-  --terracotta-tint: #e4e7e4;    /* accent background wash */
-  --moss: #475249;               /* deeper/cooler sibling accent */
-  --moss-tint: #dde3de;
-  --sand: #aea48f;               /* warm sibling for dark sections */
-  --sand-deep: #72674f;
+  /* ---- Core palette (client brand guide) ---- */
+  --ink: #1e1f1c;                /* Charcoal — text colour, do not lighten */
+  --ink-soft: #3f5347;           /* lighter secondary dark surface (Process section) */
+  --dark-surface: #2f3d34;       /* Forest — Contact + Footer background */
+  --paper: #f6f4ef;              /* Porcelain — white-ish section background */
+  --paper-dim: #e8e4da;          /* Warm Stone — beige section background */
+  --paper-line: #dcd5c4;         /* hairline borders on paper-dim sections */
+  --stone: #5c665c;              /* secondary text on paper */
+  --stone-quiet: #8b8f83;        /* tertiary / caption text */
+  --terracotta: #a9b3a2;         /* Sage — primary accent */
+  --terracotta-deep: #6f745e;    /* Olive — accent hover / pressed / text */
+  --terracotta-tint: #e4e7e1;    /* accent background wash */
+  --moss: #6f745e;               /* Olive — deeper/cooler sibling accent */
+  --moss-tint: #dee3d9;
+  --sand: #cbbba6;               /* Clay — warm sibling for dark sections */
+  --sand-deep: #a8927a;
   --white: #ffffff;
   --brick: #a3372c;              /* error / warning */
-  --accent-warm: #a15a36;        /* rust/terracotta — used sparingly for emphasis, e.g. the homepage hero eyebrow */
+  --accent-warm: #c47a5a;        /* Terracotta — used sparingly for emphasis, e.g. the hero eyebrow */
 
   /* ---- Semantic ---- */
   --surface: var(--paper);
@@ -41,11 +40,11 @@
   --text: var(--ink);
   --text-on-dark: var(--paper);
   --text-muted: var(--stone);
-  --text-muted-on-dark: #aab8ae;
+  --text-muted-on-dark: #b8c0b4;
   --border: var(--paper-line);
-  --border-on-dark: rgba(251, 249, 244, 0.14);
+  --border-on-dark: rgba(246, 244, 239, 0.14);
   --accent: var(--terracotta);
-  --focus-ring: rgba(142, 155, 142, 0.4);
+  --focus-ring: rgba(169, 179, 162, 0.4);
 
   /* ---- Type scale (fluid, mobile-first) ---- */
   --step-caption: clamp(0.75rem, 0.73rem + 0.1vw, 0.8125rem);
@@ -57,9 +56,9 @@
   --step-h2: clamp(1.875rem, 1.5rem + 2vw, 2.75rem);
   --step-h1: clamp(2.3rem, 1.7rem + 3.2vw, 3.75rem);
 
-  /* ---- Spacing rhythm (compact — no cavernous sections) ---- */
-  --space-section: clamp(3.25rem, 2.9rem + 2vw, 5.5rem);
-  --space-block: clamp(1.75rem, 1.5rem + 1.2vw, 2.75rem);
+  /* ---- Spacing rhythm (+10% over the original compact scale) ---- */
+  --space-section: clamp(3.575rem, 3.19rem + 2.2vw, 6.05rem);
+  --space-block: clamp(1.925rem, 1.65rem + 1.32vw, 3.025rem);
 
   /* ---- Layout ---- */
   --container-max: 1180px;
@@ -135,7 +134,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.015em;
   color: var(--ink);
@@ -189,8 +188,8 @@ select {
   align-items: center;
   gap: 0.6em;
   font-size: var(--step-caption);
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--terracotta-deep);
 }

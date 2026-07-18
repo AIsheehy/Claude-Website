@@ -128,7 +128,7 @@ export const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "How it works", href: "/#process" },
   { label: "Reviews", href: "/#reviews" },
-  { label: "FAQs", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 // Dedicated service landing pages, surfaced as a dropdown under the header's
@@ -154,28 +154,28 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Advice & survey",
+    title: "Advice and survey",
     description:
       "We start with an honest assessment of what's achievable, then send a surveyor to measure your property accurately — the foundation everything else is built on.",
     icon: "compass",
   },
   {
     step: "02",
-    title: "Drawings & planning statement",
+    title: "Drawings and planning statement",
     description:
       "We prepare your proposed drawings and write the planning statement — the document that sets out, in the council's own terms, why your project should be approved.",
     icon: "drawing",
   },
   {
     step: "03",
-    title: "Submission & council liaison",
+    title: "Submission and council liaison",
     description:
       "Your application is submitted correctly the first time. From there, we handle every question the council raises directly, so you're never asked to explain your own project.",
     icon: "send",
   },
   {
     step: "04",
-    title: "Decision & next steps",
+    title: "Decision and next steps",
     description:
       "Once a decision is issued, we talk you through exactly what it means — and if it's approved, what to do next to get your project moving.",
     icon: "check",
@@ -184,32 +184,35 @@ export const processSteps: ProcessStep[] = [
 
 export type Testimonial = {
   quote: string;
+  supporting: string;
   name: string;
   context: string;
   image: string;
 };
 
-// Real client testimonials and photos, carried over from the existing site.
+// Real client testimonials and photos, carried over from the existing site —
+// rewritten outcome-first: a short quoted line stating the result, then a
+// plain supporting sentence, rather than one long undifferentiated quote.
 export const testimonials: Testimonial[] = [
   {
-    quote:
-      "Great service from start to finish. Michael was honest, knowledgeable, and very detail focused. Would highly recommend and will be using again for our loft!",
+    quote: "Honest, knowledgeable and detail-focused from start to finish.",
+    supporting: "We'd happily use Form & Function again for our loft conversion.",
     name: "Harry",
-    context: "Rear extension, SW London",
+    context: "Rear extension · SW London",
     image: "/images/testimonials/harry.jpg",
   },
   {
-    quote:
-      "Thanks to Michael's guidance, our application was approved, which we are absolutely delighted about. He made the process feel smooth and straightforward.",
+    quote: "Our planning application was approved, and the whole process felt straightforward.",
+    supporting: "Michael guided us through every stage and made everything easy to understand.",
     name: "Tasha",
-    context: "Rear extension, Surrey",
+    context: "Rear extension · Surrey",
     image: "/images/testimonials/tasha.jpg",
   },
   {
-    quote:
-      "Very professional and answered all of my questions promptly which made the process much less stressful. Really grateful for the support with my project!",
+    quote: "Every question was answered quickly, making the whole process far less stressful.",
+    supporting: "Professional, responsive and a pleasure to work with.",
     name: "Irina",
-    context: "Loft conversion, Surrey",
+    context: "Loft conversion · Surrey",
     image: "/images/testimonials/irina.jpg",
   },
 ];
@@ -297,85 +300,6 @@ export const faqs: FaqItem[] = [
     question: "Do you only handle the paperwork, or the design too?",
     answer:
       "Both. Drawings are prepared with approvability in mind from the outset, not just to illustrate what you've already decided — the two are handled together, not as separate handoffs.",
-  },
-];
-
-export const approvalPrinciples = [
-  {
-    title: "A clear strategy from day one",
-    description: "A planning strategy that aligns with your goals before anything is drawn.",
-  },
-  {
-    title: "Design that works with policy",
-    description: "A design tailored to your vision that aligns with local policy, not against it.",
-  },
-  {
-    title: "A proposal that's actually viable",
-    description: "Backed by an experienced team, so what's submitted can genuinely be built.",
-  },
-];
-
-// Project types handled — real project photography, carried over from the
-// existing site's "types of projects" gallery.
-export type ProjectType = {
-  label: string;
-  image: string;
-};
-
-export const projectTypes: ProjectType[] = [
-  { label: "Loft conversions", image: "/images/project-types/loft-conversions.jpg" },
-  { label: "Single & double storey extensions", image: "/images/project-types/house-extensions.jpg" },
-  { label: "Roof, door & window alterations", image: "/images/project-types/roof-door-window.jpg" },
-  { label: "Garage conversions", image: "/images/project-types/garage-conversions.jpg" },
-  { label: "Outbuildings, home gyms & offices", image: "/images/project-types/outbuildings.jpg" },
-  { label: "Change of use applications", image: "/images/project-types/change-of-use.jpg" },
-  { label: "Annexes & conservatories", image: "/images/project-types/annexes-conservatories.jpg" },
-  { label: "All other home improvements", image: "/images/project-types/other-improvements.jpg" },
-];
-
-export const inclusions = [
-  "Initial consultation to understand your goals and the best route to achieve them",
-  "A full survey of your property and production of architectural drawings and floor plans",
-  "Design support to develop your ideas, with revisions as the scheme is refined",
-  "Preparation, submission and management of the application with the council",
-  "Direct support from initial enquiry through to the application decision",
-];
-
-export const planningPermissionFaqs: FaqItem[] = [
-  {
-    question: "How long will it take to get permission?",
-    answer:
-      "Once an application is validated, councils have a statutory period to decide — typically 8 weeks for a householder application, longer for larger or more complex schemes. We'll give you a realistic estimate for your specific project before you commit to anything.",
-  },
-  {
-    question: "What's included in your planning application service?",
-    answer:
-      "Initial consultation, a full measured survey, architectural drawings and floor plans, design support, the planning statement, submission, and management of all correspondence with the council through to decision — all handled by the same team throughout.",
-  },
-  {
-    question: "Which areas do you cover?",
-    answer:
-      "We cover London and the Home Counties. If you're unsure whether your property falls within our coverage, get in touch and we'll tell you straight away.",
-  },
-  {
-    question: "How long will it take to submit my application?",
-    answer:
-      "This depends on the complexity of the survey and drawings required, but we work to get a complete, correct application submitted as quickly as the project allows — without cutting corners that risk a refusal.",
-  },
-  {
-    question: "Can you help me design my ideas, or do I need my own plans first?",
-    answer:
-      "You don't need existing plans. Bring us your ideas and constraints, and we'll develop a design that reflects what you want while being aligned with what's likely to be approved.",
-  },
-  {
-    question: "Will I have to speak to the council myself?",
-    answer:
-      "No — we handle every piece of correspondence with your planning officer directly, so you're not fielding questions about policy or precedent yourself.",
-  },
-  {
-    question: "What's the difference between planning permission and permitted development?",
-    answer:
-      "Permitted development rights let you carry out certain works without a full planning application, provided you meet specific conditions. Planning permission is a full application assessed by the council against local policy. We work out which route applies to you as the very first step.",
   },
 ];
 

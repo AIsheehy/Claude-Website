@@ -29,7 +29,7 @@ export function Process({ tightBottom = false }: { tightBottom?: boolean }) {
             <Reveal key={item.step} delay={i * 90} className={styles.step}>
               <span className={styles.stepLine} />
               <span className={styles.iconWrap}>
-                <Icon width={22} height={22} />
+                <Icon width={25} height={25} />
               </span>
               <div className={styles.stepContent}>
                 <div className={styles.stepHead}>

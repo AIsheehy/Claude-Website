@@ -1,9 +1,0 @@
-.heading {
-  font-size: var(--step-h4);
-  margin-bottom: 1.25rem;
-}
-
-.inclusionsBlock {
-  margin-top: var(--space-block);
-  max-width: 640px;
-}
