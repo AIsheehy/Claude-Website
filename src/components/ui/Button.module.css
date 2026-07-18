@@ -27,15 +27,15 @@
 }
 
 .primary {
-  background: var(--terracotta);
+  background: var(--ink-soft);
   color: var(--white);
-  border-color: var(--terracotta);
+  border-color: var(--ink-soft);
   box-shadow: var(--shadow-sm);
 }
 
 .primary:hover {
-  background: var(--terracotta-deep);
-  border-color: var(--terracotta-deep);
+  background: var(--ink);
+  border-color: var(--ink);
   box-shadow: var(--shadow-md);
 }
 

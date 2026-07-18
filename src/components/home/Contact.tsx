@@ -61,7 +61,7 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
           </div>
         </div>
 
-        <div className={styles.formCard}>
+        <div id="enquire" className={styles.formCard}>
           <p className={styles.formEyebrow}>No obligation &middot; no pressure</p>
           <h3 className={styles.formTitle}>Get your free assessment</h3>
           <EnquiryForm compact />

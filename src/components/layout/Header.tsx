@@ -50,7 +50,7 @@ export function Header() {
               <span>{business.phone}</span>
             </a>
             <Button href="/#enquire" variant="primary" className={styles.cta}>
-              Free Assessment
+              Get in Touch
             </Button>
           </div>
 

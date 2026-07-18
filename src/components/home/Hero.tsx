@@ -3,13 +3,13 @@ import { PageHero } from "@/components/ui/PageHero";
 import { TrustList } from "@/components/ui/TrustList";
 
 export function Hero({
-  eyebrow = "Planning permission, done properly",
-  headline = "Planning permission, handled from enquiry to approval.",
+  eyebrow = "Planning permission, handled from enquiry to approval.",
+  headline = "Planning permission shouldn’t feel like a gamble.",
   lede = (
     <>
-      We handle the entire process for you &mdash; removing the stress, delays and guesswork
-      of planning permission, so you can move forward with total confidence, from your first
-      enquiry through to a granted decision.
+      We structure your entire application around what planners are actually looking for
+      &mdash; so when you submit, it&rsquo;s not a guess. It&rsquo;s a calculated step toward
+      approval.
     </>
   ),
 }: {

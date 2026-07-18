@@ -137,6 +137,7 @@
 }
 
 .formCard {
+  scroll-margin-top: 6rem;
   background: var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);

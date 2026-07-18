@@ -109,7 +109,7 @@ export const boroughs = [
 // Qualitative trust markers used on the homepage hero.
 export const trustMarkers = [
   { icon: "shield", label: "Professional indemnity insured" },
-  { icon: "layers", label: "One team, start to finish" },
+  { icon: "clock", label: "14 days from survey to submission" },
   { icon: "pin", label: "London & Home Counties coverage" },
   { icon: "star", label: "5-star rated on Google" },
 ];

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { EnquiryForm } from "@/components/home/EnquiryForm";
 import { IconPhone } from "@/components/icons";
 import { business } from "@/lib/content";
 import styles from "./PageHero.module.css";
@@ -14,9 +13,6 @@ export function PageHero({
   lede,
   primaryCtaLabel = "Get My Free Assessment",
   trustSlot,
-  formEyebrow = "Free, no-obligation assessment",
-  formTitle = "Tell us about your project",
-  formLede = "We’ll give you an honest read on what’s achievable before you spend a pound on drawings.",
   eyebrowAccent = false,
   graphic = false,
 }: {
@@ -25,30 +21,14 @@ export function PageHero({
   lede: ReactNode;
   primaryCtaLabel?: string;
   trustSlot?: ReactNode;
-  formEyebrow?: string;
-  formTitle?: string;
-  formLede?: string;
   eyebrowAccent?: boolean;
   graphic?: boolean;
 }) {
   return (
     <section className={styles.hero}>
       <Container size={graphic ? "wide" : "default"}>
-        <div className={[styles.layout, graphic && styles.layoutCentered].filter(Boolean).join(" ")}>
-          {graphic && (
-            <Reveal className={styles.graphicCol}>
-              <Image
-                src="/images/hero/hero-illustration.jpg"
-                alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
-                width={1200}
-                height={1156}
-                className={styles.graphicSvg}
-                priority
-              />
-            </Reveal>
-          )}
-
-          <Reveal className={[styles.content, graphic && styles.contentCentered].filter(Boolean).join(" ")}>
+        <div className={[styles.layout, graphic && styles.layoutGraphic].filter(Boolean).join(" ")}>
+          <Reveal className={styles.content}>
             <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
               {eyebrow}
             </p>
@@ -66,14 +46,18 @@ export function PageHero({
             </div>
           </Reveal>
 
-          <Reveal className={styles.formPanel} delay={120}>
-            <div id="enquire" className={styles.formCard}>
-              <p className={styles.formEyebrow}>{formEyebrow}</p>
-              <h2 className={styles.formTitle}>{formTitle}</h2>
-              <p className={styles.formLede}>{formLede}</p>
-              <EnquiryForm />
-            </div>
-          </Reveal>
+          {graphic && (
+            <Reveal className={styles.graphicCol} delay={120}>
+              <Image
+                src="/images/hero/hero-illustration.jpg"
+                alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
+                width={1200}
+                height={1156}
+                className={styles.graphicSvg}
+                priority
+              />
+            </Reveal>
+          )}
         </div>
 
         {trustSlot && <Reveal delay={160}>{trustSlot}</Reveal>}

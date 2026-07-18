@@ -9,58 +9,28 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "content" "form";
   gap: clamp(2rem, 1.7rem + 1.5vw, 3.5rem);
-  align-items: start;
+  align-items: center;
 }
 
 @media (min-width: 960px) {
-  .layout {
-    grid-template-columns: 1.05fr 0.95fr;
-    grid-template-areas: "content form";
-  }
-}
-
-/* Homepage-only variant: illustration on the left, copy centred, form on
-   the right. Only kicks in on genuinely wide viewports so the content and
-   form columns below never get squeezed smaller than the default layout. */
-@media (min-width: 1280px) {
-  .layoutCentered {
-    grid-template-columns: 280px 1fr 480px;
-    grid-template-areas: "graphic content form";
-    column-gap: clamp(2rem, 1.5vw + 1.5rem, 3rem);
+  .layoutGraphic {
+    grid-template-columns: 1fr 1.1fr;
+    column-gap: clamp(2.5rem, 2rem + 2vw, 4.5rem);
   }
 }
 
 .content {
-  grid-area: content;
   padding-top: 0.5rem;
 }
 
 .graphicCol {
   display: none;
-  grid-area: graphic;
-  align-self: center;
 }
 
-/* Centering only makes sense once the graphic column is actually showing
-   (below 1280px this falls back to the plain two-column layout, unchanged). */
-@media (min-width: 1280px) {
+@media (min-width: 960px) {
   .graphicCol {
     display: block;
-  }
-
-  .contentCentered {
-    text-align: center;
-  }
-
-  .contentCentered .headline,
-  .contentCentered .lede {
-    margin-inline: auto;
-  }
-
-  .contentCentered .ctaRow {
-    justify-content: center;
   }
 }
 
@@ -70,24 +40,20 @@
   border-radius: var(--radius-lg);
 }
 
-.formPanel {
-  grid-area: form;
-}
-
 .eyebrowAccent {
   color: var(--accent-warm);
 }
 
 .headline {
   margin-top: 0.9rem;
-  max-width: 15ch;
+  max-width: 17ch;
 }
 
 .lede {
   margin-top: 1.25rem;
   font-size: var(--step-body-lg);
   color: var(--text-muted);
-  max-width: 46ch;
+  max-width: 50ch;
 }
 
 .ctaRow {
@@ -139,33 +105,4 @@
   color: var(--ink);
   flex-shrink: 0;
   margin-top: 0.15rem;
-}
-
-.formCard {
-  scroll-margin-top: 6rem;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  padding: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
-}
-
-.formEyebrow {
-  font-size: var(--step-caption);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--terracotta-deep);
-}
-
-.formTitle {
-  margin-top: 0.5rem;
-  font-size: var(--step-h4);
-}
-
-.formLede {
-  margin-top: 0.6rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-muted);
-  font-size: var(--step-small);
 }
