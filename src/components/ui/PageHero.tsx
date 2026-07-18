@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnquiryForm } from "@/components/home/EnquiryForm";
-import { HeroIllustration } from "@/components/blueprint/HeroIllustration";
 import { IconPhone } from "@/components/icons";
 import { business } from "@/lib/content";
 import styles from "./PageHero.module.css";
@@ -37,7 +37,14 @@ export function PageHero({
         <div className={[styles.layout, graphic && styles.layoutCentered].filter(Boolean).join(" ")}>
           {graphic && (
             <Reveal className={styles.graphicCol}>
-              <HeroIllustration className={styles.graphicSvg} />
+              <Image
+                src="/images/hero/hero-illustration.jpg"
+                alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
+                width={1200}
+                height={1156}
+                className={styles.graphicSvg}
+                priority
+              />
             </Reveal>
           )}
 

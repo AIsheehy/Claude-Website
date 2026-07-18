@@ -234,23 +234,6 @@ select {
   }
 }
 
-/* Gentle float used by a couple of small elements in the hero illustration
-   (magnifying glass, approval seal) — kept subtle so it reads as alive,
-   not distracting. */
-@keyframes hiFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-7px);
-  }
-}
-
-.hi-float {
-  animation: hiFloat 4.5s ease-in-out infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
