@@ -11,7 +11,7 @@ export function TrustList() {
         const Icon = iconMap[item.icon as keyof typeof iconMap];
         return (
           <li key={item.label} className={styles.trustItem}>
-            <Icon width={23} height={23} />
+            <Icon width={28} height={28} />
             <span>{item.label}</span>
           </li>
         );

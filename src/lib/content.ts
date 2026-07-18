@@ -135,50 +135,39 @@ export type ProcessStep = {
   step: string;
   title: string;
   description: string;
-  icon: "compass" | "ruler" | "drawing" | "document" | "send" | "chat" | "check";
+  icon: "compass" | "drawing" | "send" | "check";
 };
 
+// A simplified, layperson-friendly roadmap — the original 7 internal stages
+// grouped into 4 milestones a homeowner can actually picture themselves
+// walking through.
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Initial advice",
-    description: "Know what's achievable before you spend a penny.",
+    title: "Advice & survey",
+    description:
+      "We start with an honest assessment of what's achievable, then send a surveyor to measure your property accurately — the foundation everything else is built on.",
     icon: "compass",
   },
   {
     step: "02",
-    title: "Measured survey",
-    description: "An accurate site survey, done right first time.",
-    icon: "ruler",
-  },
-  {
-    step: "03",
-    title: "Planning drawings",
-    description: "Drawn to the standard your council expects.",
+    title: "Drawings & planning statement",
+    description:
+      "We prepare your proposed drawings and write the planning statement — the document that sets out, in the council's own terms, why your project should be approved.",
     icon: "drawing",
   },
   {
-    step: "04",
-    title: "Planning statement",
-    description: "The written policy case behind your application.",
-    icon: "document",
-  },
-  {
-    step: "05",
-    title: "Submission",
-    description: "Submitted correctly, first time, nothing missing.",
+    step: "03",
+    title: "Submission & council liaison",
+    description:
+      "Your application is submitted correctly the first time. From there, we handle every question the council raises directly, so you're never asked to explain your own project.",
     icon: "send",
   },
   {
-    step: "06",
-    title: "Council correspondence",
-    description: "Every query handled directly by us, not you.",
-    icon: "chat",
-  },
-  {
-    step: "07",
-    title: "Decision & beyond",
-    description: "Approved, and ready to move forward with confidence.",
+    step: "04",
+    title: "Decision & next steps",
+    description:
+      "Once a decision is issued, we talk you through exactly what it means — and if it's approved, what to do next to get your project moving.",
     icon: "check",
   },
 ];

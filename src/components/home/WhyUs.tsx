@@ -2,7 +2,18 @@ import { ReactNode } from "react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Differentiator, differentiators as defaultDifferentiators } from "@/lib/differentiators";
+import { IconLayers, IconArrowRight, IconChat, IconPin, IconClock, IconShield, IconHouse } from "@/components/icons";
 import styles from "./WhyUs.module.css";
+
+const iconMap = {
+  layers: IconLayers,
+  arrow: IconArrowRight,
+  chat: IconChat,
+  pin: IconPin,
+  clock: IconClock,
+  shield: IconShield,
+  house: IconHouse,
+};
 
 export function WhyUs({
   title = "Built to remove the risk, not just the paperwork.",
@@ -38,12 +49,14 @@ export function WhyUs({
         </div>
 
         <ol className={styles.list}>
-          {items.map((item, i) => (
+          {items.map((item, i) => {
+            const Icon = iconMap[item.icon];
+            return (
             <li key={item.title}>
               <Reveal delay={i * 80}>
                 <div className={[styles.row, dark && styles.rowOnDark].filter(Boolean).join(" ")}>
-                  <span className={[styles.index, dark && styles.indexOnDark].filter(Boolean).join(" ")}>
-                    {String(i + 1).padStart(2, "0")}
+                  <span className={[styles.iconWrap, dark && styles.iconWrapOnDark].filter(Boolean).join(" ")}>
+                    <Icon width={24} height={24} />
                   </span>
                   <div>
                     <h3 className={[styles.rowTitle, dark && styles.rowTitleOnDark].filter(Boolean).join(" ")}>
@@ -56,7 +69,8 @@ export function WhyUs({
                 </div>
               </Reveal>
             </li>
-          ))}
+            );
+          })}
         </ol>
       </div>
     </Section>
