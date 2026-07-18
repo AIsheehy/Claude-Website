@@ -55,6 +55,69 @@
   transform: scaleX(1);
 }
 
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navItem .navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.navChevron {
+  color: var(--stone);
+  transition: transform var(--duration-base) var(--ease);
+}
+
+.navItem:hover .navChevron,
+.navItem:focus-within .navChevron {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, 4px);
+  min-width: 260px;
+  padding: 0.6rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--duration-base) var(--ease), transform var(--duration-base) var(--ease),
+    visibility var(--duration-base);
+}
+
+.navItem:hover .dropdown,
+.navItem:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.dropdownLink {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: background var(--duration-base) var(--ease);
+}
+
+.dropdownLink:hover {
+  background: var(--terracotta-tint);
+}
+
 .actions {
   display: none;
   align-items: center;
@@ -135,6 +198,22 @@
 .mobileNavLink {
   font-size: 1.05rem;
   font-weight: 600;
+}
+
+.mobileSubNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+  margin-left: 0.9rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+}
+
+.mobileSubNavLink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--stone);
 }
 
 .mobilePhone {

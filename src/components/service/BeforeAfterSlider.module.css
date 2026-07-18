@@ -76,3 +76,29 @@
   outline: 2px solid var(--terracotta);
   outline-offset: 3px;
 }
+
+.expand {
+  all: unset;
+  position: absolute;
+  bottom: 0.9rem;
+  right: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(21, 33, 29, 0.72);
+  color: var(--paper);
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease);
+}
+
+.expand:hover {
+  background: rgba(21, 33, 29, 0.9);
+}
+
+.expand:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 2px;
+}

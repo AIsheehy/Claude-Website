@@ -93,3 +93,22 @@
   font-size: var(--step-caption);
   color: var(--text-muted);
 }
+
+/* Mobile-only: swap the stacked grid for a horizontally scrollable carousel
+   so reaching the CTA below doesn't mean scrolling past every review first.
+   Desktop (860px+) keeps the original 3-up grid untouched. */
+@media (max-width: 859px) {
+  .grid {
+    display: flex;
+    gap: 1.1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .card {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+  }
+}

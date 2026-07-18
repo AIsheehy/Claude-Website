@@ -131,6 +131,16 @@ export const navLinks = [
   { label: "FAQs", href: "/#faq" },
 ];
 
+// Dedicated service landing pages, surfaced as a dropdown under the header's
+// "Services" nav item. Each page reuses the same content template as
+// Planning Applications (the original service page) with its own hero copy.
+export const servicesPages = [
+  { label: "Planning Applications", href: "/planning-permission" },
+  { label: "Permitted Development Applications", href: "/permitted-development" },
+  { label: "Loft Conversion Drawings", href: "/loft-conversion-drawings" },
+  { label: "Extension Drawings", href: "/extension-drawings" },
+];
+
 export type ProcessStep = {
   step: string;
   title: string;

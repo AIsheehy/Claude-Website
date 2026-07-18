@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
+import { ImageZoom } from "@/components/ui/ImageZoom";
 import { BeforeAfterSlider } from "@/components/service/BeforeAfterSlider";
 import { IconCheck } from "@/components/icons";
 import { featuredCaseStudy as cs } from "@/lib/content";
@@ -31,29 +31,25 @@ export function FeaturedCaseStudy() {
 
         <div className={styles.proof}>
           <div className={styles.proofItem}>
-            <div className={styles.proofPhotoWrap}>
-              <Image
-                src={cs.drawings}
-                alt="Architectural elevation and floor plan drawings prepared for the application"
-                fill
-                sizes="(min-width: 720px) 50vw, 100vw"
-                className={styles.proofPhoto}
-              />
-            </div>
-            <p className={styles.proofCaption}>The drawings prepared for the application.</p>
+            <ImageZoom
+              src={cs.drawings}
+              alt="Architectural elevation and floor plan drawings prepared for the application"
+              sizes="(min-width: 720px) 50vw, 100vw"
+              wrapperClassName={styles.proofPhotoWrap}
+              imageClassName={styles.proofPhoto}
+            />
+            <p className={styles.proofCaption}>The drawings prepared for the application. Click to enlarge.</p>
           </div>
           <div className={styles.proofItem}>
-            <div className={styles.proofPhotoWrap}>
-              <Image
-                src={cs.approvalLetter}
-                alt="The council's decision notice granting full planning permission (applicant details redacted)"
-                fill
-                sizes="(min-width: 720px) 50vw, 100vw"
-                className={styles.proofPhoto}
-              />
-            </div>
+            <ImageZoom
+              src={cs.approvalLetter}
+              alt="The council's decision notice granting full planning permission (applicant details redacted)"
+              sizes="(min-width: 720px) 50vw, 100vw"
+              wrapperClassName={styles.proofPhotoWrap}
+              imageClassName={styles.proofPhoto}
+            />
             <p className={styles.proofCaption}>
-              The council&rsquo;s decision notice &mdash; applicant details redacted.
+              The council&rsquo;s decision notice &mdash; applicant details redacted. Click to enlarge.
             </p>
           </div>
         </div>

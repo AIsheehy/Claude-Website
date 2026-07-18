@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { PointerEvent as ReactPointerEvent, useCallback, useRef, useState } from "react";
+import { PointerEvent as ReactPointerEvent, useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { IconClose, IconExpand } from "@/components/icons";
+import lightbox from "@/components/ui/Lightbox.module.css";
 import styles from "./BeforeAfterSlider.module.css";
 
 export function BeforeAfterSlider({
@@ -17,7 +20,21 @@ export function BeforeAfterSlider({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50);
+  const [zoomOpen, setZoomOpen] = useState(false);
   const draggingRef = useRef(false);
+
+  useEffect(() => {
+    if (!zoomOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setZoomOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [zoomOpen]);
 
   const updateFromClientX = useCallback((clientX: number) => {
     const el = containerRef.current;
@@ -62,6 +79,7 @@ export function BeforeAfterSlider({
   };
 
   return (
+    <>
     <div
       ref={containerRef}
       className={styles.container}
@@ -118,6 +136,44 @@ export function BeforeAfterSlider({
           />
         </svg>
       </div>
+
+      <button
+        type="button"
+        className={styles.expand}
+        aria-label="Enlarge the after photo"
+        onPointerDown={(event) => event.stopPropagation()}
+        onClick={(event) => {
+          event.stopPropagation();
+          setZoomOpen(true);
+        }}
+      >
+        <IconExpand width={16} height={16} />
+      </button>
     </div>
+
+    {zoomOpen &&
+      createPortal(
+        <div
+          className={lightbox.overlay}
+          role="dialog"
+          aria-modal="true"
+          aria-label={afterAlt}
+          onClick={() => setZoomOpen(false)}
+        >
+          <button
+            type="button"
+            className={lightbox.close}
+            aria-label="Close enlarged image"
+            onClick={() => setZoomOpen(false)}
+          >
+            <IconClose width={20} height={20} />
+          </button>
+          <div className={lightbox.imageWrap} onClick={(event) => event.stopPropagation()}>
+            <Image src={after} alt={afterAlt} fill sizes="92vw" className={lightbox.enlarged} />
+          </div>
+        </div>,
+        document.body
+      )}
+    </>
   );
 }

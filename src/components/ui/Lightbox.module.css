@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.25rem, 1rem + 2vw, 3rem);
+  background: rgba(21, 33, 29, 0.92);
+  cursor: zoom-out;
+}
+
+.imageWrap {
+  position: relative;
+  width: min(92vw, 1100px);
+  height: min(85vh, 800px);
+  cursor: default;
+}
+
+.enlarged {
+  object-fit: contain;
+}
+
+.close {
+  all: unset;
+  position: absolute;
+  top: clamp(1rem, 0.8rem + 1vw, 1.75rem);
+  right: clamp(1rem, 0.8rem + 1vw, 1.75rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--paper);
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease);
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}

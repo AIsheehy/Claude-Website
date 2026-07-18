@@ -178,3 +178,19 @@ export function IconChat(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IconClose(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M6 6l12 12M18 6 6 18" />
+    </svg>
+  );
+}
+
+export function IconExpand(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" />
+    </svg>
+  );
+}

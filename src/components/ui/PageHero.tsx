@@ -62,8 +62,6 @@ export function PageHero({
                 {business.phone}
               </a>
             </div>
-
-            {trustSlot}
           </Reveal>
 
           <Reveal className={styles.formPanel} delay={120}>
@@ -75,6 +73,8 @@ export function PageHero({
             </div>
           </Reveal>
         </div>
+
+        {trustSlot && <Reveal delay={160}>{trustSlot}</Reveal>}
       </Container>
     </section>
   );

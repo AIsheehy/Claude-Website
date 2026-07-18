@@ -90,15 +90,6 @@
   .contentCentered .ctaRow {
     justify-content: center;
   }
-
-  .contentCentered .trustList {
-    margin-inline: auto;
-    justify-items: center;
-  }
-
-  .contentCentered .trustItem {
-    justify-content: center;
-  }
 }
 
 .graphicSvg {
