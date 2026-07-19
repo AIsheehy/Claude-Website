@@ -1,16 +1,17 @@
 import Script from "next/script";
 
-// The GA4 Measurement ID isn't a secret — it's visible in every page's
-// source once live — so it's hardcoded here rather than left dependent on
-// a Netlify env var. Still overridable via env var if the property ever
-// changes without a code push.
+// Neither ID is a secret — both are visible in every page's source once
+// live — so they're hardcoded here rather than left dependent on a Netlify
+// env var. Still overridable via env var if either property ever changes
+// without a code push.
 const DEFAULT_GA_MEASUREMENT_ID = "G-0JPLBDKJLT";
+const DEFAULT_GOOGLE_ADS_ID = "AW-17493643073";
 
 // Renders nothing until the corresponding env var is set, so an unconfigured
 // deploy never ships a broken/empty tracking snippet.
 export function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || DEFAULT_GA_MEASUREMENT_ID;
-  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || DEFAULT_GOOGLE_ADS_ID;
   const hotjarId = process.env.NEXT_PUBLIC_HOTJAR_ID;
 
   // GA4 and Google Ads both run on the same gtag.js loader — load it once

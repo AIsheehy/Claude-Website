@@ -4,14 +4,20 @@ declare global {
   }
 }
 
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
-const GOOGLE_ADS_CONVERSION_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+// Neither value is a secret, so both are hardcoded here (matching
+// Analytics.tsx) rather than left dependent on a Netlify env var — still
+// overridable via env var if the conversion action ever changes.
+const DEFAULT_GOOGLE_ADS_ID = "AW-17493643073";
+const DEFAULT_GOOGLE_ADS_CONVERSION_LABEL = "lolZCMP3l9McEMGez5VB";
+
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || DEFAULT_GOOGLE_ADS_ID;
+const GOOGLE_ADS_CONVERSION_LABEL =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL;
 
 // Fires on every successful enquiry-form submission: a GA4 lead event
 // (mark "generate_lead" as a key event in GA4 to count it as a conversion
-// there), plus a Google Ads conversion if those two env vars are set.
-// No-ops quietly if gtag never loaded (ad blockers, cookie consent, or the
-// env vars simply aren't configured yet).
+// there), plus a Google Ads "Submit lead form" conversion.
+// No-ops quietly if gtag never loaded (ad blockers, cookie consent, etc).
 export function trackFormSubmission() {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
 
