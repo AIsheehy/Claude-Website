@@ -6,13 +6,14 @@ import Script from "next/script";
 // without a code push.
 const DEFAULT_GA_MEASUREMENT_ID = "G-0JPLBDKJLT";
 const DEFAULT_GOOGLE_ADS_ID = "AW-17493643073";
+const DEFAULT_HOTJAR_ID = "6749628";
 
 // Renders nothing until the corresponding env var is set, so an unconfigured
 // deploy never ships a broken/empty tracking snippet.
 export function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || DEFAULT_GA_MEASUREMENT_ID;
   const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || DEFAULT_GOOGLE_ADS_ID;
-  const hotjarId = process.env.NEXT_PUBLIC_HOTJAR_ID;
+  const hotjarId = process.env.NEXT_PUBLIC_HOTJAR_ID || DEFAULT_HOTJAR_ID;
 
   // GA4 and Google Ads both run on the same gtag.js loader — load it once
   // (using whichever ID is present) and issue a separate `config` call per
