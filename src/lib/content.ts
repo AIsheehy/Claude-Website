@@ -292,8 +292,23 @@ export const workProjects: WorkProject[] = [
     summary:
       "Full design and planning application for a new balcony on the rear elevation, giving the client valuable extra outdoor space without compromising the character of the property — prepared end-to-end from initial concept through to submission.",
     outcome: "Full planning application prepared and submitted.",
-    hero: { type: "placeholder" },
-    gallery: [{ caption: "Drawings — photos coming soon." }, { caption: "Photos coming soon." }],
+    hero: {
+      type: "image",
+      src: "/images/case-studies/hertfordshire-elevations.jpg",
+      alt: "Proposed elevations showing the new rear steel balcony",
+    },
+    gallery: [
+      {
+        src: "/images/case-studies/hertfordshire-floorplan.jpg",
+        alt: "Proposed floor plans for the balcony application",
+        caption: "The proposed floor plans prepared for the application. Click to enlarge.",
+      },
+      {
+        src: "/images/case-studies/hertfordshire-roofplan.jpg",
+        alt: "Proposed roof plans for the balcony application",
+        caption: "The proposed roof plans prepared for the application. Click to enlarge.",
+      },
+    ],
   },
   {
     // Same real project as the homepage's featured case study — copy

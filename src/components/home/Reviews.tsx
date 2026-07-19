@@ -29,7 +29,7 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
 
       <div className={styles.grid}>
         {testimonials.map((t, i) => (
-          <Reveal key={t.name} delay={i * 90}>
+          <Reveal key={t.name} delay={i * 90} className={styles.revealCard}>
             <article className={styles.card}>
               <div className={styles.imageWrap}>
                 <Image

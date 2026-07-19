@@ -3,6 +3,7 @@ import { display, body } from "@/lib/fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
+import { Analytics } from "@/components/analytics/Analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <MobileStickyCta />
+        <Analytics />
       </body>
     </html>
   );

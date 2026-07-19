@@ -146,6 +146,17 @@
     border-color: var(--border-on-dark);
     background: var(--ink-soft);
   }
+
+  /* The reveal-on-scroll animation is designed for vertical page scroll.
+     Inside a horizontally swiped carousel, IntersectionObserver re-fires as
+     each card is dragged into the (horizontally) clipped viewport area,
+     making cards visibly lift/fade mid-swipe. Neutralise it here so the
+     carousel feels solid instead of "loose". */
+  .revealCard {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* The sticky intro column is a desktop-only trick (pins the left column
