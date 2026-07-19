@@ -66,6 +66,10 @@
   padding-bottom: 0;
 }
 
+.revealCard {
+  height: 100%;
+}
+
 .iconWrap {
   flex-shrink: 0;
   display: inline-flex;
@@ -141,5 +145,16 @@
   .list li:last-child .rowOnDark {
     border-color: var(--border-on-dark);
     background: var(--ink-soft);
+  }
+}
+
+/* The sticky intro column is a desktop-only trick (pins the left column
+   while the taller right column scrolls past it). Below 900px the layout
+   is a single stack, so sticky here just makes the heading float oddly
+   mid-scroll — disable it. */
+@media (max-width: 899px) {
+  .intro {
+    position: static;
+    top: auto;
   }
 }

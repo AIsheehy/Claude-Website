@@ -2,6 +2,22 @@
   background: var(--surface-alt);
 }
 
+.intro {
+  max-width: 640px;
+  margin-top: -0.5rem;
+  margin-bottom: var(--space-block);
+}
+
+.lede {
+  font-size: var(--step-body-lg);
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.lede + .lede {
+  margin-top: 1rem;
+}
+
 .groups {
   display: grid;
   grid-template-columns: 1fr;

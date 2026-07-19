@@ -58,3 +58,40 @@
   font-size: var(--step-small);
   color: var(--text-muted);
 }
+
+/* Mobile: shrink everything so all 3 badges fit on one row instead of
+   wrapping. */
+@media (max-width: 640px) {
+  .row {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+
+  .item {
+    max-width: none;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .iconWrap {
+    width: 34px;
+    height: 34px;
+  }
+
+  .iconWrap svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .value {
+    margin-top: 0.5rem;
+    font-size: var(--step-small);
+  }
+
+  .label {
+    margin-top: 0.15rem;
+    font-size: 0.6875rem;
+    line-height: 1.3;
+  }
+}

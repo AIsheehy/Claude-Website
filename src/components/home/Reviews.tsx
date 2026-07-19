@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
 import { IconCheck } from "@/components/icons";
 import { testimonials } from "@/lib/content";
 import styles from "./Reviews.module.css";
@@ -55,6 +56,12 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
             </article>
           </Reveal>
         ))}
+      </div>
+
+      <div className={styles.moreWork}>
+        <Button href="/our-work" variant="secondary">
+          See more of our work here
+        </Button>
       </div>
     </Section>
   );

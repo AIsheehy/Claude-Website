@@ -51,7 +51,7 @@ export function WhyUs({
             const Icon = iconMap[item.icon];
             return (
             <li key={item.title}>
-              <Reveal delay={i * 80}>
+              <Reveal delay={i * 80} className={styles.revealCard}>
                 <div className={[styles.row, dark && styles.rowOnDark].filter(Boolean).join(" ")}>
                   <span className={[styles.iconWrap, dark && styles.iconWrapOnDark].filter(Boolean).join(" ")}>
                     <Icon width={24} height={24} />

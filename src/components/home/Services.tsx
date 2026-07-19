@@ -32,17 +32,19 @@ export function Services() {
       <SectionHead
         eyebrow="What we do"
         title="Most homeowners start the process without knowing one critical thing: Will this actually get approved?"
-        lede={
-          <>
-            And that is what we aim to establish from the very start. We don&rsquo;t think
-            planning permission should ever feel like a gamble, and we build out every
-            client&rsquo;s application around three principles: a clear planning strategy from
-            day one, a design that aligns with policy (not fights against it), and a proposal
-            that is actually viable in the real world. So whatever stage your project is at,
-            we&rsquo;re here to help get it started.
-          </>
-        }
       />
+      <div className={styles.intro}>
+        <p className={styles.lede}>
+          And that is what we aim to establish from the very start. We don&rsquo;t think
+          planning permission should ever feel like a gamble.
+        </p>
+        <p className={styles.lede}>
+          We build out every client&rsquo;s application around three principles: a clear
+          planning strategy from day one, a design that aligns with policy (not fights against
+          it), and a proposal that is actually viable in the real world. So whatever stage your
+          project is at, we&rsquo;re here to help get it started.
+        </p>
+      </div>
 
       {/* Desktop: services grouped into 3 columns */}
       <div className={styles.groups}>

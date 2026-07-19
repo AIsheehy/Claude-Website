@@ -42,29 +42,29 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
               </li>
             ))}
           </ul>
-
-          <div className={[styles.directList, beige && styles.directListBeige].filter(Boolean).join(" ")}>
-            <a
-              href={business.phoneHref}
-              className={[styles.directItem, beige && styles.directItemBeige].filter(Boolean).join(" ")}
-            >
-              <IconPhone width={18} height={18} />
-              {business.phone}
-            </a>
-            <a
-              href={`mailto:${business.email}`}
-              className={[styles.directItem, beige && styles.directItemBeige].filter(Boolean).join(" ")}
-            >
-              <IconMail width={18} height={18} />
-              {business.email}
-            </a>
-          </div>
         </div>
 
         <div id="enquire" className={styles.formCard}>
           <p className={styles.formEyebrow}>No obligation &middot; no pressure</p>
           <h3 className={styles.formTitle}>Get your free assessment</h3>
           <EnquiryForm compact />
+        </div>
+
+        <div className={[styles.directList, beige && styles.directListBeige].filter(Boolean).join(" ")}>
+          <a
+            href={business.phoneHref}
+            className={[styles.directItem, beige && styles.directItemBeige].filter(Boolean).join(" ")}
+          >
+            <IconPhone width={18} height={18} />
+            {business.phone}
+          </a>
+          <a
+            href={`mailto:${business.email}`}
+            className={[styles.directItem, beige && styles.directItemBeige].filter(Boolean).join(" ")}
+          >
+            <IconMail width={18} height={18} />
+            {business.email}
+          </a>
         </div>
       </Reveal>
     </Section>

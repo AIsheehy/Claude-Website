@@ -127,6 +127,7 @@ export const stats = [
 export const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "How it works", href: "/#process" },
+  { label: "Our Work", href: "/our-work" },
   { label: "Reviews", href: "/#reviews" },
   { label: "Contact", href: "/#contact" },
 ];
@@ -233,35 +234,95 @@ export const featuredCaseStudy = {
   approvalLetter: "/images/case-studies/approval-letter.jpg",
 };
 
-export type CaseStudy = {
+// Content for the dedicated "Our Work" page (/our-work) — three full
+// project write-ups. `gallery` entries without a `src` are placeholders for
+// projects whose photos haven't been supplied yet.
+export type WorkGalleryItem =
+  | { src: string; alt: string; caption: string }
+  | { src?: undefined; caption: string };
+
+export type WorkProject = {
+  slug: string;
   title: string;
   location: string;
   summary: string;
   outcome: string;
-  image?: string;
-  imageCaption?: string;
+  hero:
+    | { type: "beforeAfter"; before: string; after: string; beforeAlt: string; afterAlt: string }
+    | { type: "image"; src: string; alt: string }
+    | { type: "placeholder" };
+  gallery: WorkGalleryItem[];
 };
 
-export const caseStudies: CaseStudy[] = [
+export const workProjects: WorkProject[] = [
   {
-    // Real project — 21 Eveline Road, CR4 3LF.
-    title: "Rear extension & internal reconfiguration",
-    location: "South London",
+    // Real project — 21 Eveline Road, Morden. Decision notice on file with
+    // the London Borough of Merton.
+    slug: "rear-extension-south-london",
+    title: "Rear Extension South London",
+    location: "Morden, London Borough of Merton",
     summary:
-      "A single-storey rear extension with structural wall removal and a full kitchen reconfiguration, prepared end-to-end from survey through to submission.",
-    outcome: "Full planning application prepared and submitted.",
-    image: "/images/case-studies/eveline-road-elevations.jpg",
-    imageCaption: "The proposed elevations prepared for the application.",
+      "A single-storey rear and side extension with a new front porch, an additional first-floor window and a reconfigured garage parapet wall — designed and prepared end-to-end, from the initial survey through to a granted decision.",
+    outcome: "Full Planning Permission Granted by the London Borough of Merton.",
+    hero: {
+      type: "image",
+      src: "/images/case-studies/south-london-elevations.jpg",
+      alt: "Proposed elevations for the rear and side extension",
+    },
+    gallery: [
+      {
+        src: "/images/case-studies/south-london-floorplan.jpg",
+        alt: "Proposed floor plans for the rear and side extension",
+        caption: "The proposed floor plans prepared for the application. Click to enlarge.",
+      },
+      {
+        src: "/images/case-studies/south-london-decision.jpg",
+        alt: "The council's decision notice granting full planning permission (applicant details redacted)",
+        caption: "The council's decision notice — applicant details redacted. Click to enlarge.",
+      },
+    ],
   },
   {
-    // Real project — 14 Turvin Crescent, CM20 2FW.
-    title: "Rear balcony & new door set",
-    location: "Turvin Crescent, Harlow",
+    // No decision evidence on file yet for this one, so — consistent with
+    // ASA guidance — the outcome language stays neutral rather than
+    // claiming approval.
+    slug: "hertfordshire-balcony-design",
+    title: "Hertfordshire Balcony Design",
+    location: "Hertfordshire",
     summary:
-      "Addition of a steel-framed rear balcony, supported on ground-level columns, together with a new door set replacing the existing first-floor window — prepared and submitted on the client's behalf.",
+      "Full design and planning application for a new balcony on the rear elevation, giving the client valuable extra outdoor space without compromising the character of the property — prepared end-to-end from initial concept through to submission.",
     outcome: "Full planning application prepared and submitted.",
-    image: "/images/case-studies/turvin-crescent-elevations.jpg",
-    imageCaption: "The proposed elevations prepared for the application.",
+    hero: { type: "placeholder" },
+    gallery: [{ caption: "Drawings — photos coming soon." }, { caption: "Photos coming soon." }],
+  },
+  {
+    // Same real project as the homepage's featured case study — copy
+    // adapted for this page rather than duplicated verbatim.
+    slug: "upfield",
+    title: "Upfield",
+    location: "Horley, Surrey",
+    summary:
+      "A full refurbishment of a 1900s detached home, including new rear extensions, replacement windows and a new roof — prepared and managed end-to-end, from the initial survey through to a granted decision.",
+    outcome: "Full Planning Permission Granted by Reigate and Banstead Council.",
+    hero: {
+      type: "beforeAfter",
+      before: "/images/case-studies/surrey-before.jpg",
+      after: "/images/case-studies/surrey-after.jpg",
+      beforeAlt: "The property before works began",
+      afterAlt: "The completed extension and refurbishment",
+    },
+    gallery: [
+      {
+        src: "/images/case-studies/surrey-drawings.jpg",
+        alt: "Architectural elevation and floor plan drawings prepared for the application",
+        caption: "The drawings prepared for the application. Click to enlarge.",
+      },
+      {
+        src: "/images/case-studies/approval-letter.jpg",
+        alt: "The council's decision notice granting full planning permission (applicant details redacted)",
+        caption: "The council's decision notice — applicant details redacted. Click to enlarge.",
+      },
+    ],
   },
 ];
 
@@ -307,7 +368,6 @@ export const aboutCopy = {
   eyebrow: "About us",
   title: "Planning permission shouldn't feel like a gamble.",
   paragraphs: [
-    "Most homeowners only submit one planning application in their lifetime. They shouldn't have to become planning experts to get it right.",
     "I started Form & Function London to make the process simpler, clearer and more transparent. Every project is built around honest advice, careful preparation and a single point of contact from the first conversation through to the council's decision.",
   ],
 };

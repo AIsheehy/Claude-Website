@@ -1,6 +1,10 @@
 .layout {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    "copy"
+    "form"
+    "contact";
   gap: 2.5rem;
   align-items: start;
 }
@@ -8,8 +12,15 @@
 @media (min-width: 960px) {
   .layout {
     grid-template-columns: 1fr 0.95fr;
+    grid-template-areas:
+      "copy form"
+      "contact form";
     gap: 4rem;
   }
+}
+
+.copy {
+  grid-area: copy;
 }
 
 .beige {
@@ -96,10 +107,10 @@
 }
 
 .directList {
+  grid-area: contact;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  margin-top: 2rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--border-on-dark);
 }
@@ -137,6 +148,7 @@
 }
 
 .formCard {
+  grid-area: form;
   scroll-margin-top: 6rem;
   background: var(--white);
   border-radius: var(--radius-lg);
