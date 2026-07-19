@@ -10,13 +10,14 @@ export const metadata: Metadata = {
 export default function PlanningPermissionPage() {
   return (
     <ServicePageContent
-      eyebrow="Planning permission applications"
+      eyebrow="Planning Applications handled from enquiry to approval."
       headline="Secure planning permission, without the fear of refusal, delays or costly mistakes."
       lede={
         <>
-          A complete, done-for-you service &mdash; from initial advice to drawings to
-          submission &mdash; so you can move forward with clarity, confidence and the
-          strongest possible chance of approval.
+          A complete, done-for-you service &mdash; from initial advice to full submission.
+          We structure your application around what planners are actually looking for so
+          you can move forward with clarity, confidence and the strongest possible chance
+          of approval.
         </>
       }
     />
