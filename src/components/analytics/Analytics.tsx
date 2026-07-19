@@ -4,22 +4,31 @@ import Script from "next/script";
 // deploy never ships a broken/empty tracking snippet.
 export function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
   const hotjarId = process.env.NEXT_PUBLIC_HOTJAR_ID;
+
+  // GA4 and Google Ads both run on the same gtag.js loader — load it once
+  // (using whichever ID is present) and issue a separate `config` call per
+  // ID that's actually configured. trackFormSubmission() in
+  // src/lib/analytics.ts fires the actual lead/conversion events later.
+  const gtagLoaderId = gaId || googleAdsId;
 
   return (
     <>
-      {gaId && (
+      {gtagLoaderId && (
         <>
           <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtagLoaderId}`}
             strategy="afterInteractive"
           />
-          <Script id="ga4-init" strategy="afterInteractive">
+          <Script id="gtag-init" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
               gtag('js', new Date());
-              gtag('config', '${gaId}');
+              ${gaId ? `gtag('config', '${gaId}');` : ""}
+              ${googleAdsId && googleAdsId !== gaId ? `gtag('config', '${googleAdsId}');` : ""}
             `}
           </Script>
         </>

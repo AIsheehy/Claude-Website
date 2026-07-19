@@ -5,6 +5,7 @@ import { Field, controlClassName } from "@/components/ui/Field";
 import { Button } from "@/components/ui/Button";
 import { IconCheck } from "@/components/icons";
 import { services } from "@/lib/content";
+import { trackFormSubmission } from "@/lib/analytics";
 import styles from "./EnquiryForm.module.css";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -27,6 +28,7 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
       });
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
+      trackFormSubmission();
     } catch {
       setStatus("error");
     }
