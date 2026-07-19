@@ -95,15 +95,16 @@ export const services: Service[] = [
   },
 ];
 
-// Inferred from the real office address (Sutton) and client locations in
-// testimonials (SW London, Surrey) — confirm the exact coverage list.
+// London, then every traditional Home County — matches the "London and Home
+// Counties" coverage claimed throughout the rest of the site.
 export const boroughs = [
-  "Sutton",
-  "Croydon",
-  "Kingston upon Thames",
-  "Merton",
+  "London",
   "Surrey",
-  "South West London",
+  "Kent",
+  "Essex",
+  "Hertfordshire",
+  "Buckinghamshire",
+  "Berkshire",
 ];
 
 // Qualitative trust markers used on the homepage hero.
@@ -196,18 +197,18 @@ export type Testimonial = {
 // plain supporting sentence, rather than one long undifferentiated quote.
 export const testimonials: Testimonial[] = [
   {
-    quote: "Honest, knowledgeable and detail-focused from start to finish.",
-    supporting: "We'd happily use Form & Function again for our loft conversion.",
-    name: "Harry",
-    context: "Rear extension · SW London",
-    image: "/images/testimonials/harry.jpg",
-  },
-  {
     quote: "Our planning application was approved, and the whole process felt straightforward.",
     supporting: "Michael guided us through every stage and made everything easy to understand.",
     name: "Tasha",
     context: "Rear extension · Surrey",
     image: "/images/testimonials/tasha.jpg",
+  },
+  {
+    quote: "Honest, knowledgeable and detail-focused from start to finish.",
+    supporting: "We'd happily use Form & Function again for our loft conversion.",
+    name: "Harry",
+    context: "Rear extension · SW London",
+    image: "/images/testimonials/harry.jpg",
   },
   {
     quote: "Every question was answered quickly, making the whole process far less stressful.",

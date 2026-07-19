@@ -49,7 +49,7 @@ export function Header() {
               <IconPhone width={16} height={16} />
               <span>{business.phone}</span>
             </a>
-            <Button href="/#enquire" variant="primary" className={styles.cta}>
+            <Button href="#enquire" variant="primary" className={styles.cta}>
               Get in Touch
             </Button>
           </div>
@@ -98,7 +98,7 @@ export function Header() {
                 <IconPhone width={18} height={18} />
                 {business.phone}
               </a>
-              <Button href="/#enquire" variant="primary" className={styles.mobileCta}>
+              <Button href="#enquire" variant="primary" className={styles.mobileCta}>
                 Get a Free Assessment
               </Button>
             </nav>
