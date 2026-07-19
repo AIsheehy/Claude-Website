@@ -6,33 +6,33 @@ export type Differentiator = {
 
 export const differentiators: Differentiator[] = [
   {
-    title: "One team, not a chain of subcontractors",
+    title: "One team from start to finish.",
     description:
-      "Your survey, drawings, planning statement and submission are handled by the same team throughout — not passed between separate firms who've never spoken to each other.",
+      "You'll deal with the same people throughout your project. Your survey, drawings, planning statement and submission are all handled together—not passed between separate companies who have never worked together.",
     icon: "layers",
   },
   {
-    title: "A straight answer before you commit",
+    title: "Honest advice before you spend a penny on drawings.",
     description:
-      "If we don't think a scheme is likely to be approved, we'll tell you at the advice stage — before you've spent anything on drawings, not after.",
+      "If we don't believe your proposal has a realistic chance of approval, we'll tell you at the advice stage—not after you've invested time and money.",
     icon: "arrow",
   },
   {
-    title: "Every council query, answered directly",
+    title: "Stress Free Correspondence",
     description:
-      "When a planning officer has a question, it comes to us and we deal with it — you're never relaying messages between a case officer and a project manager.",
+      "Planning officers speak directly with us. We deal with every query, request and amendment, keeping your application moving and keeping you updated every step of the way while you get on with your life.",
     icon: "chat",
   },
   {
-    title: "Local policy, council by council",
+    title: "Everything tailored to you",
     description:
-      "Planning policy is interpreted differently across every borough and Home Counties council we work in. We work within the specifics of your local authority, not a generic national playbook.",
+      "What works in Bromley may not work in Barking. Every application is prepared around the policies and priorities of your local authority in line with your goals—not a generic national template.",
     icon: "pin",
   },
   {
-    title: "Speed, without cutting corners",
+    title: "Fast where it matters. Thorough where it counts.",
     description:
-      "A measured survey within 7 days, a full application submitted within 14, and unlimited revisions and support along the way — at no extra cost.",
+      "Measured survey within 7 days. Application submitted within 14. Unlimited revisions, updates and support included throughout.",
     icon: "clock",
   },
 ];

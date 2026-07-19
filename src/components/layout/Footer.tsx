@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "./Logo";
 import { IconPhone, IconMail, IconPin } from "@/components/icons";
@@ -42,9 +41,7 @@ export function Footer() {
             <p className={styles.colHeading}>Services</p>
             <ul className={styles.linkList}>
               {services.map((s) => (
-                <li key={s.slug}>
-                  <Link href={`/${s.slug}`}>{s.shortName}</Link>
-                </li>
+                <li key={s.slug}>{s.shortName}</li>
               ))}
             </ul>
           </div>

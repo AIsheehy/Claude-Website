@@ -37,7 +37,7 @@
   border-radius: var(--radius-xs);
   font-weight: 600;
   font-size: var(--step-small);
-  background: var(--terracotta);
+  background: var(--ink-soft);
   color: var(--white);
 }
 

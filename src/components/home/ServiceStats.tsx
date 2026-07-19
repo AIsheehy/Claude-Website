@@ -7,7 +7,7 @@ import { IconCheck, IconClock, IconStar } from "@/components/icons";
 import styles from "./ServiceStats.module.css";
 
 const items = [
-  { icon: IconCheck, value: 98, suffix: "%", label: "Application approval rate" },
+  { icon: IconCheck, value: 100, suffix: "%", label: "PI Insurance Coverage" },
   { icon: IconClock, value: 14, suffix: " Days", label: "From survey to submission" },
   { icon: IconStar, value: 5, suffix: "★", label: "Rating on Google" },
 ];

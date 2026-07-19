@@ -22,7 +22,7 @@ export default function Home() {
         tone="dark"
       />
       <Reviews tightBottom />
-      <InlineCta text="Ready for the same result? Let's talk about your project." />
+      <InlineCta text="Ready for the same result? Let's talk about your project." ctaLabel="Contact Us" />
       <CaseStudies />
       <WhyUs dark tightBottom />
       <InlineCta

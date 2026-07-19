@@ -93,7 +93,7 @@ export function BeforeAfterSlider({
           src={after}
           alt={afterAlt}
           fill
-          sizes="(min-width: 720px) 90vw, 100vw"
+          sizes="(min-width: 900px) 880px, 100vw"
           className={styles.image}
           draggable={false}
           priority
@@ -106,7 +106,7 @@ export function BeforeAfterSlider({
           src={before}
           alt={beforeAlt}
           fill
-          sizes="(min-width: 720px) 90vw, 100vw"
+          sizes="(min-width: 900px) 880px, 100vw"
           className={styles.image}
           draggable={false}
         />

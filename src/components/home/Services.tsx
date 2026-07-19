@@ -31,9 +31,23 @@ export function Services() {
     <Section id="services" tightBottom className={styles.section}>
       <SectionHead
         eyebrow="What we do"
-        title="Every stage of a planning application, under one roof."
-        lede="From a five-minute question to full council submission — pick where you're starting from."
+        title="Most homeowners start the process without knowing one critical thing: Will this actually get approved?"
       />
+      <div className={styles.intro}>
+        <p className={styles.lede}>
+          Planning permission shouldn&rsquo;t feel like a gamble. Every successful application
+          comes down to three things:
+        </p>
+        <ul className={styles.ledeList}>
+          <li>A clear planning strategy from day one</li>
+          <li>A design that aligns with policy (not fights against it)</li>
+          <li>A proposal that is actually viable in the real world</li>
+        </ul>
+        <p className={styles.lede}>
+          We help you from whatever stage you are at and work to these principles. So when you
+          submit, it&rsquo;s not a guess &mdash; it&rsquo;s a calculated step toward approval.
+        </p>
+      </div>
 
       <div className={styles.groups}>
         {groups.map((group, gi) => (
@@ -47,7 +61,7 @@ export function Services() {
                     const Icon = iconMap[service.icon];
                     return (
                       <li key={service.slug}>
-                        <Link href={`/${service.slug}`} className={styles.row}>
+                        <Link href="#enquire" className={styles.row}>
                           <span className={styles.iconWrap}>
                             <Icon width={18} height={18} />
                           </span>

@@ -19,18 +19,18 @@ export function FeaturedCaseStudy() {
           </span>
         </div>
 
-        <div className={styles.beforeAfter}>
-          <BeforeAfterSlider
-            before={cs.before}
-            after={cs.after}
-            beforeAlt="The property before works began"
-            afterAlt="The completed extension and refurbishment"
-          />
-          <p className={styles.dragHint}>Drag to compare</p>
-        </div>
+        <div className={styles.items}>
+          <div className={styles.item}>
+            <BeforeAfterSlider
+              before={cs.before}
+              after={cs.after}
+              beforeAlt="The property before works began"
+              afterAlt="The completed extension and refurbishment"
+            />
+            <p className={styles.dragHint}>Drag to compare</p>
+          </div>
 
-        <div className={styles.proof}>
-          <div className={styles.proofItem}>
+          <div className={styles.item}>
             <ImageZoom
               src={cs.drawings}
               alt="Architectural elevation and floor plan drawings prepared for the application"
@@ -40,7 +40,7 @@ export function FeaturedCaseStudy() {
             />
             <p className={styles.proofCaption}>The drawings prepared for the application. Click to enlarge.</p>
           </div>
-          <div className={styles.proofItem}>
+          <div className={styles.item}>
             <ImageZoom
               src={cs.approvalLetter}
               alt="The council's decision notice granting full planning permission (applicant details redacted)"

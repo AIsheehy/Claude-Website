@@ -108,17 +108,17 @@ export const boroughs = [
 
 // Qualitative trust markers used on the homepage hero.
 export const trustMarkers = [
-  { icon: "shield", label: "Professional indemnity insured" },
-  { icon: "clock", label: "14 days from survey to submission" },
-  { icon: "pin", label: "London & Home Counties coverage" },
-  { icon: "star", label: "5-star rated on Google" },
+  { icon: "shield", label: "Professional Indemnity Insured" },
+  { icon: "clock", label: "14 Days From Survey To Submission" },
+  { icon: "pin", label: "London & Home Counties Coverage" },
+  { icon: "star", label: "5-Star Rated On Google" },
 ];
 
 // Numeric claims from the existing site — reconfirm these are still current
 // before publishing; ASA guidance requires stats like this to be true and
 // substantiable, not just carried over.
 export const stats = [
-  { value: "98%", label: "Application approval rate" },
+  { value: "100%", label: "PI Insurance Coverage" },
   { value: "<14 days", label: "Applications submitted from instruction" },
   { value: "Fixed price", label: "Money-back guarantee" },
   { value: "5★", label: "Rated on Google" },
@@ -154,30 +154,30 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Advice and survey",
+    title: "Advice & Measured Survey",
     description:
-      "We start with an honest assessment of what's achievable, then send a surveyor to measure your property accurately — the foundation everything else is built on.",
+      "Every successful application starts with the right strategy. We assess what's realistically achievable before carrying out a detailed measured survey of your property, giving your project the strongest possible foundation.",
     icon: "compass",
   },
   {
     step: "02",
-    title: "Drawings and planning statement",
+    title: "Drawings & Planning Statement",
     description:
-      "We prepare your proposed drawings and write the planning statement — the document that sets out, in the council's own terms, why your project should be approved.",
+      "We prepare clear, accurate drawings alongside a planning statement that explains your proposal in the language planning officers expect to see—maximising its chance of approval.",
     icon: "drawing",
   },
   {
     step: "03",
-    title: "Submission and council liaison",
+    title: "Submission & Council Liaison",
     description:
-      "Your application is submitted correctly the first time. From there, we handle every question the council raises directly, so you're never asked to explain your own project.",
+      "Your application is submitted correctly the first time. We then manage all communication with the council on your behalf, answering questions and keeping your application moving.",
     icon: "send",
   },
   {
     step: "04",
-    title: "Decision and next steps",
+    title: "Decision & Next Steps",
     description:
-      "Once a decision is issued, we talk you through exactly what it means — and if it's approved, what to do next to get your project moving.",
+      "Once a decision is issued, we'll explain exactly what it means and guide you through the next steps, whether that's starting your project or dealing with planning conditions.",
     icon: "check",
   },
 ];
@@ -226,7 +226,7 @@ export const featuredCaseStudy = {
   location: "Surrey",
   summary:
     "A substantial refurbishment including new rear extensions, window replacements and a new roof — prepared and managed end-to-end, from survey through to a granted decision.",
-  outcome: "Full planning permission granted",
+  outcome: "Full Planning Permission Granted by Reigate and Banstead Council.",
   before: "/images/case-studies/surrey-before.jpg",
   after: "/images/case-studies/surrey-after.jpg",
   drawings: "/images/case-studies/surrey-drawings.jpg",
@@ -307,7 +307,7 @@ export const aboutCopy = {
   eyebrow: "About us",
   title: "Planning permission shouldn't feel like a gamble.",
   paragraphs: [
-    "Form & Function London exists because most people who need planning permission have never needed it before, and don't plan to again. You shouldn't have to become an expert in planning policy to extend your home or invest in a property with confidence.",
-    "We handle the process end-to-end — advice, survey, drawings, planning statement, submission and every piece of council correspondence — so the only thing you have to do is tell us what you want to achieve.",
+    "Most homeowners only submit one planning application in their lifetime. They shouldn't have to become planning experts to get it right.",
+    "I started Form & Function London to make the process simpler, clearer and more transparent. Every project is built around honest advice, careful preparation and a single point of contact from the first conversation through to the council's decision.",
   ],
 };

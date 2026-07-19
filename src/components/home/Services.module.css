@@ -2,6 +2,38 @@
   background: var(--surface-alt);
 }
 
+.intro {
+  max-width: 640px;
+  margin-top: -0.5rem;
+  margin-bottom: var(--space-block);
+}
+
+.lede {
+  font-size: var(--step-body-lg);
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.lede + .ledeList {
+  margin-top: 0.75rem;
+}
+
+.ledeList {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  font-size: var(--step-body-lg);
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.ledeList li {
+  list-style: disc;
+}
+
+.ledeList li + li {
+  margin-top: 0.35rem;
+}
+
 .groups {
   display: grid;
   grid-template-columns: 1fr;
@@ -21,6 +53,25 @@
   border-radius: var(--radius-md);
   padding: 1.5rem;
   height: 100%;
+}
+
+/* Mobile-only: swap the stacked groups for a horizontally scrollable
+   carousel, matching the pattern used for Reviews. Desktop (860px+) keeps
+   the original 3-up grid untouched. */
+@media (max-width: 859px) {
+  .groups {
+    display: flex;
+    gap: 1.1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .group {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
 }
 
 .groupTitle {

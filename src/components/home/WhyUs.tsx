@@ -14,8 +14,8 @@ const iconMap = {
 };
 
 export function WhyUs({
-  title = "Built to remove the risk, not just the paperwork.",
-  lede = "Most of what people fear about planning permission comes from not knowing who's actually handling their case, or whether the advice they're getting is honest. Here's how we deal with both.",
+  title = "Planning permission is complicated. Working with us isn't.",
+  lede = "Most homeowners only submit a planning application once. You shouldn't have to become planning experts to get it right. That's why we've built a service that removes uncertainty at every stage getting our clients projects off the ground stress free.",
   items = defaultDifferentiators,
   alt = false,
   dark = false,
