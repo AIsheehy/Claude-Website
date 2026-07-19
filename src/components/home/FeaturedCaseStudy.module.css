@@ -63,20 +63,62 @@
 }
 
 /* Mobile-only: turn the slider + 2 proof photos into a horizontally
-   scrollable carousel (the before/after drag interaction keeps working
-   inside its own slide). Desktop (720px+) keeps the grid above. */
+   scrollable carousel, matching the pattern used for Reviews (the
+   before/after drag interaction keeps working inside its own slide).
+   Each slide gets its own card so it reads as a distinct item rather than
+   spilling out of the shared white card. Desktop (720px+) keeps the grid
+   above, inside the single card. */
 @media (max-width: 719px) {
+  .card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .intro {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    padding-bottom: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    margin-bottom: 1.1rem;
+  }
+
   .items {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 1.1rem;
+    padding: 0;
   }
 
   .item {
-    flex: 0 0 86%;
+    flex: 0 0 82%;
     scroll-snap-align: start;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    padding-bottom: 0.9rem;
+  }
+
+  .item .proofPhotoWrap {
+    border: none;
+    border-radius: 0;
+  }
+
+  .dragHint,
+  .proofCaption {
+    padding-inline: 1rem;
+  }
+
+  .dragHint {
+    margin-top: 0.6rem;
   }
 }
 

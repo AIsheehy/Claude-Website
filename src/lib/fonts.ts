@@ -1,9 +1,10 @@
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Fraunces, Manrope } from "next/font/google";
 
-export const display = Cormorant_Garamond({
+export const display = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
+  weight: "variable",
+  axes: ["opsz", "SOFT", "WONK"],
   style: ["normal", "italic"],
   display: "swap",
 });

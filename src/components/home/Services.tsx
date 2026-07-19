@@ -32,23 +32,19 @@ export function Services() {
       <SectionHead
         eyebrow="What we do"
         title="Most homeowners start the process without knowing one critical thing: Will this actually get approved?"
+        lede={
+          <>
+            And that is what we aim to establish from the very start. We don&rsquo;t think
+            planning permission should ever feel like a gamble, and we build out every
+            client&rsquo;s application around three principles: a clear planning strategy from
+            day one, a design that aligns with policy (not fights against it), and a proposal
+            that is actually viable in the real world. So whatever stage your project is at,
+            we&rsquo;re here to help get it started.
+          </>
+        }
       />
-      <div className={styles.intro}>
-        <p className={styles.lede}>
-          Planning permission shouldn&rsquo;t feel like a gamble. Every successful application
-          comes down to three things:
-        </p>
-        <ul className={styles.ledeList}>
-          <li>A clear planning strategy from day one</li>
-          <li>A design that aligns with policy (not fights against it)</li>
-          <li>A proposal that is actually viable in the real world</li>
-        </ul>
-        <p className={styles.lede}>
-          We help you from whatever stage you are at and work to these principles. So when you
-          submit, it&rsquo;s not a guess &mdash; it&rsquo;s a calculated step toward approval.
-        </p>
-      </div>
 
+      {/* Desktop: services grouped into 3 columns */}
       <div className={styles.groups}>
         {groups.map((group, gi) => (
           <Reveal key={group} delay={gi * 80}>
@@ -78,6 +74,23 @@ export function Services() {
             </div>
           </Reveal>
         ))}
+      </div>
+
+      {/* Mobile: every service as its own card in a swipeable carousel,
+          same pattern as the Reviews carousel. */}
+      <div className={styles.mobileCarousel}>
+        {services.map((service) => {
+          const Icon = iconMap[service.icon];
+          return (
+            <Link key={service.slug} href="#enquire" className={styles.mobileCard}>
+              <span className={styles.iconWrap}>
+                <Icon width={18} height={18} />
+              </span>
+              <span className={styles.rowTitle}>{service.shortName}</span>
+              <span className={styles.rowSummary}>{service.summary}</span>
+            </Link>
+          );
+        })}
       </div>
     </Section>
   );
