@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
   const message = typeof body.message === "string" ? body.message : "";
 
   const { error } = await resend.emails.send({
-    from: process.env.ENQUIRY_FROM_EMAIL || "Form & Function London <enquiries@formandfunctionlondon.co.uk>",
+    from: process.env.ENQUIRY_FROM_EMAIL || `Form & Function London <${business.email}>`,
     to: business.email,
     replyTo: email,
     subject: `New enquiry from ${name}`,
