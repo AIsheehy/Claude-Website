@@ -4,11 +4,19 @@ import { FormEvent, useState } from "react";
 import { Field, controlClassName } from "@/components/ui/Field";
 import { Button } from "@/components/ui/Button";
 import { IconCheck } from "@/components/icons";
-import { services } from "@/lib/content";
 import { trackFormSubmission } from "@/lib/analytics";
 import styles from "./EnquiryForm.module.css";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+const helpOptions = [
+  "Planning Permission",
+  "Lawful Development Certificate",
+  "House Extension",
+  "Loft Extension",
+  "Architectural Drawings",
+  "Other",
+];
 
 export function EnquiryForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<Status>("idle");
@@ -85,12 +93,11 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
           <option value="" disabled>
             Select an option
           </option>
-          {services.map((s) => (
-            <option key={s.slug} value={s.shortName}>
-              {s.shortName}
+          {helpOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
             </option>
           ))}
-          <option value="not-sure">Not sure yet</option>
         </select>
       </Field>
 
