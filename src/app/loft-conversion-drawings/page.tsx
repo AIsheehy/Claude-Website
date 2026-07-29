@@ -13,9 +13,6 @@ export default function LoftConversionDrawingsPage() {
       eyebrow="Loft conversion drawings"
       headline="Professional Loft Conversion Plans"
       lede="Everything you need to get your loft conversion off the ground, from initial design to complete drawings, at one fixed price."
-      whatWeDoLedeParagraphs={[
-        "From initial design and measured surveys to complete loft conversion drawings, we prepare everything you need to move your project forward.",
-      ]}
     />
   );
 }

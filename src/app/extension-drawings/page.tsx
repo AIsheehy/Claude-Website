@@ -13,9 +13,6 @@ export default function ExtensionDrawingsPage() {
       eyebrow="Extension drawings"
       headline="Professional Home Extension Plans"
       lede="Everything you need to get your extension off the ground, from initial design to complete drawings, at one fixed price."
-      whatWeDoLedeParagraphs={[
-        "From initial design and measured surveys to complete extension drawings, we prepare everything you need to move your project forward.",
-      ]}
     />
   );
 }

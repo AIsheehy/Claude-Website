@@ -12,25 +12,21 @@ import { InlineCta } from "@/components/home/InlineCta";
 
 // Shared body for every dedicated service landing page (Planning
 // Applications, Permitted Development, Loft Conversion Drawings, Extension
-// Drawings) — identical to the homepage below the hero, aside from the hero
-// copy and the "What we do" intro copy, both of which differ page to page.
+// Drawings) — identical to the homepage below the hero. Only the hero
+// eyebrow/headline/lede differ page to page.
 export function ServicePageContent({
   eyebrow,
   headline,
   lede,
-  whatWeDoHeadline,
-  whatWeDoLedeParagraphs,
 }: {
   eyebrow: string;
   headline: ReactNode;
   lede: ReactNode;
-  whatWeDoHeadline?: ReactNode;
-  whatWeDoLedeParagraphs?: ReactNode[];
 }) {
   return (
     <>
       <Hero eyebrow={eyebrow} headline={headline} lede={lede} />
-      <Services headline={whatWeDoHeadline} ledeParagraphs={whatWeDoLedeParagraphs} />
+      <Services />
       <ServiceStats />
       <Process tightBottom />
       <InlineCta
@@ -41,7 +37,7 @@ export function ServicePageContent({
       <InlineCta text="Ready for the same result? Let's talk about your project." />
       <WhyUs dark tightBottom />
       <InlineCta
-        text="See how straightforward this can be — get your free assessment today."
+        text="See how straightforward your project can be by reaching out today."
         tone="dark"
       />
       <Contact tone="beige" />

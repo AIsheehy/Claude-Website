@@ -24,7 +24,7 @@ export default function Home() {
       <InlineCta text="Ready for the same result? Let's talk about your project." />
       <WhyUs dark tightBottom />
       <InlineCta
-        text="See how straightforward this can be — get your free assessment today."
+        text="See how straightforward your project can be by reaching out today."
         tone="dark"
       />
       <Contact tone="beige" />

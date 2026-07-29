@@ -37,6 +37,31 @@
   }
 }
 
+.mobileCarousel {
+  display: none;
+}
+
+/* Mobile: swap the grid for a horizontally scrollable carousel. */
+@media (max-width: 859px) {
+  .grid {
+    display: none;
+  }
+
+  .mobileCarousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .mobileCarousel .card {
+    flex: 0 0 44%;
+    scroll-snap-align: start;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -47,13 +72,6 @@
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  transition: border-color var(--duration-base) var(--ease),
-    box-shadow var(--duration-base) var(--ease);
-}
-
-.card:hover {
-  border-color: var(--terracotta);
-  box-shadow: var(--shadow-sm);
 }
 
 .iconWrap {

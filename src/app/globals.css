@@ -46,15 +46,15 @@
   --accent: var(--terracotta);
   --focus-ring: rgba(169, 179, 162, 0.4);
 
-  /* ---- Type scale (fluid, mobile-first; -20% off the previous scale) ---- */
-  --step-caption: clamp(0.6rem, 0.584rem + 0.08vw, 0.65rem);
-  --step-small: clamp(0.7rem, 0.68rem + 0.12vw, 0.75rem);
-  --step-body: clamp(0.8rem, 0.776rem + 0.12vw, 0.85rem);
-  --step-body-lg: clamp(0.85rem, 0.8rem + 0.28vw, 1.05rem);
-  --step-h4: clamp(0.95rem, 0.88rem + 0.36vw, 1.1rem);
-  --step-h3: clamp(1.2rem, 1.04rem + 0.8vw, 1.65rem);
-  --step-h2: clamp(1.5rem, 1.2rem + 1.6vw, 2.2rem);
-  --step-h1: clamp(1.84rem, 1.36rem + 2.56vw, 3rem);
+  /* ---- Type scale (fluid, mobile-first; +20% over the previous scale) ---- */
+  --step-caption: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+  --step-small: clamp(0.84rem, 0.82rem + 0.14vw, 0.9rem);
+  --step-body: clamp(0.96rem, 0.93rem + 0.14vw, 1.02rem);
+  --step-body-lg: clamp(1.02rem, 0.96rem + 0.34vw, 1.26rem);
+  --step-h4: clamp(1.14rem, 1.06rem + 0.43vw, 1.32rem);
+  --step-h3: clamp(1.44rem, 1.25rem + 0.96vw, 1.98rem);
+  --step-h2: clamp(1.8rem, 1.44rem + 1.92vw, 2.64rem);
+  --step-h1: clamp(2.21rem, 1.63rem + 3.07vw, 3.6rem);
 
   /* ---- Spacing rhythm (-10% off the previous scale) ---- */
   --space-section: clamp(3.2175rem, 2.871rem + 1.98vw, 5.445rem);

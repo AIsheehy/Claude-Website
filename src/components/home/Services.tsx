@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Link from "next/link";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import {
@@ -25,20 +24,11 @@ const iconMap = {
 };
 
 const defaultLedeParagraphs: ReactNode[] = [
-  <>
-    And that is what we aim to establish from the very start. We don&rsquo;t think planning
-    permission should ever feel like a gamble.
-  </>,
-  <>
-    We build out every client&rsquo;s application around three principles: a clear planning
-    strategy from day one, a design that aligns with policy (not fights against it), and a
-    proposal that is actually viable in the real world. So whatever stage your project is at,
-    we&rsquo;re here to help get it started.
-  </>,
+  "We provide professional planning and architectural design services to help take your project from initial idea to approval.",
 ];
 
 export function Services({
-  headline = "Most homeowners start the process without knowing one critical thing: Will this actually get approved?",
+  headline = "Everything You Need To Get Your Project Off The Ground",
   ledeParagraphs = defaultLedeParagraphs,
 }: {
   headline?: ReactNode;
@@ -55,18 +45,37 @@ export function Services({
         ))}
       </div>
 
+      {/* Desktop: flat grid */}
       <div className={styles.grid}>
         {services.map((service, i) => {
           const Icon = iconMap[service.icon];
           return (
             <Reveal key={service.slug} delay={i * 60}>
-              <Link href="#enquire" className={styles.card}>
+              <div className={styles.card}>
                 <span className={styles.iconWrap}>
                   <Icon width={22} height={22} />
                 </span>
                 <span className={styles.cardTitle}>{service.shortName}</span>
-              </Link>
+              </div>
             </Reveal>
+          );
+        })}
+      </div>
+
+      {/* Mobile: swipeable carousel (no Reveal wrapper — see Reviews/WhyUs
+          for why: it re-triggers via IntersectionObserver as cards scroll
+          into the horizontally clipped viewport, making them visibly
+          lift/fade mid-swipe). */}
+      <div className={styles.mobileCarousel}>
+        {services.map((service) => {
+          const Icon = iconMap[service.icon];
+          return (
+            <div key={service.slug} className={styles.card}>
+              <span className={styles.iconWrap}>
+                <Icon width={22} height={22} />
+              </span>
+              <span className={styles.cardTitle}>{service.shortName}</span>
+            </div>
           );
         })}
       </div>

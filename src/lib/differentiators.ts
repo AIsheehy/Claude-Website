@@ -6,6 +6,17 @@ export type Differentiator = {
 
 export const differentiators: Differentiator[] = [
   {
+    title: "100% Satisfaction Guarantee",
+    description:
+      "We'll work closely with you throughout the process, listening to your ideas and refining the design until you're completely happy.",
+    icon: "chat",
+  },
+  {
+    title: "One Fixed Price",
+    description: "Everything you need, from initial advice to submission, with no hidden costs.",
+    icon: "shield",
+  },
+  {
     title: "One Team From Start To Finish",
     description:
       "Everything is managed by one experienced team, from your first survey to your planning submission.",
@@ -16,16 +27,5 @@ export const differentiators: Differentiator[] = [
     description:
       "We'll tell you if your proposal is realistic before you spend money on drawings or applications.",
     icon: "arrow",
-  },
-  {
-    title: "We Deal With The Council",
-    description:
-      "We prepare your application, submit it and handle all communication with the council on your behalf.",
-    icon: "chat",
-  },
-  {
-    title: "One Fixed Price",
-    description: "Everything you need, from initial advice to submission, with no hidden costs.",
-    icon: "shield",
   },
 ];

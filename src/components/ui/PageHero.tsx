@@ -35,6 +35,19 @@ export function PageHero({
             <h1 className={styles.headline}>{headline}</h1>
             <p className={styles.lede}>{lede}</p>
 
+            {graphic && (
+              <div className={styles.mobileGraphic}>
+                <Image
+                  src="/images/hero/hero-illustration.jpg"
+                  alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
+                  width={1200}
+                  height={1156}
+                  className={styles.mobileGraphicImg}
+                  priority
+                />
+              </div>
+            )}
+
             <div className={styles.ctaRow}>
               <Button href="#enquire" size="lg">
                 {primaryCtaLabel}
