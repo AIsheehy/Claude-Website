@@ -3,7 +3,6 @@ import { Services } from "@/components/home/Services";
 import { ServiceStats } from "@/components/home/ServiceStats";
 import { Process } from "@/components/home/Process";
 import { Reviews } from "@/components/home/Reviews";
-import { CaseStudies } from "@/components/home/CaseStudies";
 import { WhyUs } from "@/components/home/WhyUs";
 import { Faq } from "@/components/home/Faq";
 import { About } from "@/components/home/About";
@@ -22,8 +21,7 @@ export default function Home() {
         tone="dark"
       />
       <Reviews tightBottom />
-      <InlineCta text="Ready for the same result? Let's talk about your project." ctaLabel="Contact Us" />
-      <CaseStudies />
+      <InlineCta text="Ready for the same result? Let's talk about your project." />
       <WhyUs dark tightBottom />
       <InlineCta
         text="See how straightforward this can be — get your free assessment today."

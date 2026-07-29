@@ -4,7 +4,6 @@ import { Services } from "@/components/home/Services";
 import { ServiceStats } from "@/components/home/ServiceStats";
 import { Process } from "@/components/home/Process";
 import { Reviews } from "@/components/home/Reviews";
-import { CaseStudies } from "@/components/home/CaseStudies";
 import { WhyUs } from "@/components/home/WhyUs";
 import { Faq } from "@/components/home/Faq";
 import { About } from "@/components/home/About";
@@ -13,21 +12,25 @@ import { InlineCta } from "@/components/home/InlineCta";
 
 // Shared body for every dedicated service landing page (Planning
 // Applications, Permitted Development, Loft Conversion Drawings, Extension
-// Drawings) — identical to the homepage below the hero. Only the hero
-// eyebrow/headline/lede differ page to page.
+// Drawings) — identical to the homepage below the hero, aside from the hero
+// copy and the "What we do" intro copy, both of which differ page to page.
 export function ServicePageContent({
   eyebrow,
   headline,
   lede,
+  whatWeDoHeadline,
+  whatWeDoLedeParagraphs,
 }: {
   eyebrow: string;
   headline: ReactNode;
   lede: ReactNode;
+  whatWeDoHeadline?: ReactNode;
+  whatWeDoLedeParagraphs?: ReactNode[];
 }) {
   return (
     <>
       <Hero eyebrow={eyebrow} headline={headline} lede={lede} />
-      <Services />
+      <Services headline={whatWeDoHeadline} ledeParagraphs={whatWeDoLedeParagraphs} />
       <ServiceStats />
       <Process tightBottom />
       <InlineCta
@@ -35,8 +38,7 @@ export function ServicePageContent({
         tone="dark"
       />
       <Reviews tightBottom />
-      <InlineCta text="Ready for the same result? Let's talk about your project." ctaLabel="Contact Us" />
-      <CaseStudies />
+      <InlineCta text="Ready for the same result? Let's talk about your project." />
       <WhyUs dark tightBottom />
       <InlineCta
         text="See how straightforward this can be — get your free assessment today."

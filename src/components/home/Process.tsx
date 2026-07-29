@@ -16,10 +16,7 @@ export function Process({ tightBottom = false }: { tightBottom?: boolean }) {
     <Section id="process" dark tight tightBottom={tightBottom}>
       <Reveal className={styles.head}>
         <p className={styles.eyebrow}>How it works</p>
-        <h2 className={styles.title}>Your roadmap from enquiry to approval.</h2>
-        <p className={styles.lede}>
-          Four stages, one team &mdash; here&rsquo;s exactly what happens after you get in touch.
-        </p>
+        <h2 className={styles.title}>A simple four-step process from enquiry to approval.</h2>
       </Reveal>
 
       <div className={styles.roadmap}>

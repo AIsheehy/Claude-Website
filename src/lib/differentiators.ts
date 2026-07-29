@@ -1,38 +1,31 @@
 export type Differentiator = {
   title: string;
   description: string;
-  icon: "layers" | "arrow" | "chat" | "pin" | "clock";
+  icon: "layers" | "arrow" | "chat" | "shield";
 };
 
 export const differentiators: Differentiator[] = [
   {
-    title: "One team from start to finish.",
+    title: "One Team From Start To Finish",
     description:
-      "You'll deal with the same people throughout your project. Your survey, drawings, planning statement and submission are all handled together—not passed between separate companies who have never worked together.",
+      "Everything is managed by one experienced team, from your first survey to your planning submission.",
     icon: "layers",
   },
   {
-    title: "Honest advice before you spend a penny on drawings.",
+    title: "Honest Advice Before You Commit",
     description:
-      "If we don't believe your proposal has a realistic chance of approval, we'll tell you at the advice stage—not after you've invested time and money.",
+      "We'll tell you if your proposal is realistic before you spend money on drawings or applications.",
     icon: "arrow",
   },
   {
-    title: "Stress Free Correspondence",
+    title: "We Deal With The Council",
     description:
-      "Planning officers speak directly with us. We deal with every query, request and amendment, keeping your application moving and keeping you updated every step of the way while you get on with your life.",
+      "We prepare your application, submit it and handle all communication with the council on your behalf.",
     icon: "chat",
   },
   {
-    title: "Everything tailored to you",
-    description:
-      "What works in Bromley may not work in Barking. Every application is prepared around the policies and priorities of your local authority in line with your goals—not a generic national template.",
-    icon: "pin",
-  },
-  {
-    title: "Fast where it matters. Thorough where it counts.",
-    description:
-      "Measured survey within 7 days. Application submitted within 14. Unlimited revisions, updates and support included throughout.",
-    icon: "clock",
+    title: "One Fixed Price",
+    description: "Everything you need, from initial advice to submission, with no hidden costs.",
+    icon: "shield",
   },
 ];

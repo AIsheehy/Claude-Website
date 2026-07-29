@@ -13,21 +13,6 @@
   border-top: 1px solid var(--border);
 }
 
-.call {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  flex: 0 0 auto;
-  padding: 0.85em 1.1em;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xs);
-  font-weight: 600;
-  font-size: var(--step-small);
-  background: var(--white);
-  color: var(--ink);
-}
-
 .enquire {
   flex: 1;
   display: inline-flex;

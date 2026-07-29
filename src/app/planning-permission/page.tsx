@@ -11,15 +11,11 @@ export default function PlanningPermissionPage() {
   return (
     <ServicePageContent
       eyebrow="Planning Applications handled from enquiry to approval."
-      headline="Secure planning permission, without the fear of refusal, delays or costly mistakes."
-      lede={
-        <>
-          A complete, done-for-you service &mdash; from initial advice to full submission.
-          We structure your application around what planners are actually looking for so
-          you can move forward with clarity, confidence and the strongest possible chance
-          of approval.
-        </>
-      }
+      headline="Planning Permission, Made Simple"
+      lede="Everything you need to get your project off the ground, from initial advice to full planning submission, at one fixed price."
+      whatWeDoLedeParagraphs={[
+        "We provide everything you need to prepare and submit a professionally presented planning application, from initial advice and drawings to council submission.",
+      ]}
     />
   );
 }

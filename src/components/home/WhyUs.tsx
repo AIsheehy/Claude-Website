@@ -2,20 +2,19 @@ import { ReactNode } from "react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Differentiator, differentiators as defaultDifferentiators } from "@/lib/differentiators";
-import { IconLayers, IconArrowRight, IconChat, IconPin, IconClock } from "@/components/icons";
+import { IconLayers, IconArrowRight, IconChat, IconShield } from "@/components/icons";
 import styles from "./WhyUs.module.css";
 
 const iconMap = {
   layers: IconLayers,
   arrow: IconArrowRight,
   chat: IconChat,
-  pin: IconPin,
-  clock: IconClock,
+  shield: IconShield,
 };
 
 export function WhyUs({
-  title = "Planning permission is complicated. Working with us isn't.",
-  lede = "Most homeowners only submit a planning application once. You shouldn't have to become planning experts to get it right. That's why we've built a service that removes uncertainty at every stage getting our clients projects off the ground stress free.",
+  title = "Why Homeowners Choose Us",
+  lede = "A professional, fixed-price planning service designed to make the process as straightforward as possible.",
   items = defaultDifferentiators,
   alt = false,
   dark = false,

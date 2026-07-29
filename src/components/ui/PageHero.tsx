@@ -11,7 +11,7 @@ export function PageHero({
   eyebrow,
   headline,
   lede,
-  primaryCtaLabel = "Get My Free Assessment",
+  primaryCtaLabel = "Get in Touch",
   trustSlot,
   eyebrowAccent = false,
   graphic = false,

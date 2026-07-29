@@ -21,78 +21,18 @@ export const business = {
 
 export type Service = {
   slug: string;
-  name: string;
   shortName: string;
-  summary: string;
   icon: "compass" | "shield" | "scale" | "ruler" | "drawing" | "house" | "roof";
-  group: "Strategy & Certainty" | "Drawings & Surveys" | "Extensions & Conversions";
 };
 
 export const services: Service[] = [
-  {
-    slug: "planning-consultancy",
-    name: "Planning Consultancy",
-    shortName: "Planning Consultancy",
-    summary: "Independent advice on what's achievable before you spend a pound on drawings.",
-    icon: "compass",
-    group: "Strategy & Certainty",
-  },
-  {
-    slug: "planning-permission",
-    name: "Planning Permission Applications",
-    shortName: "Planning Permission",
-    summary: "Full applications prepared and managed from first sketch to council decision.",
-    icon: "drawing",
-    group: "Strategy & Certainty",
-  },
-  {
-    slug: "lawful-development-certificates",
-    name: "Lawful Development Certificates",
-    shortName: "Lawful Development Certificates",
-    summary: "Written proof your permitted development rights protect you, on file, for good.",
-    icon: "shield",
-    group: "Strategy & Certainty",
-  },
-  {
-    slug: "change-of-use",
-    name: "Change of Use Applications",
-    shortName: "Change of Use",
-    summary: "Reclassifying a property's legal use, handled correctly from the outset.",
-    icon: "scale",
-    group: "Strategy & Certainty",
-  },
-  {
-    slug: "measured-building-surveys",
-    name: "Measured Building Surveys",
-    shortName: "Measured Building Surveys",
-    summary: "Precise on-site surveys that become the accurate foundation for every drawing after.",
-    icon: "ruler",
-    group: "Drawings & Surveys",
-  },
-  {
-    slug: "planning-drawings",
-    name: "Planning Drawings",
-    shortName: "Planning Drawings",
-    summary: "Existing and proposed drawings prepared to the standard your council expects.",
-    icon: "drawing",
-    group: "Drawings & Surveys",
-  },
-  {
-    slug: "house-extensions",
-    name: "House Extensions",
-    shortName: "House Extensions",
-    summary: "Rear, side and wraparound extensions — designed to be approvable, not just drawn.",
-    icon: "house",
-    group: "Extensions & Conversions",
-  },
-  {
-    slug: "loft-conversions",
-    name: "Loft Conversions",
-    shortName: "Loft Conversions",
-    summary: "Dormer, hip-to-gable and mansard conversions, planned around what your roofline allows.",
-    icon: "roof",
-    group: "Extensions & Conversions",
-  },
+  { slug: "planning-permission", shortName: "Planning Applications", icon: "drawing" },
+  { slug: "lawful-development-certificates", shortName: "Lawful Development Certificates", icon: "shield" },
+  { slug: "loft-conversions", shortName: "Loft Conversions", icon: "roof" },
+  { slug: "house-extensions", shortName: "House Extensions", icon: "house" },
+  { slug: "architectural-designs", shortName: "Architectural Designs", icon: "compass" },
+  { slug: "floor-plan-drawings", shortName: "Floor Plan Drawings", icon: "ruler" },
+  { slug: "change-of-use", shortName: "Change of Use Applications", icon: "scale" },
 ];
 
 // London, then every traditional Home County — matches the "London and Home
@@ -107,19 +47,20 @@ export const boroughs = [
   "Berkshire",
 ];
 
-// Qualitative trust markers used on the homepage hero.
+// Qualitative trust markers used on the homepage hero. 5-star rating leads,
+// the rest keep their existing order.
 export const trustMarkers = [
+  { icon: "star", label: "5-Star Rated On Google" },
   { icon: "shield", label: "Professional Indemnity Insured" },
   { icon: "clock", label: "14 Days From Survey To Submission" },
   { icon: "pin", label: "London & Home Counties Coverage" },
-  { icon: "star", label: "5-Star Rated On Google" },
 ];
 
 // Numeric claims from the existing site — reconfirm these are still current
 // before publishing; ASA guidance requires stats like this to be true and
 // substantiable, not just carried over.
 export const stats = [
-  { value: "100%", label: "PI Insurance Coverage" },
+  { value: "100%", label: "Satisfaction Guarantee" },
   { value: "<14 days", label: "Applications submitted from instruction" },
   { value: "Fixed price", label: "Money-back guarantee" },
   { value: "5★", label: "Rated on Google" },
@@ -156,30 +97,30 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Advice & Measured Survey",
+    title: "Initial Advice & Survey",
     description:
-      "Every successful application starts with the right strategy. We assess what's realistically achievable before carrying out a detailed measured survey of your property, giving your project the strongest possible foundation.",
+      "We discuss your project, answer your questions and carry out a measured survey of your property.",
     icon: "compass",
   },
   {
     step: "02",
-    title: "Drawings & Planning Statement",
+    title: "Design & Drawings",
     description:
-      "We prepare clear, accurate drawings alongside a planning statement that explains your proposal in the language planning officers expect to see—maximising its chance of approval.",
+      "We prepare your drawings and share them with you for review before making any final amendments.",
     icon: "drawing",
   },
   {
     step: "03",
-    title: "Submission & Council Liaison",
+    title: "Planning Submission",
     description:
-      "Your application is submitted correctly the first time. We then manage all communication with the council on your behalf, answering questions and keeping your application moving.",
+      "Once you're happy with the proposal, we submit your application and manage all communication with the council.",
     icon: "send",
   },
   {
     step: "04",
     title: "Decision & Next Steps",
     description:
-      "Once a decision is issued, we'll explain exactly what it means and guide you through the next steps, whether that's starting your project or dealing with planning conditions.",
+      "When a decision is issued, we'll explain the outcome and guide you through the next stage of your project.",
     icon: "check",
   },
 ];
@@ -218,22 +159,6 @@ export const testimonials: Testimonial[] = [
     image: "/images/testimonials/irina.jpg",
   },
 ];
-
-// The one case study with full photographic + documentary proof (before/after
-// photos, real drawings, a redacted real approval letter). Site: 4 Upfield,
-// Horley, Surrey — this is the only case study that carries approval language;
-// the two grid case studies below deliberately stay outcome-neutral.
-export const featuredCaseStudy = {
-  title: "Full refurbishment of a 1900s detached home",
-  location: "Surrey",
-  summary:
-    "A substantial refurbishment including new rear extensions, window replacements and a new roof — prepared and managed end-to-end, from survey through to a granted decision.",
-  outcome: "Full Planning Permission Granted by Reigate and Banstead Council.",
-  before: "/images/case-studies/surrey-before.jpg",
-  after: "/images/case-studies/surrey-after.jpg",
-  drawings: "/images/case-studies/surrey-drawings.jpg",
-  approvalLetter: "/images/case-studies/approval-letter.jpg",
-};
 
 // Content for the dedicated "Our Work" page (/our-work) — three full
 // project write-ups. `gallery` entries without a `src` are placeholders for

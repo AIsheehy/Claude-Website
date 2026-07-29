@@ -11,8 +11,11 @@ export default function ExtensionDrawingsPage() {
   return (
     <ServicePageContent
       eyebrow="Extension drawings"
-      headline="Enhance Your Home with Professional Extension Plans & Drawings Tailored To Your Vision And Planning Requirements."
-      lede="Complete Done For You Service — From Design To Drawings To Planning Application So You Can Move Forward With Clarity, Confidence & The Highest Chance of Success."
+      headline="Professional Home Extension Plans"
+      lede="Everything you need to get your extension off the ground, from initial design to complete drawings, at one fixed price."
+      whatWeDoLedeParagraphs={[
+        "From initial design and measured surveys to complete extension drawings, we prepare everything you need to move your project forward.",
+      ]}
     />
   );
 }

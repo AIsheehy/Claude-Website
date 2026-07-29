@@ -11,8 +11,11 @@ export default function LoftConversionDrawingsPage() {
   return (
     <ServicePageContent
       eyebrow="Loft conversion drawings"
-      headline="Professionally Designed Loft Conversion Plans Tailored To Your Vision And Planning Requirements."
-      lede="Complete Done For You Service — From Design and Drawings To Planning Approval So You Can Move Forward With Clarity, Confidence & The Highest Chance of Success."
+      headline="Professional Loft Conversion Plans"
+      lede="Everything you need to get your loft conversion off the ground, from initial design to complete drawings, at one fixed price."
+      whatWeDoLedeParagraphs={[
+        "From initial design and measured surveys to complete loft conversion drawings, we prepare everything you need to move your project forward.",
+      ]}
     />
   );
 }

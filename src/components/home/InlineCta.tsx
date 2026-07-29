@@ -5,7 +5,7 @@ import styles from "./InlineCta.module.css";
 
 export function InlineCta({
   text = "Ready to find out what's possible for your project?",
-  ctaLabel = "Get My Free Assessment",
+  ctaLabel = "Get in Touch",
   tone = "white",
 }: {
   text?: string;

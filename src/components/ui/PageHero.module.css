@@ -78,17 +78,11 @@
 
 .trustList {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.1rem 1.75rem;
   margin-top: 2.25rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--border);
-}
-
-@media (min-width: 640px) {
-  .trustList {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 }
 
 .trustItem {
@@ -105,4 +99,27 @@
   color: var(--ink);
   flex-shrink: 0;
   margin-top: 0.15rem;
+}
+
+/* Mobile: shrink everything so all 4 badges fit on one row instead of
+   wrapping into a 2x2 grid. */
+@media (max-width: 640px) {
+  .trustList {
+    gap: 0.5rem;
+  }
+
+  .trustItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+    font-size: 0.625rem;
+    line-height: 1.25;
+  }
+
+  .trustItem svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+  }
 }

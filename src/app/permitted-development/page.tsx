@@ -11,8 +11,11 @@ export default function PermittedDevelopmentPage() {
   return (
     <ServicePageContent
       eyebrow="Permitted development applications"
-      headline="Secure Permitted Development Approval Without The Fear Of Refusal, Delays Or Costly Mistakes."
-      lede="Complete Done For You Service — From Design To Drawings To Lawful Development Certificate So You Can Move Forward With Clarity, Confidence & The Highest Chance of Success."
+      headline="Permitted Development, Made Simple"
+      lede="Everything you need to get your project off the ground, from initial advice to securing your Lawful Development Certificate, at one fixed price."
+      whatWeDoLedeParagraphs={[
+        "From initial advice and measured surveys to drawings and your Lawful Development Certificate application, we manage every stage of the process.",
+      ]}
     />
   );
 }

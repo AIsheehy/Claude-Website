@@ -6,7 +6,7 @@ import { business } from "@/lib/content";
 import styles from "./Contact.module.css";
 
 const closingStats = [
-  { icon: IconCheck, value: "100%", label: "PI Insurance Coverage" },
+  { icon: IconCheck, value: "100%", label: "Satisfaction Guarantee" },
   { icon: IconClock, value: "14 Days", label: "To submission from instruction" },
   { icon: IconShield, value: "Founder-Led", label: "You deal with Michael directly" },
 ];

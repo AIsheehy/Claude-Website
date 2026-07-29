@@ -22,7 +22,6 @@ export function Hero({
       eyebrow={eyebrow}
       headline={headline}
       lede={lede}
-      primaryCtaLabel="Get My Free Assessment"
       trustSlot={<TrustList />}
       eyebrowAccent
       graphic

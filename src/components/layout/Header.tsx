@@ -99,7 +99,7 @@ export function Header() {
                 {business.phone}
               </a>
               <Button href="#enquire" variant="primary" className={styles.mobileCta}>
-                Get a Free Assessment
+                Get in Touch
               </Button>
             </nav>
           </Container>
