@@ -60,6 +60,8 @@
     flex: 0 0 44%;
     scroll-snap-align: start;
     height: auto;
+    align-items: center;
+    text-align: center;
   }
 }
 

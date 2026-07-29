@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/ui/Reveal";
 import { IconPhone } from "@/components/icons";
 import { business } from "@/lib/content";
 import styles from "./PageHero.module.css";
@@ -27,7 +28,7 @@ export function PageHero({
     <section className={styles.hero}>
       <Container size={graphic ? "wide" : "default"}>
         <div className={[styles.layout, graphic && styles.layoutGraphic].filter(Boolean).join(" ")}>
-          <div className={styles.content}>
+          <Reveal className={styles.content}>
             <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
               {eyebrow}
             </p>
@@ -43,10 +44,10 @@ export function PageHero({
                 {business.phone}
               </a>
             </div>
-          </div>
+          </Reveal>
 
           {graphic && (
-            <div className={styles.graphicCol}>
+            <Reveal className={styles.graphicCol} delay={120}>
               <Image
                 src="/images/hero/hero-illustration.jpg"
                 alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
@@ -55,11 +56,11 @@ export function PageHero({
                 className={styles.graphicSvg}
                 priority
               />
-            </div>
+            </Reveal>
           )}
         </div>
 
-        {trustSlot}
+        {trustSlot && <Reveal delay={160}>{trustSlot}</Reveal>}
       </Container>
     </section>
   );
