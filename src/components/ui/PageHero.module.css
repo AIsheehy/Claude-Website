@@ -40,26 +40,6 @@
   border-radius: var(--radius-lg);
 }
 
-.mobileGraphic {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-
-.mobileGraphicImg {
-  width: auto;
-  height: auto;
-  max-width: 38%;
-  max-height: 13vh;
-  border-radius: var(--radius-md);
-}
-
-@media (min-width: 960px) {
-  .mobileGraphic {
-    display: none;
-  }
-}
-
 .eyebrowAccent {
   color: var(--accent-warm);
 }
@@ -94,6 +74,12 @@
 
 .phoneLink:hover {
   color: var(--terracotta-deep);
+}
+
+@media (max-width: 640px) {
+  .phoneLink {
+    display: none;
+  }
 }
 
 .trustList {

@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Reveal } from "@/components/ui/Reveal";
 import { IconPhone } from "@/components/icons";
 import { business } from "@/lib/content";
 import styles from "./PageHero.module.css";
@@ -28,25 +27,12 @@ export function PageHero({
     <section className={styles.hero}>
       <Container size={graphic ? "wide" : "default"}>
         <div className={[styles.layout, graphic && styles.layoutGraphic].filter(Boolean).join(" ")}>
-          <Reveal className={styles.content}>
+          <div className={styles.content}>
             <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
               {eyebrow}
             </p>
             <h1 className={styles.headline}>{headline}</h1>
             <p className={styles.lede}>{lede}</p>
-
-            {graphic && (
-              <div className={styles.mobileGraphic}>
-                <Image
-                  src="/images/hero/hero-illustration.jpg"
-                  alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
-                  width={1200}
-                  height={1156}
-                  className={styles.mobileGraphicImg}
-                  priority
-                />
-              </div>
-            )}
 
             <div className={styles.ctaRow}>
               <Button href="#enquire" size="lg">
@@ -57,10 +43,10 @@ export function PageHero({
                 {business.phone}
               </a>
             </div>
-          </Reveal>
+          </div>
 
           {graphic && (
-            <Reveal className={styles.graphicCol} delay={120}>
+            <div className={styles.graphicCol}>
               <Image
                 src="/images/hero/hero-illustration.jpg"
                 alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
@@ -69,11 +55,11 @@ export function PageHero({
                 className={styles.graphicSvg}
                 priority
               />
-            </Reveal>
+            </div>
           )}
         </div>
 
-        {trustSlot && <Reveal delay={160}>{trustSlot}</Reveal>}
+        {trustSlot}
       </Container>
     </section>
   );

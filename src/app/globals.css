@@ -231,12 +231,6 @@ select {
   transform: translateY(0);
 }
 
-@media (max-width: 899px) {
-  body {
-    padding-bottom: 68px; /* clearance for the fixed mobile CTA bar */
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
