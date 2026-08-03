@@ -28,12 +28,18 @@ const defaultLedeParagraphs: ReactNode[] = [
 ];
 
 export function Services({
-  headline = "Everything You Need To Get Your Project Off The Ground",
+  emphasis = "Planning Applications",
   ledeParagraphs = defaultLedeParagraphs,
 }: {
-  headline?: ReactNode;
+  emphasis?: string;
   ledeParagraphs?: ReactNode[];
 }) {
+  const headline = (
+    <>
+      We take the stress out of <em className={styles.emphasis}>{emphasis}</em>
+    </>
+  );
+
   return (
     <Section id="services" tightBottom className={styles.section}>
       <SectionHead eyebrow="What we do" title={headline} />
@@ -56,6 +62,7 @@ export function Services({
                   <Icon width={22} height={22} />
                 </span>
                 <span className={styles.cardTitle}>{service.shortName}</span>
+                <span className={styles.cardDescription}>{service.description}</span>
               </div>
             </Reveal>
           );
@@ -75,6 +82,7 @@ export function Services({
                 <Icon width={22} height={22} />
               </span>
               <span className={styles.cardTitle}>{service.shortName}</span>
+              <span className={styles.cardDescription}>{service.description}</span>
             </div>
           );
         })}

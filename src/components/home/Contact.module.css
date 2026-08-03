@@ -179,15 +179,10 @@
 }
 
 .formEyebrow {
+  margin-bottom: 1.5rem;
   font-size: var(--step-caption);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--terracotta-deep);
-}
-
-.formTitle {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  font-size: var(--step-h4);
 }

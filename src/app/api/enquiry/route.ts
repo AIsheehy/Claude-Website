@@ -28,6 +28,7 @@ export async function POST(request: NextRequest) {
   const name = body.name;
   const email = body.email;
   const phone = typeof body.phone === "string" ? body.phone : "";
+  const address = typeof body.address === "string" ? body.address : "";
   const service = typeof body.service === "string" ? body.service : "";
   const message = typeof body.message === "string" ? body.message : "";
 
@@ -40,6 +41,7 @@ export async function POST(request: NextRequest) {
       `Name: ${name}`,
       `Phone: ${phone}`,
       `Email: ${email}`,
+      `Property address: ${address || "Not provided"}`,
       `Service: ${service || "Not specified"}`,
       "",
       "Message:",
@@ -49,6 +51,7 @@ export async function POST(request: NextRequest) {
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Property address:</strong> ${escapeHtml(address || "Not provided")}</p>
       <p><strong>Service:</strong> ${escapeHtml(service || "Not specified")}</p>
       <p><strong>Message:</strong><br/>${escapeHtml(message || "(none provided)").replace(/\n/g, "<br/>")}</p>
     `,

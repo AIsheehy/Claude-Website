@@ -47,7 +47,6 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
               <div className={styles.body}>
                 <Stars />
                 <blockquote className={styles.quote}>&ldquo;{t.quote}&rdquo;</blockquote>
-                <p className={styles.supporting}>{t.supporting}</p>
                 <footer className={styles.footer}>
                   <span className={styles.name}>{t.name}</span>
                   <span className={styles.context}>{t.context}</span>

@@ -18,6 +18,11 @@
   margin-top: 1rem;
 }
 
+.emphasis {
+  font-style: italic;
+  color: var(--terracotta-deep);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -94,4 +99,10 @@
   color: var(--ink);
   font-size: var(--step-small);
   line-height: 1.4;
+}
+
+.cardDescription {
+  color: var(--text-muted);
+  font-size: var(--step-caption);
+  line-height: 1.5;
 }

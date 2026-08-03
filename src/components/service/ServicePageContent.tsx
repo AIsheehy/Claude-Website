@@ -18,15 +18,17 @@ export function ServicePageContent({
   eyebrow,
   headline,
   lede,
+  servicesEmphasis,
 }: {
   eyebrow: string;
   headline: ReactNode;
   lede: ReactNode;
+  servicesEmphasis: string;
 }) {
   return (
     <>
       <Hero eyebrow={eyebrow} headline={headline} lede={lede} />
-      <Services />
+      <Services emphasis={servicesEmphasis} />
       <ServiceStats />
       <Process tightBottom />
       <InlineCta

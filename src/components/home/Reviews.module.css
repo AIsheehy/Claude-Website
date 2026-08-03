@@ -79,13 +79,6 @@
   font-size: var(--step-body-lg);
   line-height: 1.5;
   color: var(--ink);
-}
-
-.supporting {
-  margin-top: 0.85rem;
-  color: var(--text-muted);
-  font-size: var(--step-small);
-  line-height: 1.6;
   flex: 1;
 }
 

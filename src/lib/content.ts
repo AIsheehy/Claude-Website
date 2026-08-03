@@ -22,17 +22,53 @@ export const business = {
 export type Service = {
   slug: string;
   shortName: string;
+  description: string;
   icon: "compass" | "shield" | "scale" | "ruler" | "drawing" | "house" | "roof";
 };
 
 export const services: Service[] = [
-  { slug: "planning-permission", shortName: "Planning Applications", icon: "drawing" },
-  { slug: "lawful-development-certificates", shortName: "Lawful Development Certificates", icon: "shield" },
-  { slug: "loft-conversions", shortName: "Loft Conversions", icon: "roof" },
-  { slug: "house-extensions", shortName: "House Extensions", icon: "house" },
-  { slug: "architectural-designs", shortName: "Architectural Designs", icon: "compass" },
-  { slug: "floor-plan-drawings", shortName: "Floor Plan Drawings", icon: "ruler" },
-  { slug: "change-of-use", shortName: "Change of Use Applications", icon: "scale" },
+  {
+    slug: "planning-permission",
+    shortName: "Planning Applications",
+    description: "Full applications prepared and submitted to the council for you.",
+    icon: "drawing",
+  },
+  {
+    slug: "lawful-development-certificates",
+    shortName: "Lawful Development Certificates",
+    description: "Proof your project is lawful without needing full planning permission.",
+    icon: "shield",
+  },
+  {
+    slug: "loft-conversions",
+    shortName: "Loft Conversions",
+    description: "Drawings and approvals for turning your loft into usable space.",
+    icon: "roof",
+  },
+  {
+    slug: "house-extensions",
+    shortName: "House Extensions",
+    description: "Design and drawings for rear, side or wraparound extensions.",
+    icon: "house",
+  },
+  {
+    slug: "architectural-designs",
+    shortName: "Architectural Designs",
+    description: "Considered design work that balances your brief with what will get approved.",
+    icon: "compass",
+  },
+  {
+    slug: "floor-plan-drawings",
+    shortName: "Floor Plan Drawings",
+    description: "Accurate existing and proposed floor plans for your application.",
+    icon: "ruler",
+  },
+  {
+    slug: "change-of-use",
+    shortName: "Change of Use Applications",
+    description: "Applications for changing how a building or land is legally used.",
+    icon: "scale",
+  },
 ];
 
 // London, then every traditional Home County — matches the "London and Home
@@ -51,7 +87,7 @@ export const boroughs = [
 // the rest keep their existing order.
 export const trustMarkers = [
   { icon: "star", label: "5-Star Rated On Google" },
-  { icon: "shield", label: "Professional Indemnity Insured" },
+  { icon: "shield", label: "From £850.00" },
   { icon: "clock", label: "14 Days From Survey To Submission" },
   { icon: "pin", label: "London & Home Counties Coverage" },
 ];
@@ -127,33 +163,28 @@ export const processSteps: ProcessStep[] = [
 
 export type Testimonial = {
   quote: string;
-  supporting: string;
   name: string;
   context: string;
   image: string;
 };
 
 // Real client testimonials and photos, carried over from the existing site —
-// rewritten outcome-first: a short quoted line stating the result, then a
-// plain supporting sentence, rather than one long undifferentiated quote.
+// rewritten outcome-first as a short quoted line stating the result.
 export const testimonials: Testimonial[] = [
   {
     quote: "Our planning application was approved, and the whole process felt straightforward.",
-    supporting: "Michael guided us through every stage and made everything easy to understand.",
     name: "Tasha",
     context: "Rear extension · Surrey",
     image: "/images/testimonials/tasha.jpg",
   },
   {
     quote: "Honest, knowledgeable and detail-focused from start to finish.",
-    supporting: "We'd happily use Form & Function again for our loft conversion.",
     name: "Harry",
     context: "Rear extension · SW London",
     image: "/images/testimonials/harry.jpg",
   },
   {
     quote: "Every question was answered quickly, making the whole process far less stressful.",
-    supporting: "Professional, responsive and a pleasure to work with.",
     name: "Irina",
     context: "Loft conversion · Surrey",
     image: "/images/testimonials/irina.jpg",

@@ -88,6 +88,15 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
 
+      <Field label="Property address" htmlFor="address">
+        <input
+          id="address"
+          name="address"
+          className={controlClassName}
+          placeholder="123 Example Street, Sutton, SM2 6LE"
+        />
+      </Field>
+
       <Field label="What do you need help with?" htmlFor="service">
         <select id="service" name="service" className={controlClassName} defaultValue="">
           <option value="" disabled>

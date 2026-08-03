@@ -13,6 +13,7 @@ export default function PlanningPermissionPage() {
       eyebrow="Planning Applications handled from enquiry to approval."
       headline="Planning Permission, Made Simple"
       lede="Everything you need to get your project off the ground, from initial advice to full planning submission, at one fixed price."
+      servicesEmphasis="Planning Applications"
     />
   );
 }
