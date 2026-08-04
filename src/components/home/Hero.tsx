@@ -12,16 +12,19 @@ export function Hero({
       approval.
     </>
   ),
+  primaryCtaLabel,
 }: {
   eyebrow?: string;
   headline?: ReactNode;
   lede?: ReactNode;
+  primaryCtaLabel?: string;
 }) {
   return (
     <PageHero
       eyebrow={eyebrow}
       headline={headline}
       lede={lede}
+      primaryCtaLabel={primaryCtaLabel}
       trustSlot={<TrustList />}
       eyebrowAccent
       graphic

@@ -10,7 +10,7 @@ import {
   IconHouse,
   IconRoof,
 } from "@/components/icons";
-import { services } from "@/lib/content";
+import { services as defaultServices, Service } from "@/lib/content";
 import styles from "./Services.module.css";
 
 const iconMap = {
@@ -28,13 +28,17 @@ const defaultLedeParagraphs: ReactNode[] = [
 ];
 
 export function Services({
+  headline,
   emphasis = "Planning Applications",
   ledeParagraphs = defaultLedeParagraphs,
+  services = defaultServices,
 }: {
+  headline?: ReactNode;
   emphasis?: string;
   ledeParagraphs?: ReactNode[];
+  services?: Service[];
 }) {
-  const headline = (
+  const resolvedHeadline = headline ?? (
     <>
       We take the stress out of <em className={styles.emphasis}>{emphasis}</em>
     </>
@@ -42,7 +46,7 @@ export function Services({
 
   return (
     <Section id="services" tightBottom className={styles.section}>
-      <SectionHead eyebrow="What we do" title={headline} />
+      <SectionHead eyebrow="What we do" title={resolvedHeadline} />
       <div className={styles.intro}>
         {ledeParagraphs.map((paragraph, i) => (
           <p key={i} className={styles.lede}>

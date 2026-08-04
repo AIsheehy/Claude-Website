@@ -1,0 +1,16 @@
+.body {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--step-body-lg);
+  line-height: 1.55;
+}
+
+.body p + p {
+  margin-top: 1rem;
+}
+
+.cta {
+  margin-top: 1.75rem;
+}

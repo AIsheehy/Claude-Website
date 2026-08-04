@@ -29,3 +29,30 @@
 .textOnDark {
   color: var(--paper);
 }
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--step-h4);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.headingOnDark {
+  color: var(--paper);
+}
+
+.textSecondary {
+  font-size: var(--step-body);
+  color: var(--text-muted);
+}
+
+.textSecondaryOnDark {
+  color: var(--text-muted-on-dark);
+}
