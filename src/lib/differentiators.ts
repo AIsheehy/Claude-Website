@@ -1,31 +1,25 @@
 export type Differentiator = {
   title: string;
   description: string;
-  icon: "layers" | "arrow" | "chat" | "shield";
+  icon: "layers" | "chat" | "shield";
 };
 
 export const differentiators: Differentiator[] = [
   {
-    title: "One Experienced and Passionate Team",
+    title: "Deep Professional Experience",
     description:
-      "You'll work with one experienced, passionate team from your first survey through to your planning submission — invested in getting your project right.",
+      "Delivering complex projects from home improvements to large scale refurbishments so we have the knowledge to meet your needs.",
     icon: "layers",
   },
   {
-    title: "100% Satisfaction Guarantee",
+    title: "Founder Led Service",
     description:
-      "We'll work closely with you throughout the process, listening to your ideas and refining the design until you're completely happy.",
+      "All work is handled directly by the company founder - so you get the care and dedication your project deserves.",
     icon: "chat",
   },
   {
     title: "One Fixed Price",
     description: "Everything you need, from initial advice to submission, with no hidden costs.",
     icon: "shield",
-  },
-  {
-    title: "Honest Advice Before You Commit",
-    description:
-      "We'll tell you if your proposal is realistic before you spend money on drawings or applications.",
-    icon: "arrow",
   },
 ];

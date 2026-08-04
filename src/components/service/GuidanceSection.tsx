@@ -15,7 +15,7 @@ export function GuidanceSection({
   ctaLabel: string;
 }) {
   return (
-    <Section tight>
+    <Section tight className={styles.section}>
       <SectionHead eyebrow={eyebrow} title={heading} align="center" />
       <Reveal className={styles.body} delay={80}>
         {paragraphs.map((paragraph) => (

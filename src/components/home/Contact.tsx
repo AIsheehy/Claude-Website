@@ -1,14 +1,14 @@
 import { EnquiryForm } from "./EnquiryForm";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { IconPhone, IconMail, IconCheck, IconClock, IconShield } from "@/components/icons";
+import { IconPhone, IconMail, IconChat, IconClock, IconShield } from "@/components/icons";
 import { business } from "@/lib/content";
 import styles from "./Contact.module.css";
 
 const closingStats = [
-  { icon: IconCheck, value: "100%", label: "Satisfaction Guarantee" },
-  { icon: IconClock, value: "14 Days", label: "To submission from instruction" },
-  { icon: IconShield, value: "Founder-Led", label: "You deal with Michael directly" },
+  { icon: IconChat, label: "Founder Led Service" },
+  { icon: IconShield, label: "From £995.00" },
+  { icon: IconClock, label: "Drawings Ready Within 7 Days" },
 ];
 
 export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
@@ -19,26 +19,21 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
         <div className={styles.copy}>
           <p className={beige ? "eyebrow" : "eyebrow onDark"}>Ready when you are</p>
           <h2 className={[styles.title, beige && styles.titleBeige].filter(Boolean).join(" ")}>
-            Let&rsquo;s get your project moving.
+            Let&rsquo;s Get Your Project Moving
           </h2>
           <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
-            No obligation, no jargon and no pressure &mdash; just a straight, honest answer on
-            what&rsquo;s achievable, usually within hours, direct from the person who&rsquo;ll
-            actually handle your application.
+            Tell us a little about your project and we&rsquo;ll explain the best way to move
+            forward. You&rsquo;ll receive clear, honest advice and a fixed quotation directly from
+            the person who&rsquo;ll manage your project from start to finish.
           </p>
 
           <ul className={[styles.statRow, beige && styles.statRowBeige].filter(Boolean).join(" ")}>
             {closingStats.map((s) => (
               <li key={s.label} className={styles.statItem}>
                 <s.icon width={18} height={18} className={beige ? styles.statIconBeige : undefined} />
-                <div>
-                  <div className={[styles.statValue, beige && styles.statValueBeige].filter(Boolean).join(" ")}>
-                    {s.value}
-                  </div>
-                  <div className={[styles.statLabel, beige && styles.statLabelBeige].filter(Boolean).join(" ")}>
-                    {s.label}
-                  </div>
-                </div>
+                <span className={[styles.statLabel, beige && styles.statLabelBeige].filter(Boolean).join(" ")}>
+                  {s.label}
+                </span>
               </li>
             ))}
           </ul>

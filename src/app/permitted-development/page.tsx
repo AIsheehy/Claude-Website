@@ -12,50 +12,43 @@ const permittedDevelopmentServices: Service[] = [
   {
     slug: "permitted-development-assessment",
     shortName: "Permitted Development Assessment",
-    description:
-      "Every property is different. We'll assess your home against the current Permitted Development rules, explain whether your project qualifies and advise on the best route forward before you spend money on unnecessary applications or construction.",
+    description: "We assess your home against the rules and advise on the best route forward.",
     icon: "scale",
   },
   {
     slug: "lawful-development-certificate",
     shortName: "Lawful Development Certificate",
-    description:
-      "If your project qualifies, we'll prepare and submit a Lawful Development Certificate application, giving you official confirmation from your local authority that your proposal is lawful and can be carried out under Permitted Development rights.",
+    description: "Official confirmation from your council that your project is lawful under Permitted Development.",
     icon: "shield",
   },
   {
     slug: "measured-survey",
     shortName: "Accurate Measured Survey",
-    description:
-      "We carry out a detailed survey of your property, recording every measurement and level to ensure your drawings accurately reflect your home from the very beginning.",
+    description: "A detailed survey of your property, so your drawings accurately reflect your home.",
     icon: "ruler",
   },
   {
     slug: "architectural-drawings",
     shortName: "Professional Architectural Drawings",
-    description:
-      "Existing and proposed drawings prepared to the standard required by your local authority, ensuring your application is clear, accurate and professionally presented.",
+    description: "Drawings prepared to the standard your local authority requires, clear and accurate.",
     icon: "house",
   },
   {
     slug: "application-package",
     shortName: "Complete Application Package",
-    description:
-      "We prepare, organise and submit everything required to support your Lawful Development Certificate application, making the process straightforward from start to finish.",
+    description: "Everything your Lawful Development Certificate application needs, prepared and submitted for you.",
     icon: "drawing",
   },
   {
     slug: "council-liaison",
     shortName: "Council Liaison",
-    description:
-      "We communicate directly with your local authority on your behalf, responding to any queries and managing the application until a decision is issued wherever possible.",
+    description: "We deal directly with your council, managing the application through to a decision.",
     icon: "roof",
   },
   {
     slug: "aftercare",
     shortName: "Aftercare and Ongoing Support",
-    description:
-      "Our support doesn't end once your certificate has been submitted. We're here to answer questions, provide guidance and help you move confidently into the next stage of your project.",
+    description: "Support doesn't stop at submission — we're here for questions and next steps too.",
     icon: "compass",
   },
 ];

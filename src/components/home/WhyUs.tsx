@@ -2,12 +2,11 @@ import { ReactNode } from "react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Differentiator, differentiators as defaultDifferentiators } from "@/lib/differentiators";
-import { IconLayers, IconArrowRight, IconChat, IconShield } from "@/components/icons";
+import { IconLayers, IconChat, IconShield } from "@/components/icons";
 import styles from "./WhyUs.module.css";
 
 const iconMap = {
   layers: IconLayers,
-  arrow: IconArrowRight,
   chat: IconChat,
   shield: IconShield,
 };

@@ -61,42 +61,6 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
     <form className={styles.form} onSubmit={handleSubmit}>
       <input type="text" name="company" tabIndex={-1} autoComplete="off" className={styles.honeypot} aria-hidden="true" />
 
-      <div className={styles.grid}>
-        <Field label="Full name" htmlFor="name" required>
-          <input id="name" name="name" required className={controlClassName} placeholder="Jane Smith" />
-        </Field>
-        <Field label="Phone number" htmlFor="phone" required>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            required
-            className={controlClassName}
-            placeholder="07000 000000"
-          />
-        </Field>
-      </div>
-
-      <Field label="Email address" htmlFor="email" required>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          className={controlClassName}
-          placeholder="jane@email.com"
-        />
-      </Field>
-
-      <Field label="Property address" htmlFor="address">
-        <input
-          id="address"
-          name="address"
-          className={controlClassName}
-          placeholder="123 Example Street, Sutton, SM2 6LE"
-        />
-      </Field>
-
       <Field label="What do you need help with?" htmlFor="service">
         <select id="service" name="service" className={controlClassName} defaultValue="">
           <option value="" disabled>
@@ -119,8 +83,19 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
 
+      <Field label="Email address" htmlFor="email" required>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          className={controlClassName}
+          placeholder="jane@email.com"
+        />
+      </Field>
+
       <Button type="submit" size="lg" className={styles.submit}>
-        {status === "submitting" ? "Sending…" : "Get in Touch"}
+        {status === "submitting" ? "Sending…" : "Submit"}
       </Button>
       {status === "error" && (
         <p className={styles.errorText}>

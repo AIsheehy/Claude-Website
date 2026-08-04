@@ -11,7 +11,7 @@ function escapeHtml(value: string) {
 export async function POST(request: NextRequest) {
   const body = await request.json().catch(() => null);
 
-  if (!body || typeof body.name !== "string" || typeof body.email !== "string") {
+  if (!body || typeof body.email !== "string") {
     return NextResponse.json({ ok: false, error: "Invalid submission." }, { status: 400 });
   }
 
@@ -25,10 +25,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, error: "Email is not configured." }, { status: 500 });
   }
 
-  const name = body.name;
   const email = body.email;
-  const phone = typeof body.phone === "string" ? body.phone : "";
-  const address = typeof body.address === "string" ? body.address : "";
   const service = typeof body.service === "string" ? body.service : "";
   const message = typeof body.message === "string" ? body.message : "";
 
@@ -36,22 +33,16 @@ export async function POST(request: NextRequest) {
     from: process.env.ENQUIRY_FROM_EMAIL || `Form & Function London <${business.email}>`,
     to: business.email,
     replyTo: email,
-    subject: `New enquiry from ${name}`,
+    subject: `New enquiry — ${service || "General enquiry"}`,
     text: [
-      `Name: ${name}`,
-      `Phone: ${phone}`,
       `Email: ${email}`,
-      `Property address: ${address || "Not provided"}`,
       `Service: ${service || "Not specified"}`,
       "",
       "Message:",
       message || "(none provided)",
     ].join("\n"),
     html: `
-      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-      <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Property address:</strong> ${escapeHtml(address || "Not provided")}</p>
       <p><strong>Service:</strong> ${escapeHtml(service || "Not specified")}</p>
       <p><strong>Message:</strong><br/>${escapeHtml(message || "(none provided)").replace(/\n/g, "<br/>")}</p>
     `,

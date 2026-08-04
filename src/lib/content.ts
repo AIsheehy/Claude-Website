@@ -87,8 +87,8 @@ export const boroughs = [
 // the rest keep their existing order.
 export const trustMarkers = [
   { icon: "star", label: "5-Star Rated On Google" },
-  { icon: "shield", label: "From £850.00" },
-  { icon: "clock", label: "14 Days From Survey To Submission" },
+  { icon: "shield", label: "From £995.00" },
+  { icon: "clock", label: "Drawings Ready Within 7 Days" },
   { icon: "pin", label: "London & Home Counties Coverage" },
 ];
 
@@ -305,34 +305,38 @@ export type FaqItem = {
 
 export const faqs: FaqItem[] = [
   {
-    question: "What happens if my application is refused?",
+    question: "How long will it take to get permission?",
     answer:
-      "We assess the risk of refusal honestly before you submit — if we don't think an application is likely to succeed, we'll say so at the advice stage, not after. If a refusal does happen, we review the council's reasoning and advise on amending and resubmitting or appealing, as part of our service.",
+      "We aim to have your application submitted within 14 days. The council then must make a decision within the statutory period of a maximum of 8 weeks.",
   },
   {
-    question: "How do I know I won't waste money on drawings that can't be built?",
+    question: "What's included in your application?",
     answer:
-      "That's what the initial advice stage is for. We look at your property, the relevant planning policy and any site-specific constraints before a single drawing is produced, so you're making decisions with a clear view of what's realistic.",
+      "Simply put, everything you need to secure approval. We handle every step for you, from the initial survey and production of all scaled drawings and plans, right up to submission and management of the application with the council.",
   },
   {
-    question: "Do I need planning permission, or does permitted development cover me?",
-    answer:
-      "Often neither is obvious without a proper assessment — many projects fall under permitted development rights, some need a Lawful Development Certificate to prove it, and others need full planning permission. We work out which applies to you as the first step.",
+    question: "Which areas of the UK do you cover?",
+    answer: "We mainly work in London and the Home Counties but are happy to travel, so get in touch!",
   },
   {
-    question: "How long does the process take?",
+    question: "How long will it take to submit my application?",
     answer:
-      "Councils have statutory timeframes for a decision once an application is validated — typically 8 weeks for householder applications, longer for larger schemes. Survey, drawings and preparation ahead of submission vary by project; we'll give you a realistic timeline for your specific case at the advice stage.",
+      "On average, just 14 days. We aim to have the draft version of your application with you within 7 days of survey. We then aim to have the full application complete and submitted 7 days later.",
   },
   {
-    question: "Will I deal with one person, or get passed between departments?",
+    question: "Can you help me with designing my ideas?",
     answer:
-      "One team handles your project from initial advice through to the council's decision — including every piece of correspondence in between. You're not re-explaining your project to someone new at each stage.",
+      "Yes, absolutely. Good home design is something we are deeply passionate about and would love to help make your ideas a reality.",
   },
   {
-    question: "Do you only handle the paperwork, or the design too?",
+    question: "Will I have to speak to the council?",
     answer:
-      "Both. Drawings are prepared with approvability in mind from the outset, not just to illustrate what you've already decided — the two are handled together, not as separate handoffs.",
+      "No, not unless you specifically want to. We handle the entire process for you, acting as your planning agent and handling all correspondence with your local authority — you will only hear from them once a (hopefully positive) decision has been reached.",
+  },
+  {
+    question: "What is the difference between planning permission and permitted development?",
+    answer:
+      "Permitted Development allows certain home improvements, provided they meet size and design limits, which are guaranteed by a Lawful Development Certificate. Planning Permission is a formal process that involves a council decision. We'll identify which applies to your property and prepare drawings accordingly.",
   },
 ];
 

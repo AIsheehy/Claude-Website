@@ -12,50 +12,43 @@ const extensionServices: Service[] = [
   {
     slug: "feasibility-study",
     shortName: "Detailed Feasibility Study",
-    description:
-      "Before spending money on drawings, find out what your local authority is likely to approve, the planning constraints affecting your property and the best route to maximise your chances of success.",
+    description: "Find out what your council is likely to approve before you spend money on drawings.",
     icon: "compass",
   },
   {
     slug: "measured-survey",
     shortName: "Accurate Measured Survey",
-    description:
-      "We carry out a detailed survey of your property, recording every measurement and level to ensure your drawings are accurate from day one.",
+    description: "A detailed survey of your property, so your drawings are accurate from day one.",
     icon: "ruler",
   },
   {
     slug: "design-support",
     shortName: "Inspired Design Support",
-    description:
-      "Combining our technical experience with your ideas, we'll refine your design together through unlimited revisions until you're completely happy with the final proposal.",
+    description: "We refine your design together, through unlimited revisions, until you're completely happy.",
     icon: "drawing",
   },
   {
     slug: "architectural-drawings",
     shortName: "Professional Architectural Drawings",
-    description:
-      "Clear, accurate existing and proposed drawings prepared to planning standards, giving your project the best possible foundation for a successful application.",
+    description: "Clear, accurate drawings prepared to planning standards, giving your application a strong foundation.",
     icon: "house",
   },
   {
     slug: "application-package",
     shortName: "Complete Planning Application Package",
-    description:
-      "We prepare and organise every document needed for your submission, ensuring your application is complete, accurate and ready for review by the local authority.",
+    description: "Every document your application needs, prepared and organised, ready for council review.",
     icon: "shield",
   },
   {
     slug: "council-liaison",
     shortName: "Council Liaison",
-    description:
-      "We deal directly with the local authority on your behalf, responding to queries, managing correspondence and keeping your application moving wherever possible.",
+    description: "We deal directly with the local authority, managing correspondence and keeping things moving.",
     icon: "scale",
   },
   {
     slug: "aftercare",
     shortName: "Aftercare and Ongoing Support",
-    description:
-      "Our support doesn't end once your application is submitted. We're here to answer questions, provide advice and guide you through the next stages of your project.",
+    description: "Support doesn't stop at submission — we're here for questions and next steps too.",
     icon: "roof",
   },
 ];

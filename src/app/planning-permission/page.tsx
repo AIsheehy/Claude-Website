@@ -12,57 +12,49 @@ const planningServices: Service[] = [
   {
     slug: "feasibility-study",
     shortName: "Detailed Planning Feasibility Study",
-    description:
-      "Before spending money on drawings or construction, we'll assess your project, explain the planning constraints affecting your property and advise on the best route to maximise your chances of approval.",
+    description: "We assess your project and explain the planning constraints before you spend money.",
     icon: "compass",
   },
   {
     slug: "permitted-development-assessment",
     shortName: "Permitted Development Assessment",
-    description:
-      "Not every project requires planning permission. We'll establish whether your proposal can be completed under Permitted Development or whether a full planning application is needed, helping you avoid unnecessary time and expense.",
+    description: "We establish whether Permitted Development applies, saving you unnecessary time and expense.",
     icon: "scale",
   },
   {
     slug: "measured-survey",
     shortName: "Accurate Measured Survey",
-    description:
-      "We carry out a detailed survey of your property, recording every measurement and level to ensure your drawings are accurate from the very beginning.",
+    description: "A detailed survey of your property, so your drawings are accurate from the start.",
     icon: "ruler",
   },
   {
     slug: "design-support",
     shortName: "Inspired Design Support",
-    description:
-      "Combining our technical expertise with your ideas, we'll refine your design together through unlimited revisions until you're completely happy with the final proposal before anything is submitted.",
+    description: "We refine your design together, through unlimited revisions, until you're completely happy.",
     icon: "drawing",
   },
   {
     slug: "planning-drawings",
     shortName: "Professional Planning Drawings",
-    description:
-      "Existing and proposed drawings prepared to planning standards, giving your application the best possible chance of progressing smoothly through the council's review process.",
+    description: "Drawings prepared to planning standards, giving your application the best chance of approval.",
     icon: "house",
   },
   {
     slug: "complete-application",
     shortName: "Complete Planning Application",
-    description:
-      "We prepare, organise and submit all the documents required by your local authority, ensuring your application is complete, accurate and professionally presented.",
+    description: "We prepare, organise and submit everything your local authority requires.",
     icon: "shield",
   },
   {
     slug: "council-liaison",
     shortName: "Council Liaison",
-    description:
-      "We communicate directly with the planning officer on your behalf, responding to queries and managing the application until a decision is reached wherever possible.",
+    description: "We deal directly with the planning officer, managing your application to a decision.",
     icon: "roof",
   },
   {
     slug: "aftercare",
     shortName: "Aftercare and Ongoing Support",
-    description:
-      "Our support doesn't stop once your application is submitted. We're here to answer questions, explain the next stages and provide continued guidance throughout your project.",
+    description: "Support doesn't stop at submission — we're here to guide you through what's next.",
     icon: "shield",
   },
 ];
