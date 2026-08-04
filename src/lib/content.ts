@@ -161,16 +161,55 @@ export const processSteps: ProcessStep[] = [
   },
 ];
 
+export type TestimonialGalleryImage = {
+  src: string;
+  alt: string;
+  label: string;
+  fit: "cover" | "contain";
+  /** Extra disclosure badge shown on the image itself (used for AI visualisations). */
+  badge?: string;
+};
+
 export type Testimonial = {
   quote: string;
   name: string;
   context: string;
   image: string;
+  /** Optional project photo/drawing gallery, replacing the single `image` when present. */
+  gallery?: TestimonialGalleryImage[];
 };
 
 // Real client testimonials and photos, carried over from the existing site —
 // rewritten outcome-first as a short quoted line stating the result.
 export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Michael made the drawings and planning process much less stressful. He was very professional, answered all my questions promptly and was always helpful throughout.",
+    name: "Irina",
+    context: "Rear extension · Mitcham",
+    image: "/images/testimonials/eveline-road/existing.jpg",
+    gallery: [
+      {
+        src: "/images/testimonials/eveline-road/existing.jpg",
+        alt: "The rear of the property at 21 Eveline Road before the extension works began",
+        label: "Existing",
+        fit: "cover",
+      },
+      {
+        src: "/images/testimonials/eveline-road/approved-drawings.png",
+        alt: "The approved proposed rear elevation drawing for 21 Eveline Road",
+        label: "Approved Drawings",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/eveline-road/visualisation.jpg",
+        alt: "An artist's visualisation of the proposed rear extension at 21 Eveline Road",
+        label: "Artist's Visualisation",
+        fit: "cover",
+        badge: "Artist's Visualisation",
+      },
+    ],
+  },
   {
     quote: "Our planning application was approved, and the whole process felt straightforward.",
     name: "Tasha",
@@ -182,12 +221,6 @@ export const testimonials: Testimonial[] = [
     name: "Harry",
     context: "Rear extension · SW London",
     image: "/images/testimonials/harry.jpg",
-  },
-  {
-    quote: "Every question was answered quickly, making the whole process far less stressful.",
-    name: "Irina",
-    context: "Loft conversion · Surrey",
-    image: "/images/testimonials/irina.jpg",
   },
 ];
 

@@ -1,0 +1,165 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.mediaBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--paper-dim);
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.imageCover {
+  object-fit: cover;
+}
+
+.imageContain {
+  object-fit: contain;
+}
+
+.caption {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  padding: 0.3em 0.7em;
+  background: rgba(21, 33, 29, 0.78);
+  color: var(--white);
+  font-size: var(--step-caption);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-xs);
+}
+
+.visualisationBadge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  padding: 0.3em 0.65em;
+  background: rgba(251, 249, 244, 0.92);
+  color: var(--ink);
+  font-size: 0.6875rem;
+  font-style: italic;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-sm);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(251, 249, 244, 0.85);
+  color: var(--ink);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease), background var(--duration-base) var(--ease);
+}
+
+.gallery:hover .arrow,
+.gallery:focus-within .arrow {
+  opacity: 1;
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--white);
+}
+
+.arrow:disabled {
+  cursor: default;
+  opacity: 0;
+}
+
+.arrow:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--terracotta-deep);
+  outline-offset: 2px;
+}
+
+.arrowPrev {
+  left: 0.6rem;
+}
+
+.arrowNext {
+  right: 0.6rem;
+}
+
+.arrowIconPrev {
+  transform: rotate(180deg);
+}
+
+/* Touch devices have no hover state to reveal the arrows, so keep them
+   hidden there and rely on the native swipe + the labelled nav row. */
+@media (hover: none) {
+  .arrow {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.6rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.navButton {
+  border: none;
+  padding: 0.5em 0.65em;
+  border-radius: var(--radius-xs);
+  background: var(--paper-dim);
+  color: var(--text-muted);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease), color var(--duration-base) var(--ease);
+  min-height: 34px;
+}
+
+.navButton:hover {
+  background: var(--border);
+}
+
+.navButtonActive {
+  background: var(--terracotta-deep);
+  color: var(--white);
+}
+
+.navButton:focus-visible {
+  outline: 2px solid var(--terracotta-deep);
+  outline-offset: 2px;
+}

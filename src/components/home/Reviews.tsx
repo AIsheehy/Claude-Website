@@ -4,6 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { IconCheck } from "@/components/icons";
 import { testimonials } from "@/lib/content";
+import { ReviewGallery } from "./ReviewGallery";
 import styles from "./Reviews.module.css";
 
 function Stars() {
@@ -28,33 +29,46 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
       />
 
       <div className={styles.grid}>
-        {testimonials.map((t, i) => (
-          <Reveal key={t.name} delay={i * 90} className={styles.revealCard}>
-            <article className={styles.card}>
-              <div className={styles.imageWrap}>
-                <Image
-                  src={t.image}
-                  alt={`Completed project for ${t.name}, ${t.context}`}
-                  fill
-                  sizes="(min-width: 860px) 33vw, 100vw"
-                  className={styles.image}
-                />
-                <span className={styles.approvedBadge}>
-                  <IconCheck width={13} height={13} />
-                  Planning Approved
-                </span>
-              </div>
-              <div className={styles.body}>
-                <Stars />
-                <blockquote className={styles.quote}>&ldquo;{t.quote}&rdquo;</blockquote>
-                <footer className={styles.footer}>
-                  <span className={styles.name}>{t.name}</span>
-                  <span className={styles.context}>{t.context}</span>
-                </footer>
-              </div>
-            </article>
-          </Reveal>
-        ))}
+        {testimonials.map((t, i) => {
+          const approvedBadge = (
+            <span className={styles.approvedBadge}>
+              <IconCheck width={13} height={13} />
+              Planning Approved
+            </span>
+          );
+          return (
+            <Reveal key={t.name} delay={i * 90} className={styles.revealCard}>
+              <article className={styles.card}>
+                {t.gallery ? (
+                  <ReviewGallery images={t.gallery} overlay={approvedBadge} />
+                ) : (
+                  <div className={styles.imageWrap}>
+                    <Image
+                      src={t.image}
+                      alt={`Completed project for ${t.name}, ${t.context}`}
+                      fill
+                      sizes="(min-width: 860px) 33vw, 100vw"
+                      className={styles.image}
+                    />
+                    {approvedBadge}
+                  </div>
+                )}
+                <div className={styles.body}>
+                  <Stars />
+                  <blockquote
+                    className={[styles.quote, t.gallery && styles.quoteCompact].filter(Boolean).join(" ")}
+                  >
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <footer className={styles.footer}>
+                    <span className={styles.name}>{t.name}</span>
+                    <span className={styles.context}>{t.context}</span>
+                  </footer>
+                </div>
+              </article>
+            </Reveal>
+          );
+        })}
       </div>
 
       <div className={styles.moreWork}>

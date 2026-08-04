@@ -82,6 +82,13 @@
   flex: 1;
 }
 
+/* Gallery cards carry an extra nav-control row above this text block, so
+   the quote drops one step to keep the card from growing taller than its
+   siblings. */
+.quoteCompact {
+  font-size: var(--step-body);
+}
+
 .footer {
   display: flex;
   flex-direction: column;
