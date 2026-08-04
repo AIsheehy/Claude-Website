@@ -187,6 +187,33 @@ export type Testimonial = {
 // rewritten outcome-first as a short quoted line stating the result.
 export const testimonials: Testimonial[] = [
   {
+    quote: "An excellent experience from start to finish. Michael was professional, and our application was approved.",
+    name: "Tasha",
+    context: "House extension · Surrey",
+    image: "/images/testimonials/upfield-horley/existing.jpg",
+    gallery: [
+      {
+        src: "/images/testimonials/upfield-horley/existing.jpg",
+        alt: "The rear of the property at Upfield, Horley before the extension works began",
+        label: "Existing",
+        fit: "cover",
+      },
+      {
+        src: "/images/testimonials/upfield-horley/approved-drawings.png",
+        alt: "The approved planning drawing sheet for Upfield, Horley, showing all proposed elevations",
+        label: "Approved Drawings",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/upfield-horley/visualisation.jpg",
+        alt: "An artist's visualisation of the proposed extension at Upfield, Horley",
+        label: "Artist's Visualisation",
+        fit: "cover",
+        badge: "Artist's Visualisation",
+      },
+    ],
+  },
+  {
     quote: "Michael made the drawings and planning process much less stressful, and was always helpful.",
     name: "Irina",
     context: "Rear extension · Mitcham",
@@ -237,33 +264,6 @@ export const testimonials: Testimonial[] = [
       {
         src: "/images/testimonials/turvin-crescent/visualisation.jpg",
         alt: "An artist's visualisation of the proposed extension and balcony at 14 Turvin Crescent",
-        label: "Artist's Visualisation",
-        fit: "cover",
-        badge: "Artist's Visualisation",
-      },
-    ],
-  },
-  {
-    quote: "An excellent experience from start to finish. Michael was professional, and our application was approved.",
-    name: "Tasha",
-    context: "House extension · Surrey",
-    image: "/images/testimonials/upfield-horley/existing.jpg",
-    gallery: [
-      {
-        src: "/images/testimonials/upfield-horley/existing.jpg",
-        alt: "The rear of the property at Upfield, Horley before the extension works began",
-        label: "Existing",
-        fit: "cover",
-      },
-      {
-        src: "/images/testimonials/upfield-horley/approved-drawings.png",
-        alt: "The approved planning drawing sheet for Upfield, Horley, showing all proposed elevations",
-        label: "Approved Drawings",
-        fit: "contain",
-      },
-      {
-        src: "/images/testimonials/upfield-horley/visualisation.jpg",
-        alt: "An artist's visualisation of the proposed extension at Upfield, Horley",
         label: "Artist's Visualisation",
         fit: "cover",
         badge: "Artist's Visualisation",
