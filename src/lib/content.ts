@@ -175,6 +175,10 @@ export type Testimonial = {
   name: string;
   context: string;
   image: string;
+  /** Defaults to "Planning Approved" when omitted — set explicitly for projects
+   *  where permission has not (yet, or ever) been granted, so the badge never
+   *  implies an outcome that didn't happen. */
+  statusBadge?: string;
   /** Optional project photo/drawing gallery, replacing the single `image` when present. */
   gallery?: TestimonialGalleryImage[];
 };
@@ -211,16 +215,63 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
-    quote: "Our planning application was approved, and the whole process felt straightforward.",
-    name: "Tasha",
-    context: "Rear extension · Surrey",
-    image: "/images/testimonials/tasha.jpg",
+    quote:
+      "Great service from start to finish. Michael was honest, knowledgeable and incredibly detail-focused throughout. The drawings and planning application were handled professionally, communication was clear, and the whole process felt straightforward. I would happily recommend Form & Function London.",
+    name: "Harry",
+    context: "House extension · South West London",
+    image: "/images/testimonials/turvin-crescent/existing.jpg",
+    // This application was not approved — the badge and gallery labels must
+    // not imply that it was.
+    statusBadge: "Planning Application",
+    gallery: [
+      {
+        src: "/images/testimonials/turvin-crescent/existing.jpg",
+        alt: "The rear of the property at 14 Turvin Crescent before the extension works began",
+        label: "Existing",
+        fit: "cover",
+      },
+      {
+        src: "/images/testimonials/turvin-crescent/proposed-drawings.png",
+        alt: "The proposed rear elevation drawing for 14 Turvin Crescent",
+        label: "Proposed Drawings",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/turvin-crescent/visualisation.jpg",
+        alt: "An artist's visualisation of the proposed extension and balcony at 14 Turvin Crescent",
+        label: "Artist's Visualisation",
+        fit: "cover",
+        badge: "Artist's Visualisation",
+      },
+    ],
   },
   {
-    quote: "Honest, knowledgeable and detail-focused from start to finish.",
-    name: "Harry",
-    context: "Rear extension · SW London",
-    image: "/images/testimonials/harry.jpg",
+    quote:
+      "We had an excellent experience from start to finish. Michael was professional, supportive and knowledgeable throughout the entire process. Communication was always clear, and we were kept informed at every stage. Thanks to Michael's expertise and guidance, our planning application was successfully approved, which we were absolutely delighted about. He made what can often be a stressful process feel smooth and straightforward. We would highly recommend Form & Function London.",
+    name: "Tasha",
+    context: "House extension · Surrey",
+    image: "/images/testimonials/upfield-horley/existing.jpg",
+    gallery: [
+      {
+        src: "/images/testimonials/upfield-horley/existing.jpg",
+        alt: "The rear of the property at Upfield, Horley before the extension works began",
+        label: "Existing",
+        fit: "cover",
+      },
+      {
+        src: "/images/testimonials/upfield-horley/approved-drawings.png",
+        alt: "The approved proposed rear elevation drawing for Upfield, Horley",
+        label: "Approved Drawings",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/upfield-horley/visualisation.jpg",
+        alt: "An artist's visualisation of the proposed extension at Upfield, Horley",
+        label: "Artist's Visualisation",
+        fit: "cover",
+        badge: "Artist's Visualisation",
+      },
+    ],
   },
 ];
 

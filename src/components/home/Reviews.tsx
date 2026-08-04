@@ -25,7 +25,7 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
       <SectionHead
         eyebrow="Reviews"
         title="What it's actually like to work with us."
-        lede="Feedback from clients we've helped get their projects approved."
+        lede="Real projects, genuine feedback and the drawings that helped move them forward."
       />
 
       <div className={styles.grid}>
@@ -33,7 +33,7 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
           const approvedBadge = (
             <span className={styles.approvedBadge}>
               <IconCheck width={13} height={13} />
-              Planning Approved
+              {t.statusBadge ?? "Planning Approved"}
             </span>
           );
           return (
