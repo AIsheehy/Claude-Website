@@ -187,8 +187,7 @@ export type Testimonial = {
 // rewritten outcome-first as a short quoted line stating the result.
 export const testimonials: Testimonial[] = [
   {
-    quote:
-      "Michael made the drawings and planning process much less stressful. He was very professional, answered all my questions promptly and was always helpful throughout.",
+    quote: "Michael made the drawings and planning process much less stressful, and was always helpful.",
     name: "Irina",
     context: "Rear extension · Mitcham",
     image: "/images/testimonials/eveline-road/existing.jpg",
@@ -201,7 +200,7 @@ export const testimonials: Testimonial[] = [
       },
       {
         src: "/images/testimonials/eveline-road/approved-drawings.png",
-        alt: "The approved proposed rear elevation drawing for 21 Eveline Road",
+        alt: "The approved planning drawing sheet for 21 Eveline Road, showing all proposed elevations",
         label: "Approved Drawings",
         fit: "contain",
       },
@@ -215,8 +214,7 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
-    quote:
-      "Great service from start to finish. Michael was honest, knowledgeable and incredibly detail-focused throughout. The drawings and planning application were handled professionally, communication was clear, and the whole process felt straightforward. I would happily recommend Form & Function London.",
+    quote: "Great service from start to finish. Michael was honest, knowledgeable and detail-focused throughout.",
     name: "Harry",
     context: "House extension · South West London",
     image: "/images/testimonials/turvin-crescent/existing.jpg",
@@ -232,7 +230,7 @@ export const testimonials: Testimonial[] = [
       },
       {
         src: "/images/testimonials/turvin-crescent/proposed-drawings.png",
-        alt: "The proposed rear elevation drawing for 14 Turvin Crescent",
+        alt: "The proposed planning drawing sheet for 14 Turvin Crescent, showing all proposed elevations",
         label: "Proposed Drawings",
         fit: "contain",
       },
@@ -246,8 +244,7 @@ export const testimonials: Testimonial[] = [
     ],
   },
   {
-    quote:
-      "We had an excellent experience from start to finish. Michael was professional, supportive and knowledgeable throughout the entire process. Communication was always clear, and we were kept informed at every stage. Thanks to Michael's expertise and guidance, our planning application was successfully approved, which we were absolutely delighted about. He made what can often be a stressful process feel smooth and straightforward. We would highly recommend Form & Function London.",
+    quote: "An excellent experience from start to finish. Michael was professional, and our application was approved.",
     name: "Tasha",
     context: "House extension · Surrey",
     image: "/images/testimonials/upfield-horley/existing.jpg",
@@ -260,7 +257,7 @@ export const testimonials: Testimonial[] = [
       },
       {
         src: "/images/testimonials/upfield-horley/approved-drawings.png",
-        alt: "The approved proposed rear elevation drawing for Upfield, Horley",
+        alt: "The approved planning drawing sheet for Upfield, Horley, showing all proposed elevations",
         label: "Approved Drawings",
         fit: "contain",
       },
