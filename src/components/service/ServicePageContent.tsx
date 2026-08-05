@@ -34,13 +34,13 @@ export function ServicePageContent({
   servicesLedeParagraphs,
   services,
   afterServicesCtaText = "Not sure which service you need? Get a free assessment and we'll tell you.",
-  afterServicesCtaLabel,
+  afterServicesCtaLabel = "Get A Free Assessment",
   guidance,
   midPageCtaText = "Ready for the same result? Let's talk about your project.",
-  midPageCtaLabel,
+  midPageCtaLabel = "Get Started Today For Free",
   finalCtaHeading,
   finalCtaText = "See how straightforward your project can be by reaching out today.",
-  finalCtaLabel,
+  finalCtaLabel = "Find Out How To Get Started",
 }: {
   eyebrow: string;
   headline: ReactNode;

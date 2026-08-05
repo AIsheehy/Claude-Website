@@ -7,9 +7,9 @@ import { TestimonialGalleryImage } from "@/lib/content";
 import styles from "./ReviewGallery.module.css";
 
 const ARIA_LABELS = [
+  "View drawings",
   "View existing property",
-  "View approved drawings",
-  "View artist's visualisation",
+  "View proposed visualisation",
 ];
 
 export function ReviewGallery({

@@ -193,21 +193,21 @@ export const testimonials: Testimonial[] = [
     image: "/images/testimonials/upfield-horley/existing.jpg",
     gallery: [
       {
-        src: "/images/testimonials/upfield-horley/existing.jpg",
-        alt: "The rear of the property at Upfield, Horley before the extension works began",
-        label: "Existing",
-        fit: "cover",
-      },
-      {
         src: "/images/testimonials/upfield-horley/approved-drawings.png",
         alt: "The approved planning drawing sheet for Upfield, Horley, showing all proposed elevations",
         label: "Approved Drawings",
         fit: "contain",
       },
       {
+        src: "/images/testimonials/upfield-horley/existing.jpg",
+        alt: "The rear of the property at Upfield, Horley before the extension works began",
+        label: "Existing",
+        fit: "cover",
+      },
+      {
         src: "/images/testimonials/upfield-horley/visualisation.jpg",
         alt: "An artist's visualisation of the proposed extension at Upfield, Horley",
-        label: "Artist's Visualisation",
+        label: "Proposed",
         fit: "cover",
         badge: "Artist's Visualisation",
       },
@@ -220,21 +220,21 @@ export const testimonials: Testimonial[] = [
     image: "/images/testimonials/eveline-road/existing.jpg",
     gallery: [
       {
-        src: "/images/testimonials/eveline-road/existing.jpg",
-        alt: "The rear of the property at 21 Eveline Road before the extension works began",
-        label: "Existing",
-        fit: "cover",
-      },
-      {
         src: "/images/testimonials/eveline-road/approved-drawings.png",
         alt: "The approved planning drawing sheet for 21 Eveline Road, showing all proposed elevations",
         label: "Approved Drawings",
         fit: "contain",
       },
       {
+        src: "/images/testimonials/eveline-road/existing.jpg",
+        alt: "The rear of the property at 21 Eveline Road before the extension works began",
+        label: "Existing",
+        fit: "cover",
+      },
+      {
         src: "/images/testimonials/eveline-road/visualisation.jpg",
         alt: "An artist's visualisation of the proposed rear extension at 21 Eveline Road",
-        label: "Artist's Visualisation",
+        label: "Proposed",
         fit: "cover",
         badge: "Artist's Visualisation",
       },
@@ -250,21 +250,21 @@ export const testimonials: Testimonial[] = [
     statusBadge: "Planning Application",
     gallery: [
       {
-        src: "/images/testimonials/turvin-crescent/existing.jpg",
-        alt: "The rear of the property at 14 Turvin Crescent before the extension works began",
-        label: "Existing",
-        fit: "cover",
-      },
-      {
         src: "/images/testimonials/turvin-crescent/proposed-drawings.png",
         alt: "The proposed planning drawing sheet for 14 Turvin Crescent, showing all proposed elevations",
         label: "Proposed Drawings",
         fit: "contain",
       },
       {
+        src: "/images/testimonials/turvin-crescent/existing.jpg",
+        alt: "The rear of the property at 14 Turvin Crescent before the extension works began",
+        label: "Existing",
+        fit: "cover",
+      },
+      {
         src: "/images/testimonials/turvin-crescent/visualisation.jpg",
         alt: "An artist's visualisation of the proposed extension and balcony at 14 Turvin Crescent",
-        label: "Artist's Visualisation",
+        label: "Proposed",
         fit: "cover",
         badge: "Artist's Visualisation",
       },

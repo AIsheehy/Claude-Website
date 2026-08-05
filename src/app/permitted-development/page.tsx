@@ -65,7 +65,6 @@ export default function PermittedDevelopmentPage() {
         "Permitted Development can save time, money and unnecessary planning applications, but only if your project meets the rules. We'll assess your proposal, explain your options and manage the entire process, giving you complete confidence before any work begins. Our tailored service can include:",
       ]}
       services={permittedDevelopmentServices}
-      afterServicesCtaLabel="Check Your Permitted Development Rights"
       guidance={{
         eyebrow: "Permitted development",
         heading: "Not Sure If Your Project Falls Under Permitted Development?",
@@ -75,10 +74,8 @@ export default function PermittedDevelopmentPage() {
         ],
         ctaLabel: "Speak to a Permitted Development Expert",
       }}
-      midPageCtaLabel="Check Your Permitted Development Rights"
       finalCtaHeading="Think Your Project Might Qualify?"
       finalCtaText="We'll assess your proposal, explain whether Permitted Development applies and help you move forward with complete confidence."
-      finalCtaLabel="Secure Your Lawful Development Certificate"
     />
   );
 }

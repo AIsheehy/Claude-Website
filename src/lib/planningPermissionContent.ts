@@ -58,14 +58,13 @@ export const planningServices: Service[] = [
 export const planningPermissionContent = {
   eyebrow: "Planning permission advice, drawings and complete application packages.",
   headline: "Planning Permission, Made Simple",
-  lede: "Whether you're just exploring ideas or ready to submit your application, we'll guide you through the entire planning process. From expert advice and professionally prepared drawings to complete planning submissions, everything is tailored to your project and delivered at one fixed price.",
-  heroCtaLabel: "Find Out If You Need Planning Permission",
+  lede: "Whether you're just exploring ideas or ready to submit your application, we are here to help. From expert advice and professionally prepared drawings to complete planning submissions, everything is tailored to your project and delivered at one fixed price.",
+  heroCtaLabel: "Get A Free Planning Assessment",
   servicesHeadline: "Planning Permission Doesn't Have to Be Complicated",
   servicesLedeParagraphs: [
     "Whether you need help understanding the planning rules or want someone to manage the entire application from start to finish, we'll guide you every step of the way. Every project is different, so we tailor our service to your needs and can include:",
   ],
   services: planningServices,
-  afterServicesCtaLabel: "Get Expert Planning Advice",
   guidance: {
     eyebrow: "Planning permission",
     heading: "Not Sure If You Need Planning Permission?",
@@ -75,8 +74,6 @@ export const planningPermissionContent = {
     ],
     ctaLabel: "Check Your Project",
   } satisfies GuidanceContent,
-  midPageCtaLabel: "Get Expert Planning Advice",
   finalCtaHeading: "Not Sure Where to Start?",
   finalCtaText: "We'll explain exactly what your project needs and recommend the most suitable route before you spend money unnecessarily.",
-  finalCtaLabel: "Start Your Planning Application",
 };

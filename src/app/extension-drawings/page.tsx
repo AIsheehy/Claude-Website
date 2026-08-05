@@ -65,11 +65,8 @@ export default function ExtensionDrawingsPage() {
         "Whether you're just exploring ideas or already have sketches prepared, we'll meet you where you are. Every project is different, so we tailor our service to your needs, from one-off drawings to complete planning application packages.",
       ]}
       services={extensionServices}
-      afterServicesCtaLabel="Discuss Your Extension Project"
-      midPageCtaLabel="See How We Can Help"
       finalCtaHeading="Ready to Start Planning Your Extension?"
       finalCtaText="Tell us about your ideas and we'll explain the best way to move your project forward."
-      finalCtaLabel="Get Your Fixed Quote"
     />
   );
 }
