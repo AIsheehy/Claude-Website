@@ -1,7 +1,7 @@
 export type Differentiator = {
   title: string;
   description: string;
-  icon: "compass" | "chat" | "drawing" | "shield" | "scale";
+  icon: "compass" | "chat" | "drawing" | "shield";
 };
 
 export const differentiators: Differentiator[] = [
@@ -26,10 +26,5 @@ export const differentiators: Differentiator[] = [
     title: "One Fixed Price",
     description: "Know what you're paying from the outset, with no unexpected professional fees.",
     icon: "shield",
-  },
-  {
-    title: "We Deal With the Council",
-    description: "We prepare, submit and manage the application on your behalf.",
-    icon: "scale",
   },
 ];

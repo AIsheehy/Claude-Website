@@ -24,8 +24,11 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
           <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
             Tell us a little about your project and we will explain the type of permission you
             need, any specific local requirements, the likely timeline and a fixed quote on how
-            much it will all cost. You&rsquo;ll receive clear, honest advice and a fixed quotation
-            directly from the person who&rsquo;ll manage your project from start to finish.
+            much it will all cost.
+          </p>
+          <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
+            You&rsquo;ll receive clear, honest advice and a fixed quotation directly from the
+            person who&rsquo;ll manage your project from start to finish.
           </p>
 
           <ul className={[styles.statRow, beige && styles.statRowBeige].filter(Boolean).join(" ")}>
@@ -41,7 +44,7 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
         </div>
 
         <div id="enquire" className={styles.formCard}>
-          <p className={styles.formEyebrow}>No obligation &middot; no pressure</p>
+          <p className={styles.formEyebrow}>No obligation &middot; Response within hours</p>
           <EnquiryForm compact />
         </div>
 

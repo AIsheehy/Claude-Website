@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
 import { IconShield, IconCompass, IconChat } from "@/components/icons";
 import { meetMichael } from "@/lib/content";
 import styles from "./MeetMichael.module.css";
@@ -16,7 +18,13 @@ export function MeetMichael() {
       <Reveal className={styles.layout}>
         <div className={styles.visual}>
           <div className={styles.avatar}>
-            <span className={styles.initials}>M</span>
+            <Image
+              src="/images/team/michael.jpg"
+              alt="Michael, founder of Form & Function London"
+              fill
+              sizes="132px"
+              className={styles.avatarImage}
+            />
           </div>
           <ul className={styles.credentials}>
             {credentials.map((c) => (
@@ -37,6 +45,14 @@ export function MeetMichael() {
               <p key={p.slice(0, 24)}>{p}</p>
             ))}
           </div>
+          <Button
+            href="https://calendly.com/michael-formandfunctionlondon/30min"
+            variant="secondary"
+            className={styles.cta}
+            external
+          >
+            Book a Call
+          </Button>
         </div>
       </Reveal>
     </Section>

@@ -1,5 +1,5 @@
 .section {
-  background: var(--paper-dim);
+  background: var(--paper);
 }
 
 .layout {
@@ -31,23 +31,19 @@
 }
 
 .avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 132px;
   height: 132px;
   flex-shrink: 0;
   border-radius: 50%;
+  overflow: hidden;
   background: var(--white);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
 }
 
-.initials {
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--terracotta-deep);
+.avatarImage {
+  object-fit: cover;
 }
 
 .credentials {
@@ -90,4 +86,8 @@
   color: var(--text-muted);
   font-size: var(--step-body);
   line-height: 1.7;
+}
+
+.cta {
+  margin-top: 1.5rem;
 }

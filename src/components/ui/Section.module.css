@@ -1,13 +1,27 @@
 .section {
-  padding-block: var(--space-section);
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
 }
 
 .tight {
-  padding-block: calc(var(--space-section) * 0.6);
+  padding-top: calc(var(--space-section) * 0.6);
+  padding-bottom: calc(var(--space-section) * 0.6);
 }
 
 .tightBottom {
   padding-bottom: 0;
+}
+
+/* Mobile: the gap between a section's top edge and its first line of text
+   is 20% smaller than the gap the rest of the spacing rhythm uses. */
+@media (max-width: 899px) {
+  .section {
+    padding-top: calc(var(--space-section) * 0.8);
+  }
+
+  .tight {
+    padding-top: calc(var(--space-section) * 0.6 * 0.8);
+  }
 }
 
 .dark {

@@ -7,11 +7,12 @@ export const planningPermissionContent = {
   lede: "Whether you're exploring ideas or ready to apply, our planning expertise will help you move forward with confidence. From professional drawings to complete planning submissions, everything is tailored to your project and delivered at one fixed price.",
   heroCtaLabel: "Get A Free Planning Assessment",
   heroCtaNote: {
-    line1: "Find out if you need planning, what it'll cost and how long it'll take.",
-    line2: "Free initial advice · Fixed quote · No obligation.",
+    line1: "Do I need Planning? What will it cost? How long will it take?",
+    line2: "Find out for free with a no obligation planning assessment.",
   },
   servicesHeadline: "Planning Permission Doesn't Have to Be Complicated",
   servicesLedeParagraphs: [
-    "Whether you need help understanding the planning rules or want someone to manage the entire application from start to finish, we'll guide you every step of the way. Every project is different, so we tailor our service to your needs and can include:",
+    "Red tape, ambiguous rules and complex application requirements. Planning Permission can be complicated. But it doesn't have to be.",
+    "We use our experience and know how to cut through the noise, taking the stress out of planning and getting our clients' projects off the ground from day one. Our services include:",
   ],
 };

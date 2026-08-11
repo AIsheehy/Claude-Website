@@ -69,7 +69,10 @@ export function PageHero({
           )}
         </div>
 
-        {trustSlot && <Reveal delay={160}>{trustSlot}</Reveal>}
+        {/* Rendered without Reveal — it's already above the fold on every
+            page, so a scroll-triggered fade would just make it visibly pop
+            in a beat after the rest of the hero instead of loading with it. */}
+        {trustSlot}
       </Container>
     </section>
   );

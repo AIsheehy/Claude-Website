@@ -8,7 +8,6 @@ import { WhyUs } from "@/components/home/WhyUs";
 import { MeetMichael } from "@/components/home/MeetMichael";
 import { Faq } from "@/components/home/Faq";
 import { Contact } from "@/components/home/Contact";
-import { InlineCta } from "@/components/home/InlineCta";
 
 // Shared body for every dedicated service landing page (Planning
 // Applications, Permitted Development, Loft Conversion Drawings, Extension
@@ -24,8 +23,6 @@ export function ServicePageContent({
   servicesHeadline,
   servicesEmphasis,
   servicesLedeParagraphs,
-  afterServicesCtaText = "Not sure which service you need? Get a free assessment and we'll tell you.",
-  afterServicesCtaLabel = "Get A Free Assessment",
 }: {
   eyebrow: string;
   headline: ReactNode;
@@ -35,8 +32,6 @@ export function ServicePageContent({
   servicesHeadline?: ReactNode;
   servicesEmphasis?: string;
   servicesLedeParagraphs?: ReactNode[];
-  afterServicesCtaText?: string;
-  afterServicesCtaLabel?: string;
 }) {
   return (
     <>
@@ -44,11 +39,10 @@ export function ServicePageContent({
       <Services headline={servicesHeadline} emphasis={servicesEmphasis} ledeParagraphs={servicesLedeParagraphs} />
       <ServiceStats />
       <Reviews />
-      <Process tightBottom />
-      <InlineCta text={afterServicesCtaText} ctaLabel={afterServicesCtaLabel} tone="dark" />
-      <WhyUs dark />
-      <MeetMichael />
+      <Process />
+      <WhyUs />
       <Contact tone="beige" />
+      <MeetMichael />
       <Faq />
     </>
   );

@@ -27,14 +27,14 @@ export type Service = {
 
 // The single "What We Do" grid shown identically across every page.
 export const services: Service[] = [
-  { slug: "house-extensions", shortName: "House Extensions", icon: "house" },
+  { slug: "home-extensions", shortName: "Home Extensions", icon: "house" },
   { slug: "loft-conversions", shortName: "Loft Conversions", icon: "roof" },
-  { slug: "measured-survey", shortName: "Measured Survey", icon: "ruler" },
   { slug: "garage-conversions", shortName: "Garage Conversions", icon: "layers" },
+  { slug: "conservatories", shortName: "Conservatories", icon: "ruler" },
   { slug: "change-of-use", shortName: "Change of Use Applications", icon: "scale" },
   { slug: "hmos", shortName: "HMOs", icon: "document" },
   { slug: "architectural-design", shortName: "Architectural Design", icon: "compass" },
-  { slug: "to-scale-floor-plans", shortName: "To Scale Floor Plans", icon: "drawing" },
+  { slug: "floor-plans", shortName: "Floor Plans", icon: "drawing" },
 ];
 
 // London, then every traditional Home County — matches the "London and Home

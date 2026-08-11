@@ -10,6 +10,7 @@ type ButtonProps = {
   className?: string;
   type?: "button" | "submit";
   onClick?: () => void;
+  external?: boolean;
 };
 
 export function Button({
@@ -20,6 +21,7 @@ export function Button({
   className,
   type = "button",
   onClick,
+  external = false,
 }: ButtonProps) {
   const classes = [styles.button, styles[variant], size === "lg" && styles.lg, className]
     .filter(Boolean)
@@ -29,7 +31,7 @@ export function Button({
     const isExternalOrTel = href.startsWith("tel:") || href.startsWith("http");
     if (isExternalOrTel) {
       return (
-        <a href={href} className={classes}>
+        <a href={href} className={classes} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
           {children}
         </a>
       );
