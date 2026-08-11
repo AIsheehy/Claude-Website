@@ -22,53 +22,19 @@ export const business = {
 export type Service = {
   slug: string;
   shortName: string;
-  description: string;
-  icon: "compass" | "shield" | "scale" | "ruler" | "drawing" | "house" | "roof";
+  icon: "compass" | "shield" | "scale" | "ruler" | "drawing" | "house" | "roof" | "layers" | "document";
 };
 
+// The single "What We Do" grid shown identically across every page.
 export const services: Service[] = [
-  {
-    slug: "planning-permission",
-    shortName: "Planning Applications",
-    description: "Full applications prepared and submitted to the council for you.",
-    icon: "drawing",
-  },
-  {
-    slug: "lawful-development-certificates",
-    shortName: "Lawful Development Certificates",
-    description: "Proof your project is lawful without needing full planning permission.",
-    icon: "shield",
-  },
-  {
-    slug: "loft-conversions",
-    shortName: "Loft Conversions",
-    description: "Drawings and approvals for turning your loft into usable space.",
-    icon: "roof",
-  },
-  {
-    slug: "house-extensions",
-    shortName: "House Extensions",
-    description: "Design and drawings for rear, side or wraparound extensions.",
-    icon: "house",
-  },
-  {
-    slug: "architectural-designs",
-    shortName: "Architectural Designs",
-    description: "Considered design work that balances your brief with what will get approved.",
-    icon: "compass",
-  },
-  {
-    slug: "floor-plan-drawings",
-    shortName: "Floor Plan Drawings",
-    description: "Accurate existing and proposed floor plans for your application.",
-    icon: "ruler",
-  },
-  {
-    slug: "change-of-use",
-    shortName: "Change of Use Applications",
-    description: "Applications for changing how a building or land is legally used.",
-    icon: "scale",
-  },
+  { slug: "house-extensions", shortName: "House Extensions", icon: "house" },
+  { slug: "loft-conversions", shortName: "Loft Conversions", icon: "roof" },
+  { slug: "measured-survey", shortName: "Measured Survey", icon: "ruler" },
+  { slug: "garage-conversions", shortName: "Garage Conversions", icon: "layers" },
+  { slug: "change-of-use", shortName: "Change of Use Applications", icon: "scale" },
+  { slug: "hmos", shortName: "HMOs", icon: "document" },
+  { slug: "architectural-design", shortName: "Architectural Design", icon: "compass" },
+  { slug: "to-scale-floor-plans", shortName: "To Scale Floor Plans", icon: "drawing" },
 ];
 
 // London, then every traditional Home County — matches the "London and Home
@@ -87,9 +53,9 @@ export const boroughs = [
 // the rest keep their existing order.
 export const trustMarkers = [
   { icon: "star", label: "5-Star Rated On Google" },
-  { icon: "shield", label: "From £995.00" },
+  { icon: "shield", label: "Packages From £995.00" },
   { icon: "clock", label: "Drawings Ready Within 7 Days" },
-  { icon: "pin", label: "London & Home Counties Coverage" },
+  { icon: "pin", label: "London & Home Counties" },
 ];
 
 // Numeric claims from the existing site — reconfirm these are still current
@@ -133,30 +99,26 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Initial Advice & Survey",
-    description:
-      "We discuss your project, answer your questions and carry out a measured survey of your property.",
+    title: "Free initial assessment",
+    description: "Tell us what you're planning and we'll advise on the best route.",
     icon: "compass",
   },
   {
     step: "02",
-    title: "Design & Drawings",
-    description:
-      "We prepare your drawings and share them with you for review before making any final amendments.",
+    title: "Survey & design",
+    description: "We survey your property and prepare your drawings.",
     icon: "drawing",
   },
   {
     step: "03",
-    title: "Planning Submission",
-    description:
-      "Once you're happy with the proposal, we submit your application and manage all communication with the council.",
+    title: "Application submitted",
+    description: "We prepare the application and deal with the council.",
     icon: "send",
   },
   {
     step: "04",
-    title: "Decision & Next Steps",
-    description:
-      "When a decision is issued, we'll explain the outcome and guide you through the next stage of your project.",
+    title: "Decision & next steps",
+    description: "We'll explain the outcome and what happens next.",
     icon: "check",
   },
 ];
@@ -421,10 +383,12 @@ export const faqs: FaqItem[] = [
   },
 ];
 
-export const aboutCopy = {
-  eyebrow: "About us",
-  title: "Planning permission shouldn't feel like a gamble.",
+export const meetMichael = {
+  eyebrow: "Meet Michael",
+  title: "Founder of Form & Function London",
   paragraphs: [
-    "I started Form & Function London to make the process simpler, clearer and more transparent. Every project is built around honest advice, careful preparation and a single point of contact from the first conversation through to the council's decision.",
+    "I'm a building surveyor with professional experience managing design, refurbishment and property projects across London and the South East.",
+    "I founded Form & Function to give homeowners a more straightforward way to navigate planning — combining practical building knowledge, professional drawings and clear advice from one point of contact.",
+    "You'll deal directly with me throughout your project, supported by our design resources where required.",
   ],
 };

@@ -140,3 +140,49 @@
     max-width: none;
   }
 }
+
+/* Mobile: the roadmap was taking up far too much vertical space — compress
+   the icon size, gaps and type scale while keeping the same content. */
+@media (max-width: 859px) {
+  .head {
+    margin-bottom: 1.1rem;
+  }
+
+  .step {
+    gap: 0.85rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .stepLine {
+    left: 22px;
+    top: 50px;
+  }
+
+  .iconWrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .iconWrap svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .stepContent {
+    padding-top: 0.1rem;
+  }
+
+  .stepHead {
+    gap: 0.5rem;
+  }
+
+  .stepTitle {
+    font-size: var(--step-body-lg);
+  }
+
+  .stepDescription {
+    margin-top: 0.25rem;
+    font-size: var(--step-small);
+    line-height: 1.5;
+  }
+}

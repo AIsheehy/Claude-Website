@@ -8,7 +8,7 @@ import styles from "./Contact.module.css";
 const closingStats = [
   { icon: IconChat, label: "Founder Led Service" },
   { icon: IconShield, label: "From £995.00" },
-  { icon: IconClock, label: "Drawings Ready Within 7 Days" },
+  { icon: IconClock, label: "Drawings Within 7 Days" },
 ];
 
 export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
@@ -19,12 +19,13 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
         <div className={styles.copy}>
           <p className={beige ? "eyebrow" : "eyebrow onDark"}>Ready when you are</p>
           <h2 className={[styles.title, beige && styles.titleBeige].filter(Boolean).join(" ")}>
-            Let&rsquo;s Get Your Project Moving
+            Get Your Free Planning Assessment
           </h2>
           <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
-            Tell us a little about your project and we&rsquo;ll explain the best way to move
-            forward. You&rsquo;ll receive clear, honest advice and a fixed quotation directly from
-            the person who&rsquo;ll manage your project from start to finish.
+            Tell us a little about your project and we will explain the type of permission you
+            need, any specific local requirements, the likely timeline and a fixed quote on how
+            much it will all cost. You&rsquo;ll receive clear, honest advice and a fixed quotation
+            directly from the person who&rsquo;ll manage your project from start to finish.
           </p>
 
           <ul className={[styles.statRow, beige && styles.statRowBeige].filter(Boolean).join(" ")}>

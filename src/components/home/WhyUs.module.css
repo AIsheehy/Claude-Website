@@ -1,171 +1,80 @@
-.alt {
-  background: var(--surface-alt);
-}
-
-.layout {
+.grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 
-@media (min-width: 900px) {
-  .layout {
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 4rem;
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-}
 
-.intro {
-  position: sticky;
-  top: 6rem;
-  align-self: start;
-}
+  /* 5 items in a 2-column grid: let the last one take the full width of
+     its row instead of leaving an empty cell beside it. */
+  .revealCard:last-child {
+    grid-column: 1 / -1;
+  }
 
-.title {
-  margin-top: 0.75rem;
-  max-width: 16ch;
-}
-
-.titleOnDark {
-  color: var(--paper);
-}
-
-.lede {
-  margin-top: 1.1rem;
-  color: var(--text-muted);
-  font-size: var(--step-body);
-  max-width: 40ch;
-}
-
-.ledeOnDark {
-  color: var(--text-muted-on-dark);
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  gap: 1.5rem;
-  padding-block: 1.75rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.rowOnDark {
-  border-bottom-color: var(--border-on-dark);
-}
-
-.list li:first-child .row {
-  padding-top: 0;
-}
-
-.list li:last-child .row {
-  border-bottom: none;
-  padding-bottom: 0;
+  .revealCard:last-child .card {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .revealCard {
   height: 100%;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  height: 100%;
+  padding: 1.75rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.cardOnDark {
+  background: var(--ink-soft);
+  border-color: var(--border-on-dark);
+}
+
 .iconWrap {
-  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--terracotta-tint);
   color: var(--terracotta-deep);
 }
 
 .iconWrapOnDark {
-  background: var(--ink-soft);
+  background: var(--dark-surface);
   color: var(--sand);
   border: 1px solid var(--border-on-dark);
 }
 
-.rowTitle {
+.cardTitle {
   font-size: var(--step-h4);
 }
 
-.rowTitleOnDark {
+.cardTitleOnDark {
   color: var(--paper);
 }
 
-.rowDescription {
-  margin-top: 0.6rem;
+.cardDescription {
   color: var(--text-muted);
   font-size: var(--step-small);
   line-height: 1.65;
-  max-width: 56ch;
 }
 
-.rowDescriptionOnDark {
+.cardDescriptionOnDark {
   color: var(--text-muted-on-dark);
-}
-
-/* Mobile-only: the vertical bordered-row list becomes a horizontally
-   scrollable carousel of self-contained cards, so getting to the CTA below
-   doesn't mean scrolling past every point one at a time. Desktop (900px+)
-   keeps the original sticky-intro list untouched. */
-@media (max-width: 899px) {
-  .list {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.5rem;
-    margin-top: -0.5rem;
-  }
-
-  .list li {
-    flex: 0 0 82%;
-    scroll-snap-align: start;
-  }
-
-  .row,
-  .list li:first-child .row,
-  .list li:last-child .row {
-    flex-direction: column;
-    height: 100%;
-    padding: 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    background: var(--paper);
-  }
-
-  .rowOnDark,
-  .list li:first-child .rowOnDark,
-  .list li:last-child .rowOnDark {
-    border-color: var(--border-on-dark);
-    background: var(--ink-soft);
-  }
-
-  /* The reveal-on-scroll animation is designed for vertical page scroll.
-     Inside a horizontally swiped carousel, IntersectionObserver re-fires as
-     each card is dragged into the (horizontally) clipped viewport area,
-     making cards visibly lift/fade mid-swipe. Neutralise it here so the
-     carousel feels solid instead of "loose". */
-  .revealCard {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-/* The sticky intro column is a desktop-only trick (pins the left column
-   while the taller right column scrolls past it). Below 900px the layout
-   is a single stack, so sticky here just makes the heading float oddly
-   mid-scroll — disable it. */
-@media (max-width: 899px) {
-  .intro {
-    position: static;
-    top: auto;
-  }
 }

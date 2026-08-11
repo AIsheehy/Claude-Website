@@ -26,57 +26,31 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 }
 
 @media (min-width: 960px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
-  }
-}
-
-.mobileCarousel {
-  display: none;
-}
-
-/* Mobile: swap the grid for a horizontally scrollable carousel. */
-@media (max-width: 859px) {
-  .grid {
-    display: none;
-  }
-
-  .mobileCarousel {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.5rem;
-  }
-
-  .mobileCarousel .card {
-    flex: 0 0 44%;
-    scroll-snap-align: start;
-    height: auto;
-    align-items: center;
-    text-align: center;
   }
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.85rem;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 0.75rem;
   height: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -86,10 +60,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
-  border-radius: var(--radius-xs);
+  border-radius: 50%;
   background: var(--terracotta-tint);
   color: var(--terracotta-deep);
 }
@@ -99,10 +73,4 @@
   color: var(--ink);
   font-size: var(--step-small);
   line-height: 1.4;
-}
-
-.cardDescription {
-  color: var(--text-muted);
-  font-size: var(--step-caption);
-  line-height: 1.5;
 }

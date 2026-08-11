@@ -9,8 +9,10 @@ import {
   IconDrawing,
   IconHouse,
   IconRoof,
+  IconLayers,
+  IconDocument,
 } from "@/components/icons";
-import { services as defaultServices, Service } from "@/lib/content";
+import { services, Service } from "@/lib/content";
 import styles from "./Services.module.css";
 
 const iconMap = {
@@ -21,6 +23,8 @@ const iconMap = {
   drawing: IconDrawing,
   house: IconHouse,
   roof: IconRoof,
+  layers: IconLayers,
+  document: IconDocument,
 };
 
 const defaultLedeParagraphs: ReactNode[] = [
@@ -31,12 +35,10 @@ export function Services({
   headline,
   emphasis = "Planning Applications",
   ledeParagraphs = defaultLedeParagraphs,
-  services = defaultServices,
 }: {
   headline?: ReactNode;
   emphasis?: string;
   ledeParagraphs?: ReactNode[];
-  services?: Service[];
 }) {
   const resolvedHeadline = headline ?? (
     <>
@@ -55,39 +57,18 @@ export function Services({
         ))}
       </div>
 
-      {/* Desktop: flat grid */}
       <div className={styles.grid}>
-        {services.map((service, i) => {
+        {services.map((service: Service, i) => {
           const Icon = iconMap[service.icon];
           return (
             <Reveal key={service.slug} delay={i * 60}>
               <div className={styles.card}>
                 <span className={styles.iconWrap}>
-                  <Icon width={22} height={22} />
+                  <Icon width={24} height={24} />
                 </span>
                 <span className={styles.cardTitle}>{service.shortName}</span>
-                <span className={styles.cardDescription}>{service.description}</span>
               </div>
             </Reveal>
-          );
-        })}
-      </div>
-
-      {/* Mobile: swipeable carousel (no Reveal wrapper — see Reviews/WhyUs
-          for why: it re-triggers via IntersectionObserver as cards scroll
-          into the horizontally clipped viewport, making them visibly
-          lift/fade mid-swipe). */}
-      <div className={styles.mobileCarousel}>
-        {services.map((service) => {
-          const Icon = iconMap[service.icon];
-          return (
-            <div key={service.slug} className={styles.card}>
-              <span className={styles.iconWrap}>
-                <Icon width={22} height={22} />
-              </span>
-              <span className={styles.cardTitle}>{service.shortName}</span>
-              <span className={styles.cardDescription}>{service.description}</span>
-            </div>
           );
         })}
       </div>

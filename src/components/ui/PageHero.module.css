@@ -76,6 +76,25 @@
   color: var(--terracotta-deep);
 }
 
+.ctaNote {
+  margin-top: 1.1rem;
+}
+
+.ctaNote p {
+  font-size: var(--step-caption);
+  line-height: 1.5;
+}
+
+.ctaNote p:first-child {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ctaNoteMuted {
+  margin-top: 0.2rem;
+  color: var(--text-muted);
+}
+
 @media (max-width: 640px) {
   .phoneLink {
     display: none;

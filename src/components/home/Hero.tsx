@@ -13,11 +13,13 @@ export function Hero({
     </>
   ),
   primaryCtaLabel,
+  ctaNote,
 }: {
   eyebrow?: string;
   headline?: ReactNode;
   lede?: ReactNode;
   primaryCtaLabel?: string;
+  ctaNote?: { line1: string; line2: string };
 }) {
   return (
     <PageHero
@@ -25,6 +27,7 @@ export function Hero({
       headline={headline}
       lede={lede}
       primaryCtaLabel={primaryCtaLabel}
+      ctaNote={ctaNote}
       trustSlot={<TrustList />}
       eyebrowAccent
       graphic

@@ -231,6 +231,15 @@ select {
   transform: translateY(0);
 }
 
+/* Mobile: tighten the vertical rhythm between sections by ~15% so the page
+   doesn't feel as long to scroll through on a phone. */
+@media (max-width: 899px) {
+  :root {
+    --space-section: clamp(2.735rem, 2.44rem + 1.68vw, 4.628rem);
+    --space-block: clamp(1.473rem, 1.262rem + 1.01vw, 2.314rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

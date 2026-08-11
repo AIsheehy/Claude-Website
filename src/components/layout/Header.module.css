@@ -238,3 +238,19 @@
     display: none;
   }
 }
+
+/* Mobile: sticky header ~30% smaller so it takes up less of the viewport. */
+@media (max-width: 899px) {
+  .row {
+    height: 50px;
+  }
+
+  .logoLink {
+    transform: scale(0.7);
+    transform-origin: left center;
+  }
+
+  .burger {
+    transform: scale(0.7);
+  }
+}

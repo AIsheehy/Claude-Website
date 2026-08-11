@@ -12,6 +12,7 @@ export function PageHero({
   headline,
   lede,
   primaryCtaLabel = "Get in Touch",
+  ctaNote,
   trustSlot,
   eyebrowAccent = false,
   graphic = false,
@@ -20,6 +21,7 @@ export function PageHero({
   headline: ReactNode;
   lede: ReactNode;
   primaryCtaLabel?: string;
+  ctaNote?: { line1: string; line2: string };
   trustSlot?: ReactNode;
   eyebrowAccent?: boolean;
   graphic?: boolean;
@@ -44,6 +46,13 @@ export function PageHero({
                 {business.phone}
               </a>
             </div>
+
+            {ctaNote && (
+              <div className={styles.ctaNote}>
+                <p>{ctaNote.line1}</p>
+                <p className={styles.ctaNoteMuted}>{ctaNote.line2}</p>
+              </div>
+            )}
           </Reveal>
 
           {graphic && (

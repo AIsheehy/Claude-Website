@@ -1,25 +1,35 @@
 export type Differentiator = {
   title: string;
   description: string;
-  icon: "layers" | "chat" | "shield";
+  icon: "compass" | "chat" | "drawing" | "shield" | "scale";
 };
 
 export const differentiators: Differentiator[] = [
   {
-    title: "Deep Professional Experience",
+    title: "Professional Planning & Building Expertise",
     description:
-      "Delivering complex projects from home improvements to large scale refurbishments so we have the knowledge to meet your needs.",
-    icon: "layers",
+      "Your project is assessed with practical construction knowledge as well as planning considerations.",
+    icon: "compass",
   },
   {
-    title: "Founder Led Service",
-    description:
-      "All work is handled directly by the company founder - so you get the care and dedication your project deserves.",
+    title: "Founder-Led Service",
+    description: "You'll deal directly with Michael from your initial assessment through to submission.",
     icon: "chat",
   },
   {
+    title: "Design Built Around Your Ideas",
+    description:
+      "We don't force a standard solution. We'll develop your ideas and advise on how to make them practical and planning-friendly.",
+    icon: "drawing",
+  },
+  {
     title: "One Fixed Price",
-    description: "Everything you need, from initial advice to submission, with no hidden costs.",
+    description: "Know what you're paying from the outset, with no unexpected professional fees.",
     icon: "shield",
+  },
+  {
+    title: "We Deal With the Council",
+    description: "We prepare, submit and manage the application on your behalf.",
+    icon: "scale",
   },
 ];
