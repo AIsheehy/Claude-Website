@@ -5,7 +5,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Differentiator, differentiators as defaultDifferentiators } from "@/lib/differentiators";
 import { IconCompass, IconChat, IconDrawing, IconShield } from "@/components/icons";
 import { meetMichael } from "@/lib/content";
-import { CalendlyBookButton } from "./CalendlyBookButton";
 import styles from "./WhyUs.module.css";
 
 const iconMap = {
@@ -15,11 +14,7 @@ const iconMap = {
   shield: IconShield,
 };
 
-const credentials = [
-  { icon: IconShield, label: "BSc Building Surveyor" },
-  { icon: IconCompass, label: "Founder-Led" },
-  { icon: IconChat, label: "Direct Point of Contact" },
-];
+const credentials = [{ icon: IconShield, label: "BSc Building Surveyor" }];
 
 export function WhyUs({
   title = "Why Homeowners Choose Us",
@@ -58,7 +53,6 @@ export function WhyUs({
             ))}
           </ul>
         </div>
-        <CalendlyBookButton className={styles.bookCta} />
       </Reveal>
 
       <div className={styles.grid}>
