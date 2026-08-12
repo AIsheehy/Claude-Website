@@ -22,15 +22,26 @@ export const business = {
 export type Service = {
   slug: string;
   shortName: string;
-  icon: "compass" | "shield" | "scale" | "ruler" | "drawing" | "house" | "roof" | "layers" | "document";
+  icon:
+    | "compass"
+    | "shield"
+    | "scale"
+    | "ruler"
+    | "drawing"
+    | "house"
+    | "roof"
+    | "layers"
+    | "document"
+    | "garage"
+    | "conservatory";
 };
 
 // The single "What We Do" grid shown identically across every page.
 export const services: Service[] = [
   { slug: "home-extensions", shortName: "Home Extensions", icon: "house" },
   { slug: "loft-conversions", shortName: "Loft Conversions", icon: "roof" },
-  { slug: "garage-conversions", shortName: "Garage Conversions", icon: "layers" },
-  { slug: "conservatories", shortName: "Conservatories", icon: "ruler" },
+  { slug: "garage-conversions", shortName: "Garage Conversions", icon: "garage" },
+  { slug: "conservatories", shortName: "Conservatories", icon: "conservatory" },
   { slug: "change-of-use", shortName: "Change of Use Applications", icon: "scale" },
   { slug: "hmos", shortName: "HMOs", icon: "document" },
   { slug: "architectural-design", shortName: "Architectural Design", icon: "compass" },
@@ -384,11 +395,6 @@ export const faqs: FaqItem[] = [
 ];
 
 export const meetMichael = {
-  eyebrow: "Meet Michael",
+  name: "Michael",
   title: "Founder of Form & Function London",
-  paragraphs: [
-    "I'm a building surveyor with professional experience managing design, refurbishment and property projects across London and the South East.",
-    "I founded Form & Function to give homeowners a more straightforward way to navigate planning — combining practical building knowledge, professional drawings and clear advice from one point of contact.",
-    "You'll deal directly with me throughout your project, supported by our design resources where required.",
-  ],
 };

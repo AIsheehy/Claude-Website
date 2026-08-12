@@ -194,3 +194,23 @@ export function IconExpand(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IconGarage(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M3 10.5 12 4l9 6.5" />
+      <path d="M4 10v9.5h16V10" />
+      <path d="M4 14.5h16M4 17.5h16" />
+    </svg>
+  );
+}
+
+export function IconConservatory(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M4 19.5V12L12 5.5l8 6.5v7.5" />
+      <path d="M4 19.5h16M4 12h16" />
+      <path d="M8 19.5v-8M12 19.5V9M16 19.5v-8" />
+    </svg>
+  );
+}

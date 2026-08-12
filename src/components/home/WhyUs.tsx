@@ -1,8 +1,11 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Differentiator, differentiators as defaultDifferentiators } from "@/lib/differentiators";
 import { IconCompass, IconChat, IconDrawing, IconShield } from "@/components/icons";
+import { meetMichael } from "@/lib/content";
+import { CalendlyBookButton } from "./CalendlyBookButton";
 import styles from "./WhyUs.module.css";
 
 const iconMap = {
@@ -12,40 +15,63 @@ const iconMap = {
   shield: IconShield,
 };
 
+const credentials = [
+  { icon: IconShield, label: "BSc Building Surveyor" },
+  { icon: IconCompass, label: "Founder-Led" },
+  { icon: IconChat, label: "Direct Point of Contact" },
+];
+
 export function WhyUs({
   title = "Why Homeowners Choose Us",
-  lede = "A professional, fixed-price planning service designed to make the process as straightforward as possible.",
+  lede = "A professional, founder-led planning service designed to make the process as straightforward as possible.",
   items = defaultDifferentiators,
-  dark = false,
 }: {
   title?: ReactNode;
   lede?: ReactNode;
   items?: Differentiator[];
-  dark?: boolean;
 }) {
   return (
-    <Section id="why-us" dark={dark}>
-      <SectionHead eyebrow="Why us" title={title} lede={lede} onDark={dark} />
+    <Section id="why-us">
+      <SectionHead eyebrow="Why us" title={title} lede={lede} />
+
+      <Reveal className={styles.founderRow}>
+        <div className={styles.avatar}>
+          <Image
+            src="/images/team/michael.jpg"
+            alt="Michael, founder of Form & Function London"
+            fill
+            sizes="84px"
+            className={styles.avatarImage}
+          />
+        </div>
+        <div className={styles.founderInfo}>
+          <p className={styles.founderName}>{meetMichael.name}</p>
+          <p className={styles.founderTitle}>{meetMichael.title}</p>
+          <ul className={styles.credentials}>
+            {credentials.map((c) => (
+              <li key={c.label} className={styles.credential}>
+                <span className={styles.credentialIcon}>
+                  <c.icon width={13} height={13} />
+                </span>
+                {c.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <CalendlyBookButton className={styles.bookCta} />
+      </Reveal>
 
       <div className={styles.grid}>
         {items.map((item, i) => {
           const Icon = iconMap[item.icon];
           return (
             <Reveal key={item.title} delay={i * 80} className={styles.revealCard}>
-              <div className={[styles.card, dark && styles.cardOnDark].filter(Boolean).join(" ")}>
-                <span className={[styles.iconWrap, dark && styles.iconWrapOnDark].filter(Boolean).join(" ")}>
+              <div className={styles.card}>
+                <span className={styles.iconWrap}>
                   <Icon width={24} height={24} />
                 </span>
-                <h3 className={[styles.cardTitle, dark && styles.cardTitleOnDark].filter(Boolean).join(" ")}>
-                  {item.title}
-                </h3>
-                <p
-                  className={[styles.cardDescription, dark && styles.cardDescriptionOnDark]
-                    .filter(Boolean)
-                    .join(" ")}
-                >
-                  {item.description}
-                </p>
+                <h3 className={styles.cardTitle}>{item.title}</h3>
+                <p className={styles.cardDescription}>{item.description}</p>
               </div>
             </Reveal>
           );

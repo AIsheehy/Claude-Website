@@ -5,9 +5,9 @@ import { ServiceStats } from "@/components/home/ServiceStats";
 import { Process } from "@/components/home/Process";
 import { Reviews } from "@/components/home/Reviews";
 import { WhyUs } from "@/components/home/WhyUs";
-import { MeetMichael } from "@/components/home/MeetMichael";
 import { Faq } from "@/components/home/Faq";
 import { Contact } from "@/components/home/Contact";
+import { MobileStickyCta } from "@/components/home/MobileStickyCta";
 
 // Shared body for every dedicated service landing page (Planning
 // Applications, Permitted Development, Loft Conversion Drawings, Extension
@@ -23,6 +23,7 @@ export function ServicePageContent({
   servicesHeadline,
   servicesEmphasis,
   servicesLedeParagraphs,
+  stickyMobileCta = false,
 }: {
   eyebrow: string;
   headline: ReactNode;
@@ -32,6 +33,7 @@ export function ServicePageContent({
   servicesHeadline?: ReactNode;
   servicesEmphasis?: string;
   servicesLedeParagraphs?: ReactNode[];
+  stickyMobileCta?: boolean;
 }) {
   return (
     <>
@@ -42,8 +44,8 @@ export function ServicePageContent({
       <Process />
       <WhyUs />
       <Contact tone="beige" />
-      <MeetMichael />
       <Faq />
+      {stickyMobileCta && <MobileStickyCta />}
     </>
   );
 }

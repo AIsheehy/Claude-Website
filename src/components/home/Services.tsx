@@ -11,6 +11,8 @@ import {
   IconRoof,
   IconLayers,
   IconDocument,
+  IconGarage,
+  IconConservatory,
 } from "@/components/icons";
 import { services, Service } from "@/lib/content";
 import styles from "./Services.module.css";
@@ -25,6 +27,8 @@ const iconMap = {
   roof: IconRoof,
   layers: IconLayers,
   document: IconDocument,
+  garage: IconGarage,
+  conservatory: IconConservatory,
 };
 
 const defaultLedeParagraphs: ReactNode[] = [
@@ -64,7 +68,7 @@ export function Services({
             <Reveal key={service.slug} delay={i * 60}>
               <div className={styles.card}>
                 <span className={styles.iconWrap}>
-                  <Icon width={24} height={24} />
+                  <Icon width={14} height={14} />
                 </span>
                 <span className={styles.cardTitle}>{service.shortName}</span>
               </div>

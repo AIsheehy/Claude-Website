@@ -7,13 +7,13 @@ export type Differentiator = {
 export const differentiators: Differentiator[] = [
   {
     title: "Professional Planning & Building Expertise",
-    description:
-      "Your project is assessed with practical construction knowledge as well as planning considerations.",
+    description: "I have years of professional experience managing projects throughout London and the South.",
     icon: "compass",
   },
   {
     title: "Founder-Led Service",
-    description: "You'll deal directly with Michael from your initial assessment through to submission.",
+    description:
+      "You'll deal directly with Michael from your initial assessment through to submission — your single, direct point of contact throughout.",
     icon: "chat",
   },
   {

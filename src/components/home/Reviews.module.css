@@ -119,15 +119,16 @@
      is nested one level inside it, so the flex-basis has to go on
      .revealCard, not .card, or it's simply ignored and the card falls back
      to sizing itself from its own content (which is what was happening). */
-  .revealCard {
+  .revealCard,
+  /* Once a card's IntersectionObserver fires, Reveal adds "isVisible"
+     alongside "reveal", and globals.css's ".reveal.isVisible" (2 classes)
+     outranks the single-class ".revealCard" reset below — silently
+     reintroducing the 480ms opacity/transform transition mid-scroll and
+     making the cards feel like they're "floating" as they snap. Matching
+     the 3-class combination here guarantees this reset always wins. */
+  .reveal.isVisible.revealCard {
     flex: 0 0 92%;
     scroll-snap-align: start;
-
-    /* The reveal-on-scroll animation is designed for vertical page scroll.
-       Inside a horizontally swiped carousel, IntersectionObserver re-fires
-       as each card is dragged into the (horizontally) clipped viewport
-       area, making cards visibly lift/fade mid-swipe. Neutralise it here
-       so the carousel feels solid instead of "loose". */
     opacity: 1;
     transform: none;
     transition: none;

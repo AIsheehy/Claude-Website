@@ -1,3 +1,134 @@
+.founderRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: var(--space-block);
+  padding-bottom: var(--space-block);
+  border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.avatarImage {
+  object-fit: cover;
+}
+
+.founderInfo {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.founderName {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 700;
+  font-size: var(--step-h4);
+  color: var(--ink);
+}
+
+.founderTitle {
+  margin-top: 0.15rem;
+  color: var(--text-muted);
+  font-size: var(--step-small);
+}
+
+.credentials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+}
+
+.credential {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: var(--step-caption);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.credentialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--terracotta-tint);
+  color: var(--terracotta-deep);
+}
+
+.bookCta {
+  flex-shrink: 0;
+}
+
+/* Mobile: smaller avatar, and the credential chips shrink further while
+   staying in a single horizontal row (never stacking vertically). */
+@media (max-width: 639px) {
+  .founderRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  /* align-items: flex-start above means flex children no longer stretch to
+     the container's width by default, so without an explicit width here
+     .founderInfo (and the credentials row inside it) would shrink to fit
+     its own content instead of the viewport — letting the nowrap
+     credentials strip below grow past the screen edge undetected. */
+  .founderInfo {
+    width: 100%;
+  }
+
+  .credentials {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.6rem;
+    width: 100%;
+    scrollbar-width: none;
+    /* All 3 chips don't quite fit on one line at phone widths — fade the
+       trailing edge so the row reads as scrollable rather than cut off. */
+    mask-image: linear-gradient(to right, black calc(100% - 24px), transparent 100%);
+  }
+
+  .credentials::-webkit-scrollbar {
+    display: none;
+  }
+
+  .credentialIcon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .credential {
+    font-size: 0.6875rem;
+  }
+
+  .bookCta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* 4 items, always shown as a 2x2 grid — mobile included. */
 .grid {
   display: grid;
@@ -27,11 +158,6 @@
   border-radius: var(--radius-md);
 }
 
-.cardOnDark {
-  background: var(--ink-soft);
-  border-color: var(--border-on-dark);
-}
-
 .iconWrap {
   display: inline-flex;
   align-items: center;
@@ -44,28 +170,14 @@
   color: var(--terracotta-deep);
 }
 
-.iconWrapOnDark {
-  background: var(--dark-surface);
-  color: var(--sand);
-  border: 1px solid var(--border-on-dark);
-}
-
 .cardTitle {
   font-size: var(--step-h4);
-}
-
-.cardTitleOnDark {
-  color: var(--paper);
 }
 
 .cardDescription {
   color: var(--text-muted);
   font-size: var(--step-small);
   line-height: 1.65;
-}
-
-.cardDescriptionOnDark {
-  color: var(--text-muted-on-dark);
 }
 
 /* Mobile: each card is now only half the row width (2x2 grid), so shrink
