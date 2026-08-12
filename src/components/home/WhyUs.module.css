@@ -84,6 +84,15 @@
     height: 64px;
   }
 
+  /* .founderInfo's "flex: 1 1 240px" sizes it along the row layout's
+     horizontal main axis on desktop — but founderRow switches to
+     flex-direction: column here, flipping the main axis to vertical, so
+     that same 240px becomes a minimum *height* instead of width, leaving
+     a large empty gap below the content. Reset it for the column layout. */
+  .founderInfo {
+    flex: 1 1 auto;
+  }
+
   .credentialIcon {
     width: 20px;
     height: 20px;
