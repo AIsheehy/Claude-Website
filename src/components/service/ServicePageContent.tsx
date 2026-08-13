@@ -39,12 +39,12 @@ export function ServicePageContent({
     <>
       <Hero eyebrow={eyebrow} headline={headline} lede={lede} primaryCtaLabel={heroCtaLabel} ctaNote={heroCtaNote} />
       <Services headline={servicesHeadline} emphasis={servicesEmphasis} ledeParagraphs={servicesLedeParagraphs} />
-      <ServiceStats />
       <Reviews />
-      <Process />
+      <Process tightBottom />
+      <ServiceStats />
       <WhyUs />
       <Contact tone="beige" />
-      <Faq />
+      <Faq tightBottom={stickyMobileCta} />
       {stickyMobileCta && <MobileStickyCta />}
     </>
   );

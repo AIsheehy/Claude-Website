@@ -133,4 +133,19 @@
     transform: none;
     transition: none;
   }
+
+  /* Keep the gallery image the same size, but tighten the text block below
+     it so the card itself reads smaller on screen. */
+  .body {
+    padding: 1.25rem;
+  }
+
+  .stars {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer {
+    margin-top: 0.9rem;
+    padding-top: 0.75rem;
+  }
 }

@@ -6,9 +6,18 @@ import { business } from "@/lib/content";
 import styles from "./Contact.module.css";
 
 const closingStats = [
-  { icon: IconChat, label: "Founder Led Service" },
-  { icon: IconShield, label: "From £995.00" },
-  { icon: IconClock, label: "Drawings Within 7 Days" },
+  { icon: IconClock, label: "Response Within Hours" },
+  { icon: IconChat, label: "Advice From Professionals" },
+  { icon: IconShield, label: "No Obligation or Marketing Emails" },
+];
+
+const explainPoints = [
+  "The type of permission you require (if any)",
+  "The process of getting there",
+  "Any specific local rules in your area",
+  "What the likely timeline will be",
+  "What the likely costs will be",
+  "How to get started",
 ];
 
 export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
@@ -22,10 +31,13 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
             Get Your Free Planning Assessment
           </h2>
           <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
-            Tell us a little about your project and we will explain the type of permission you
-            need, any specific local requirements, the likely timeline and a fixed quote on how
-            much it will all cost.
+            Tell us a little about your project and we will explain:
           </p>
+          <ul className={[styles.explainList, beige && styles.explainListBeige].filter(Boolean).join(" ")}>
+            {explainPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
           <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
             You&rsquo;ll receive clear, honest advice and a fixed quotation directly from the
             person who&rsquo;ll manage your project from start to finish.
@@ -44,7 +56,6 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
         </div>
 
         <div id="enquire" className={styles.formCard}>
-          <p className={styles.formEyebrow}>No obligation &middot; Response within hours</p>
           <EnquiryForm compact />
         </div>
 

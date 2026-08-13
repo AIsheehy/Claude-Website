@@ -8,13 +8,18 @@ export function Faq({
   items = defaultFaqs,
   title = "The questions people actually ask us.",
   groupName = "faq",
+  tightBottom = false,
 }: {
   items?: FaqItem[];
   title?: string;
   groupName?: string;
+  tightBottom?: boolean;
 }) {
   return (
-    <Section id="faq" className={styles.section}>
+    <Section
+      id="faq"
+      className={[styles.section, tightBottom && styles.tightBottomMobile].filter(Boolean).join(" ")}
+    >
       <SectionHead eyebrow="Frequently asked" title={title} align="center" />
 
       <div className={styles.list}>

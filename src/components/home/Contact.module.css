@@ -30,7 +30,7 @@
 .title {
   margin-top: 0.75rem;
   color: var(--paper);
-  max-width: 14ch;
+  max-width: 21ch;
 }
 
 .titleBeige {
@@ -46,6 +46,30 @@
 
 .ledeBeige {
   color: var(--text-muted);
+}
+
+.explainList {
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: disc;
+  color: var(--text-muted-on-dark);
+  font-size: var(--step-body);
+  max-width: 44ch;
+}
+
+.explainList li::marker {
+  color: var(--sand);
+}
+
+.explainListBeige {
+  color: var(--text-muted);
+}
+
+.explainListBeige li::marker {
+  color: var(--terracotta-deep);
 }
 
 .statRow {
@@ -157,13 +181,4 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   padding: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
-}
-
-.formEyebrow {
-  margin-bottom: 1.5rem;
-  font-size: var(--step-caption);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--terracotta-deep);
 }

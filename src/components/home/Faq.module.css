@@ -1,3 +1,14 @@
+/* On pages with the mobile sticky CTA, that bar's own reserved-space
+   spacer already follows this section — without this, its bottom padding
+   would stack on top of the spacer for a much bigger gap than any other
+   section boundary on the page. Desktop never shows the sticky bar, so
+   this only applies below the mobile breakpoint. */
+@media (max-width: 899px) {
+  .tightBottomMobile {
+    padding-bottom: 0;
+  }
+}
+
 .list {
   max-width: 800px;
   margin-inline: auto;

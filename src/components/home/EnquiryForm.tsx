@@ -83,6 +83,16 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
 
+      <Field label="Property Post Code" htmlFor="postcode">
+        <input
+          id="postcode"
+          name="postcode"
+          type="text"
+          className={controlClassName}
+          placeholder="e.g. SM2 6LE"
+        />
+      </Field>
+
       <Field label="Email address" htmlFor="email" required>
         <input
           id="email"

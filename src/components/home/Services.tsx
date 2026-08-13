@@ -51,7 +51,7 @@ export function Services({
   );
 
   return (
-    <Section id="services" tightBottom className={styles.section}>
+    <Section id="services" className={styles.section}>
       <SectionHead eyebrow="What we do" title={resolvedHeadline} />
       <div className={styles.intro}>
         {ledeParagraphs.map((paragraph, i) => (
