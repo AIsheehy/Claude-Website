@@ -45,7 +45,7 @@ export function ServicePageContent({
       <WhyUs />
       <Contact tone="beige" />
       <Faq tightBottom={stickyMobileCta} />
-      {stickyMobileCta && <MobileStickyCta />}
+      {stickyMobileCta && <MobileStickyCta note={heroCtaNote} />}
     </>
   );
 }
