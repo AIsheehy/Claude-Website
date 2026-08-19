@@ -13,7 +13,7 @@ const closingStats = [
 
 const explainPoints = [
   "The type of permission you require (if any)",
-  "The process of getting there",
+  "How to get Council approval",
   "Any specific local rules in your area",
   "What the likely timeline will be",
   "What the likely costs will be",

@@ -10,13 +10,18 @@ export const metadata: Metadata = {
 export default function ExtensionDrawingsPage() {
   return (
     <ServicePageContent
-      eyebrow="Architectural drawings, planning advice and application packages for home extensions."
-      headline="Design, Drawings and Complete Planning Application Packages for Your Home Extension"
-      lede="Whether you're just exploring ideas or ready to submit your application, we provide everything from initial feasibility advice to professionally prepared drawings and complete planning submissions, all at one fixed price."
-      heroCtaLabel="Get Your Free Project Assessment"
-      servicesHeadline="We Take the Stress Out of Extending Your Home"
+      eyebrow="Extension advice, drawings and complete application packages."
+      headline="Extensions, Made Simple"
+      lede="Whether you're exploring ideas or ready to apply, our extension expertise will help you move forward with confidence. From professional drawings to complete extension submissions, everything is tailored to your project and delivered at one fixed price."
+      heroCtaLabel="Get A Free Extension Assessment"
+      heroCtaNote={{
+        line1: "Do I need an Extension? What is involved? What will it cost? How long will it take?",
+        line2: "Find out for free with a no obligation extension assessment.",
+      }}
+      servicesHeadline="Extension Projects Don't Have to Be Complicated"
       servicesLedeParagraphs={[
-        "Whether you're just exploring ideas or already have sketches prepared, we'll meet you where you are. Every project is different, so we tailor our service to your needs, from one-off drawings to complete planning application packages.",
+        "Red tape, ambiguous rules and complex application requirements. Extension projects can be complicated. But it doesn't have to be.",
+        "We use our experience and know how to cut through the noise, taking the stress out of extension projects and getting our clients' projects off the ground from day one. Our services include:",
       ]}
     />
   );

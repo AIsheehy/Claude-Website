@@ -65,7 +65,7 @@ export const boroughs = [
 export const trustMarkers = [
   { icon: "star", label: "5-Star Rated On Google" },
   { icon: "shield", label: "Packages From £995.00" },
-  { icon: "clock", label: "Drawings Ready Within 7 Days" },
+  { icon: "clock", label: "Applications Ready Within 14 Days" },
   { icon: "pin", label: "London & Home Counties" },
 ];
 
@@ -117,7 +117,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: "02",
     title: "Survey & design",
-    description: "We survey your property and prepare your drawings.",
+    description: "If you choose to move forward, we survey your property and prepare your drawings.",
     icon: "drawing",
   },
   {
