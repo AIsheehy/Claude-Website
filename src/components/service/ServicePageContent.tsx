@@ -23,7 +23,7 @@ export function ServicePageContent({
   servicesHeadline,
   servicesEmphasis,
   servicesLedeParagraphs,
-  stickyMobileCta = false,
+  stickyMobileCta = true,
 }: {
   eyebrow: string;
   headline: ReactNode;
@@ -43,9 +43,9 @@ export function ServicePageContent({
       <Process tightBottom />
       <ServiceStats />
       <WhyUs />
-      <Contact tone="beige" />
+      <Contact tone="beige" formCtaLabel={heroCtaLabel} />
       <Faq tightBottom={stickyMobileCta} />
-      {stickyMobileCta && <MobileStickyCta note={heroCtaNote} />}
+      {stickyMobileCta && <MobileStickyCta label={heroCtaLabel} note={heroCtaNote} />}
     </>
   );
 }

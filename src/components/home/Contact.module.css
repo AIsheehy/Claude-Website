@@ -1,6 +1,11 @@
+/* minmax(0, ...) rather than a bare 1fr/0.95fr — otherwise a grid track's
+   minimum width defaults to the max-content size of its widest child, and
+   the submit button's non-wrapping text (page-specific, can run long e.g.
+   "Get A Free Loft Conversion Assessment") was blowing the whole column
+   out past the viewport on mobile. */
 .layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
     "copy"
     "form"
@@ -11,7 +16,7 @@
 
 @media (min-width: 960px) {
   .layout {
-    grid-template-columns: 1fr 0.95fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
     grid-template-areas:
       "copy form"
       "contact form";

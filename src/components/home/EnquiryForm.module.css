@@ -12,9 +12,18 @@
   opacity: 0;
 }
 
+/* Button's base style sets white-space: nowrap for typically-short button
+   labels — but this submit label is page-specific and can run long (e.g.
+   "Get A Free Loft Conversion Assessment"), so let it wrap onto a second
+   line rather than overflow. !important is needed since Button.module.css
+   and this file are separate CSS modules with equal (single-class)
+   specificity, so which one wins on a tie is otherwise cascade-order
+   dependent rather than deterministic. */
 .submit {
   width: 100%;
   margin-top: 0.25rem;
+  white-space: normal !important;
+  line-height: 1.3;
 }
 
 .smallprint {

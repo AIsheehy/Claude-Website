@@ -23,9 +23,4 @@ export const differentiators: Differentiator[] = [
       "We don't force a standard solution. We'll develop your ideas and advise on how to make them practical and planning-friendly.",
     icon: "drawing",
   },
-  {
-    title: "One Fixed Price",
-    description: "Know what you're paying from the outset, with no unexpected professional fees.",
-    icon: "shield",
-  },
 ];

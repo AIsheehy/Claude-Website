@@ -18,7 +18,13 @@ const helpOptions = [
   "Other",
 ];
 
-export function EnquiryForm({ compact = false }: { compact?: boolean }) {
+export function EnquiryForm({
+  compact = false,
+  submitLabel = "Get My Free Planning Assessment",
+}: {
+  compact?: boolean;
+  submitLabel?: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -105,7 +111,7 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
       </Field>
 
       <Button type="submit" size="lg" className={styles.submit}>
-        {status === "submitting" ? "Sending…" : "Get My Free Planning Assessment"}
+        {status === "submitting" ? "Sending…" : submitLabel}
       </Button>
       {status === "error" && (
         <p className={styles.errorText}>

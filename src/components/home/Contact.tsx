@@ -20,7 +20,13 @@ const explainPoints = [
   "How to get started",
 ];
 
-export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
+export function Contact({
+  tone = "dark",
+  formCtaLabel,
+}: {
+  tone?: "dark" | "beige";
+  formCtaLabel?: string;
+}) {
   const beige = tone === "beige";
   return (
     <Section id="contact" dark={!beige} className={beige ? styles.beige : undefined}>
@@ -56,7 +62,7 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "beige" }) {
         </div>
 
         <div id="enquire" className={styles.formCard}>
-          <EnquiryForm compact />
+          <EnquiryForm compact submitLabel={formCtaLabel} />
         </div>
 
         <div className={[styles.directList, beige && styles.directListBeige].filter(Boolean).join(" ")}>

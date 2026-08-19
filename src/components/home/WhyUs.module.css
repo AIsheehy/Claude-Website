@@ -94,15 +94,18 @@
   }
 }
 
-/* 4 items, always shown as a 2x2 grid — mobile included. */
+/* 3 items: a single row on desktop. On mobile each card stacks full-width
+   in one column instead of a 2-up grid, so there's less to scan per row
+   and the text has room to breathe. */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 @media (min-width: 640px) {
   .grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
   }
 }
@@ -143,33 +146,4 @@
   color: var(--text-muted);
   font-size: var(--step-small);
   line-height: 1.65;
-}
-
-/* Mobile: each card is now only half the row width (2x2 grid), so shrink
-   the padding and type scale to fit comfortably. */
-@media (max-width: 639px) {
-  .card {
-    padding: 1.1rem;
-    gap: 0.6rem;
-  }
-
-  .iconWrap {
-    width: 38px;
-    height: 38px;
-  }
-
-  .iconWrap svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .cardTitle {
-    font-size: var(--step-small);
-    line-height: 1.35;
-  }
-
-  .cardDescription {
-    font-size: var(--step-caption);
-    line-height: 1.5;
-  }
 }
