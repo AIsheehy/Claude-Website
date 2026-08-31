@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
   const email = body.email;
   const service = typeof body.service === "string" ? body.service : "";
   const message = typeof body.message === "string" ? body.message : "";
-  const postcode = typeof body.postcode === "string" ? body.postcode : "";
+  const address = typeof body.address === "string" ? body.address : "";
 
   const { error } = await resend.emails.send({
     from: process.env.ENQUIRY_FROM_EMAIL || `Form & Function London <${business.email}>`,
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     text: [
       `Email: ${email}`,
       `Service: ${service || "Not specified"}`,
-      `Property postcode: ${postcode || "Not specified"}`,
+      `Property address: ${address || "Not specified"}`,
       "",
       "Message:",
       message || "(none provided)",
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     html: `
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Service:</strong> ${escapeHtml(service || "Not specified")}</p>
-      <p><strong>Property postcode:</strong> ${escapeHtml(postcode || "Not specified")}</p>
+      <p><strong>Property address:</strong> ${escapeHtml(address || "Not specified")}</p>
       <p><strong>Message:</strong><br/>${escapeHtml(message || "(none provided)").replace(/\n/g, "<br/>")}</p>
     `,
   });

@@ -61,10 +61,12 @@ export function WhyUs({
           return (
             <Reveal key={item.title} delay={i * 80} className={styles.revealCard}>
               <div className={styles.card}>
-                <span className={styles.iconWrap}>
-                  <Icon width={24} height={24} />
-                </span>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
+                <div className={styles.cardHead}>
+                  <span className={styles.iconWrap}>
+                    <Icon width={20} height={20} />
+                  </span>
+                  <h3 className={styles.cardTitle}>{item.title}</h3>
+                </div>
                 <p className={styles.cardDescription}>{item.description}</p>
               </div>
             </Reveal>

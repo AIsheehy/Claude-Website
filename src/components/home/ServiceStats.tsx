@@ -7,7 +7,7 @@ import styles from "./ServiceStats.module.css";
 
 const items = [
   { icon: IconStar, label: "5-Star Rated On Google" },
-  { icon: IconShield, label: "Packages From £995.00" },
+  { icon: IconShield, label: "All Work Fully Insured" },
   { icon: IconClock, label: "Applications Ready Within 14 Days" },
 ];
 

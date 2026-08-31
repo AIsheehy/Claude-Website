@@ -64,7 +64,6 @@ export const boroughs = [
 // the rest keep their existing order.
 export const trustMarkers = [
   { icon: "star", label: "5-Star Rated On Google" },
-  { icon: "shield", label: "Packages From £995.00" },
   { icon: "clock", label: "Applications Ready Within 14 Days" },
   { icon: "pin", label: "London & Home Counties" },
 ];

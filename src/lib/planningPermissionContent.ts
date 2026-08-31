@@ -5,7 +5,7 @@ export const planningPermissionContent = {
   eyebrow: "Planning permission advice, drawings and complete application packages.",
   headline: "Planning Permission, Made Simple",
   lede: "Whether you're exploring ideas or ready to apply, our planning expertise will help you move forward with confidence. From professional drawings to complete planning submissions, everything is tailored to your project and delivered at one fixed price.",
-  heroCtaLabel: "Get A Free Planning Assessment",
+  heroCtaLabel: "Get A Free Project Assessment",
   heroCtaNote: {
     line1: "Do I need Planning? What is involved? What will it cost? How long will it take?",
     line2: "Find out for free with a no obligation planning assessment.",

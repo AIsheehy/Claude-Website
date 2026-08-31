@@ -77,67 +77,6 @@
   color: var(--terracotta-deep);
 }
 
-.statRow {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--border-on-dark);
-}
-
-.statRowBeige {
-  border-top-color: var(--border);
-}
-
-.statItem {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-/* Mobile: shrink everything so all 3 badges stay in one row instead of
-   stacking into a single column. */
-@media (max-width: 640px) {
-  .statRow {
-    gap: 0.5rem;
-  }
-
-  .statItem {
-    gap: 0.4rem;
-  }
-
-  .statItem svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .statLabel {
-    font-size: 0.6875rem;
-    line-height: 1.3;
-  }
-}
-
-.statItem svg {
-  color: var(--sand);
-  flex-shrink: 0;
-}
-
-.statItem svg.statIconBeige {
-  color: var(--terracotta-deep);
-}
-
-.statLabel {
-  font-weight: 700;
-  font-size: var(--step-small);
-  color: var(--paper);
-  line-height: 1.3;
-}
-
-.statLabelBeige {
-  color: var(--ink);
-}
-
 .directList {
   grid-area: contact;
   display: flex;

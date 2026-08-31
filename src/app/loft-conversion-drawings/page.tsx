@@ -14,7 +14,7 @@ export default function LoftConversionDrawingsPage() {
       eyebrow="Loft Conversion advice, drawings and complete application packages."
       headline="Loft Conversions Made Simple"
       lede="Whether you're exploring ideas or ready to get started, our expert team will help you move forward with confidence. From professional drawings to complete planning submissions, everything is tailored to your project and delivered at one fixed price."
-      heroCtaLabel="Get A Free Loft Conversion Assessment"
+      heroCtaLabel="Get A Free Project Assessment"
       heroCtaNote={planningPermissionContent.heroCtaNote}
       servicesHeadline="Loft Conversions Don't Have to Be Complicated"
       servicesLedeParagraphs={[

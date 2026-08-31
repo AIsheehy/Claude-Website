@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 import styles from "./MobileStickyCta.module.css";
 
 export function MobileStickyCta({
-  label = "Get My Free Planning Assessment",
+  label = "Get A Free Project Assessment",
   note,
 }: {
   label?: string;

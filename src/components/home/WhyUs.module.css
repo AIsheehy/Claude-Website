@@ -118,7 +118,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.85rem;
+  gap: 0.65rem;
   height: 100%;
   padding: 1.75rem;
   background: var(--white);
@@ -126,12 +126,20 @@
   border-radius: var(--radius-md);
 }
 
+/* Icon sits beside the title instead of stacked above it — keeps the icon
+   without the extra vertical space a full icon row used to cost. */
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
 .iconWrap {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 50%;
   background: var(--terracotta-tint);
@@ -146,4 +154,37 @@
   color: var(--text-muted);
   font-size: var(--step-small);
   line-height: 1.65;
+}
+
+/* Mobile: these cards were taking up too much of the screen while
+   scrolling — tighten the padding and type scale so each one is more
+   compact. */
+@media (max-width: 639px) {
+  .card {
+    gap: 0.5rem;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .cardHead {
+    gap: 0.55rem;
+  }
+
+  .iconWrap {
+    width: 32px;
+    height: 32px;
+  }
+
+  .iconWrap svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cardTitle {
+    font-size: var(--step-body-lg);
+  }
+
+  .cardDescription {
+    font-size: var(--step-caption);
+    line-height: 1.55;
+  }
 }

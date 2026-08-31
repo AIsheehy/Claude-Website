@@ -20,7 +20,7 @@ const helpOptions = [
 
 export function EnquiryForm({
   compact = false,
-  submitLabel = "Get My Free Planning Assessment",
+  submitLabel = "Get A Free Project Assessment",
 }: {
   compact?: boolean;
   submitLabel?: string;
@@ -89,13 +89,13 @@ export function EnquiryForm({
         />
       </Field>
 
-      <Field label="Property Post Code" htmlFor="postcode">
+      <Field label="Property Address" htmlFor="address">
         <input
-          id="postcode"
-          name="postcode"
+          id="address"
+          name="address"
           type="text"
           className={controlClassName}
-          placeholder="e.g. SM2 6LE"
+          placeholder="e.g. 12 High Street, Sutton, SM2 6LE"
         />
       </Field>
 
@@ -118,7 +118,7 @@ export function EnquiryForm({
           Something went wrong sending that — please call us instead, or try again.
         </p>
       )}
-      <p className={styles.smallprint}>No obligation. We&rsquo;ll never share your details.</p>
+      <p className={styles.smallprint}>No Obligation. No Marketing Emails. Response Within Hours.</p>
     </form>
   );
 }
