@@ -24,9 +24,8 @@ export function ServicePageContent({
   servicesEmphasis,
   servicesLedeParagraphs,
   stickyMobileCta = true,
-  eyebrowHiddenOnMobile = false,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   headline: ReactNode;
   lede: ReactNode;
   heroCtaLabel?: string;
@@ -35,7 +34,6 @@ export function ServicePageContent({
   servicesEmphasis?: string;
   servicesLedeParagraphs?: ReactNode[];
   stickyMobileCta?: boolean;
-  eyebrowHiddenOnMobile?: boolean;
 }) {
   return (
     <>
@@ -45,7 +43,6 @@ export function ServicePageContent({
         lede={lede}
         primaryCtaLabel={heroCtaLabel}
         ctaNote={heroCtaNote}
-        eyebrowHiddenOnMobile={eyebrowHiddenOnMobile}
       />
       <Services headline={servicesHeadline} emphasis={servicesEmphasis} ledeParagraphs={servicesLedeParagraphs} />
       <Reviews />

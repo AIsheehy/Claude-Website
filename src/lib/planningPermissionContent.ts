@@ -2,7 +2,6 @@
 // with the homepage so the two stay identical (see planning-permission/page.tsx
 // and app/page.tsx).
 export const planningPermissionContent = {
-  eyebrow: "Planning permission advice, drawings and complete application packages.",
   headline: "Planning Permission, Made Simple",
   lede: "Whether you're exploring ideas or ready to apply, our planning expertise will help you move forward with confidence. From professional drawings to complete planning submissions, everything is tailored to your project and delivered at one fixed price.",
   heroCtaLabel: "Get A Free Project Assessment",

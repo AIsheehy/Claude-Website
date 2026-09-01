@@ -52,6 +52,7 @@ export function WhyUs({
               </li>
             ))}
           </ul>
+          <p className={styles.founderBio}>{meetMichael.bio}</p>
         </div>
       </Reveal>
 

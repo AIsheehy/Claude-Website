@@ -1,7 +1,7 @@
 .founderRow {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
   margin-bottom: var(--space-block);
   padding-bottom: var(--space-block);
@@ -71,6 +71,14 @@
   color: var(--terracotta-deep);
 }
 
+.founderBio {
+  margin-top: 0.75rem;
+  max-width: 46ch;
+  color: var(--text-muted);
+  font-size: var(--step-small);
+  line-height: 1.55;
+}
+
 /* Mobile: smaller avatar and credential icon — stays a row (photo with the
    name/title/badge beside it) rather than stacking, to save vertical
    space. */
@@ -91,6 +99,12 @@
 
   .credential {
     font-size: 0.6875rem;
+  }
+
+  .founderBio {
+    margin-top: 0.5rem;
+    font-size: var(--step-caption);
+    line-height: 1.45;
   }
 }
 

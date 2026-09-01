@@ -396,4 +396,5 @@ export const faqs: FaqItem[] = [
 export const meetMichael = {
   name: "Michael",
   title: "Founder of Form & Function London",
+  bio: "I started Form & Function because planning a home project shouldn't feel confusing. I'll personally review your project, explain your options in plain English and manage the process through to the council decision.",
 };

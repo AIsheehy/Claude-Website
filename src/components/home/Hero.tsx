@@ -3,7 +3,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { TrustList } from "@/components/ui/TrustList";
 
 export function Hero({
-  eyebrow = "Planning permission, handled from enquiry to approval.",
+  eyebrow,
   headline = "Planning permission shouldn’t feel like a gamble.",
   lede = (
     <>
@@ -14,14 +14,12 @@ export function Hero({
   ),
   primaryCtaLabel,
   ctaNote,
-  eyebrowHiddenOnMobile = false,
 }: {
   eyebrow?: string;
   headline?: ReactNode;
   lede?: ReactNode;
   primaryCtaLabel?: string;
   ctaNote?: { line1: string; line2: string };
-  eyebrowHiddenOnMobile?: boolean;
 }) {
   return (
     <PageHero
@@ -32,7 +30,6 @@ export function Hero({
       ctaNote={ctaNote}
       trustSlot={<TrustList />}
       eyebrowAccent
-      eyebrowHiddenOnMobile={eyebrowHiddenOnMobile}
       graphic
     />
   );

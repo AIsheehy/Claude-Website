@@ -13,6 +13,8 @@ import {
   IconDocument,
   IconGarage,
   IconConservatory,
+  IconClock,
+  IconTag,
 } from "@/components/icons";
 import { services, Service } from "@/lib/content";
 import styles from "./Services.module.css";
@@ -33,6 +35,12 @@ const iconMap = {
 
 const defaultLedeParagraphs: ReactNode[] = [
   "We provide professional planning and architectural design services to help take your project from initial idea to approval.",
+];
+
+const trustItems = [
+  { icon: IconClock, label: "5+ Years Experience" },
+  { icon: IconShield, label: "Fully PI Insured" },
+  { icon: IconTag, label: "Fixed Price Packages" },
 ];
 
 export function Services({
@@ -75,6 +83,15 @@ export function Services({
             </Reveal>
           );
         })}
+      </div>
+
+      <div className={styles.trustRow}>
+        {trustItems.map((item) => (
+          <div key={item.label} className={styles.trustItem}>
+            <item.icon width={20} height={20} />
+            {item.label}
+          </div>
+        ))}
       </div>
     </Section>
   );

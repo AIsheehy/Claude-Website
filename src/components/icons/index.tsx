@@ -205,6 +205,15 @@ export function IconGarage(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function IconTag(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12.5 4.5H19v6.5L11 19.5 4.5 13 12.5 4.5Z" />
+      <circle cx="16" cy="8" r="1.4" />
+    </svg>
+  );
+}
+
 export function IconConservatory(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...base} {...props}>

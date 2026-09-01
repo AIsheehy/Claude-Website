@@ -45,6 +45,10 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
                   >
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
+                  <footer className={styles.footer}>
+                    <span className={styles.name}>{t.name}</span>
+                    <span className={styles.context}>{t.context}</span>
+                  </footer>
                 </div>
                 {t.gallery ? (
                   <ReviewGallery images={t.gallery} overlay={approvedBadge} />
@@ -60,10 +64,6 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
                     {approvedBadge}
                   </div>
                 )}
-                <footer className={styles.footer}>
-                  <span className={styles.name}>{t.name}</span>
-                  <span className={styles.context}>{t.context}</span>
-                </footer>
               </article>
             </Reveal>
           );
