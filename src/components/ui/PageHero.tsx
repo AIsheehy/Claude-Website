@@ -15,6 +15,7 @@ export function PageHero({
   ctaNote,
   trustSlot,
   eyebrowAccent = false,
+  eyebrowHiddenOnMobile = false,
   graphic = false,
 }: {
   eyebrow: string;
@@ -24,6 +25,7 @@ export function PageHero({
   ctaNote?: { line1: string; line2: string };
   trustSlot?: ReactNode;
   eyebrowAccent?: boolean;
+  eyebrowHiddenOnMobile?: boolean;
   graphic?: boolean;
 }) {
   return (
@@ -31,7 +33,15 @@ export function PageHero({
       <Container size={graphic ? "wide" : "default"}>
         <div className={[styles.layout, graphic && styles.layoutGraphic].filter(Boolean).join(" ")}>
           <Reveal className={styles.content}>
-            <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
+            <p
+              className={[
+                "eyebrow",
+                eyebrowAccent && styles.eyebrowAccent,
+                eyebrowHiddenOnMobile && styles.eyebrowHiddenMobile,
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
               {eyebrow}
             </p>
             <h1 className={styles.headline}>{headline}</h1>

@@ -21,7 +21,7 @@ export default function ExtensionDrawingsPage() {
       servicesHeadline="Extension Projects Don't Have to Be Complicated"
       servicesLedeParagraphs={[
         "Red tape, ambiguous rules and complex application requirements. Extension projects can be complicated. But it doesn't have to be.",
-        "We use our experience and know how to cut through the noise, taking the stress out of extension projects and getting our clients' projects off the ground from day one. Our services include:",
+        "We use our experience and know how to cut through the noise, taking the stress out of extension projects and getting our clients' projects off the ground from day one. Types of projects we can help with:",
       ]}
     />
   );

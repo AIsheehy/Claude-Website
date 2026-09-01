@@ -51,6 +51,12 @@
   color: var(--accent-warm);
 }
 
+@media (max-width: 640px) {
+  .eyebrowHiddenMobile {
+    display: none;
+  }
+}
+
 .headline {
   margin-top: 0.9rem;
   max-width: 17ch;

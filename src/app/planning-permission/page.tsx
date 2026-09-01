@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function PlanningPermissionPage() {
-  return <ServicePageContent {...planningPermissionContent} />;
+  return <ServicePageContent {...planningPermissionContent} eyebrowHiddenOnMobile />;
 }

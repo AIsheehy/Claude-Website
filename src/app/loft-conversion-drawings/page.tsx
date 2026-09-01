@@ -19,7 +19,7 @@ export default function LoftConversionDrawingsPage() {
       servicesHeadline="Loft Conversions Don't Have to Be Complicated"
       servicesLedeParagraphs={[
         "Red tape, ambiguous rules and complex application requirements. Loft Conversions can be complicated. But it doesn't have to be.",
-        "We use our experience and know how to cut through the noise, taking the stress out of planning and getting our clients' projects off the ground from day one. Our services include:",
+        "We use our experience and know how to cut through the noise, taking the stress out of planning and getting our clients' projects off the ground from day one. Types of projects we can help with:",
       ]}
     />
   );

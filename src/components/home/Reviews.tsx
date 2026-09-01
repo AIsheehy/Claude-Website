@@ -38,6 +38,14 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
           return (
             <Reveal key={t.name} delay={i * 90} className={styles.revealCard}>
               <article className={styles.card}>
+                <div className={styles.textTop}>
+                  <Stars />
+                  <blockquote
+                    className={[styles.quote, t.gallery && styles.quoteCompact].filter(Boolean).join(" ")}
+                  >
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                </div>
                 {t.gallery ? (
                   <ReviewGallery images={t.gallery} overlay={approvedBadge} />
                 ) : (
@@ -52,18 +60,10 @@ export function Reviews({ tightBottom = false }: { tightBottom?: boolean }) {
                     {approvedBadge}
                   </div>
                 )}
-                <div className={styles.body}>
-                  <Stars />
-                  <blockquote
-                    className={[styles.quote, t.gallery && styles.quoteCompact].filter(Boolean).join(" ")}
-                  >
-                    &ldquo;{t.quote}&rdquo;
-                  </blockquote>
-                  <footer className={styles.footer}>
-                    <span className={styles.name}>{t.name}</span>
-                    <span className={styles.context}>{t.context}</span>
-                  </footer>
-                </div>
+                <footer className={styles.footer}>
+                  <span className={styles.name}>{t.name}</span>
+                  <span className={styles.context}>{t.context}</span>
+                </footer>
               </article>
             </Reveal>
           );

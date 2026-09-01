@@ -14,12 +14,14 @@ export function Hero({
   ),
   primaryCtaLabel,
   ctaNote,
+  eyebrowHiddenOnMobile = false,
 }: {
   eyebrow?: string;
   headline?: ReactNode;
   lede?: ReactNode;
   primaryCtaLabel?: string;
   ctaNote?: { line1: string; line2: string };
+  eyebrowHiddenOnMobile?: boolean;
 }) {
   return (
     <PageHero
@@ -30,6 +32,7 @@ export function Hero({
       ctaNote={ctaNote}
       trustSlot={<TrustList />}
       eyebrowAccent
+      eyebrowHiddenOnMobile={eyebrowHiddenOnMobile}
       graphic
     />
   );

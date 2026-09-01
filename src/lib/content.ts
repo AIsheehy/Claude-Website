@@ -65,7 +65,7 @@ export const boroughs = [
 export const trustMarkers = [
   { icon: "star", label: "5-Star Rated On Google" },
   { icon: "clock", label: "Applications Ready Within 14 Days" },
-  { icon: "pin", label: "London & Home Counties" },
+  { icon: "pin", label: "London & Home Counties Coverage" },
 ];
 
 // Numeric claims from the existing site — reconfirm these are still current

@@ -52,11 +52,11 @@
   color: var(--moss-tint);
 }
 
-.body {
+.textTop {
   display: flex;
   flex-direction: column;
-  flex: 1;
   padding: clamp(2rem, 1.7rem + 1.3vw, 2.75rem);
+  padding-bottom: 1.6rem;
 }
 
 .stars {
@@ -73,7 +73,6 @@
   font-size: var(--step-body-lg);
   line-height: 1.5;
   color: var(--ink);
-  flex: 1;
 }
 
 /* Gallery cards carry an extra nav-control row above this text block, so
@@ -83,12 +82,16 @@
   font-size: var(--step-body);
 }
 
+/* margin-top: auto pins the footer to the bottom of the card regardless of
+   how tall the quote above the image is, since .card is a flex column and
+   the image between them has a fixed aspect-ratio rather than being able
+   to flex-grow itself. */
 .footer {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  margin-top: 1.75rem;
-  padding-top: 1.4rem;
+  margin-top: auto;
+  padding: 1.4rem clamp(2rem, 1.7rem + 1.3vw, 2.75rem) clamp(2rem, 1.7rem + 1.3vw, 2.75rem);
   border-top: 1px solid var(--border);
 }
 
@@ -134,10 +137,11 @@
     transition: none;
   }
 
-  /* Keep the gallery image the same size, but tighten the text block below
-     it so the card itself reads smaller on screen. */
-  .body {
+  /* Keep the gallery image the same size, but tighten the text blocks above
+     and below it so the card itself reads smaller on screen. */
+  .textTop {
     padding: 1.25rem;
+    padding-bottom: 0.9rem;
   }
 
   .stars {
@@ -145,7 +149,6 @@
   }
 
   .footer {
-    margin-top: 0.9rem;
-    padding-top: 0.75rem;
+    padding: 0.75rem 1.25rem 1.25rem;
   }
 }
