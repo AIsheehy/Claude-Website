@@ -56,6 +56,15 @@
   max-width: 17ch;
 }
 
+/* When there's no eyebrow line above it, the headline becomes the first
+   child of .content — on mobile, pull it up to close the gap the eyebrow
+   would otherwise have left above the fold. */
+@media (max-width: 899px) {
+  .content > .headline:first-child {
+    margin-top: 0;
+  }
+}
+
 .lede {
   margin-top: 1.25rem;
   font-size: var(--step-body-lg);
