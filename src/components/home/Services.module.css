@@ -100,6 +100,10 @@
   flex-shrink: 0;
 }
 
+.trustLabel {
+  line-height: 1.3;
+}
+
 @media (max-width: 640px) {
   .trustRow {
     gap: 0.65rem;
@@ -112,7 +116,7 @@
     align-items: center;
     text-align: center;
     gap: 0.4rem;
-    font-size: 0.6875rem;
+    font-size: 0.6rem;
     line-height: 1.3;
   }
 

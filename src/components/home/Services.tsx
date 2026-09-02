@@ -38,9 +38,9 @@ const defaultLedeParagraphs: ReactNode[] = [
 ];
 
 const trustItems = [
-  { icon: IconClock, label: "5+ Years Experience" },
-  { icon: IconShield, label: "Fully PI Insured" },
-  { icon: IconTag, label: "Fixed Price Packages" },
+  { icon: IconClock, line1: "5+ Years", line2: "Experience" },
+  { icon: IconShield, line1: "Full Professional", line2: "Indemnity Insurance" },
+  { icon: IconTag, line1: "Fixed Price", line2: "Packages" },
 ];
 
 export function Services({
@@ -87,9 +87,13 @@ export function Services({
 
       <div className={styles.trustRow}>
         {trustItems.map((item) => (
-          <div key={item.label} className={styles.trustItem}>
+          <div key={item.line1} className={styles.trustItem}>
             <item.icon width={20} height={20} />
-            {item.label}
+            <span className={styles.trustLabel}>
+              {item.line1}
+              <br />
+              {item.line2}
+            </span>
           </div>
         ))}
       </div>
