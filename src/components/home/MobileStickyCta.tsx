@@ -6,7 +6,7 @@ export function MobileStickyCta({
   note,
 }: {
   label?: string;
-  note?: { line1: string; line2: string };
+  note?: { line1: string; line2?: string };
 }) {
   return (
     <>
@@ -21,7 +21,7 @@ export function MobileStickyCta({
         {note && (
           <div className={styles.note}>
             <p>{note.line1}</p>
-            <p className={styles.noteMuted}>{note.line2}</p>
+            {note.line2 && <p className={styles.noteMuted}>{note.line2}</p>}
           </div>
         )}
       </div>

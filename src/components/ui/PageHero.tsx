@@ -21,7 +21,7 @@ export function PageHero({
   headline: ReactNode;
   lede: ReactNode;
   primaryCtaLabel?: string;
-  ctaNote?: { line1: string; line2: string };
+  ctaNote?: { line1: string; line2?: string };
   trustSlot?: ReactNode;
   eyebrowAccent?: boolean;
   graphic?: boolean;
@@ -52,7 +52,7 @@ export function PageHero({
             {ctaNote && (
               <div className={styles.ctaNote}>
                 <p>{ctaNote.line1}</p>
-                <p className={styles.ctaNoteMuted}>{ctaNote.line2}</p>
+                {ctaNote.line2 && <p className={styles.ctaNoteMuted}>{ctaNote.line2}</p>}
               </div>
             )}
           </Reveal>

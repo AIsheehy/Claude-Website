@@ -34,18 +34,22 @@ export type Service = {
     | "document"
     | "garage"
     | "conservatory";
+  /** Dedicated service page this card links to. Falls back to Planning
+   *  Permission when a project type doesn't map clearly to one of the
+   *  other dedicated pages. */
+  href: string;
 };
 
 // The single "What We Do" grid shown identically across every page.
 export const services: Service[] = [
-  { slug: "home-extensions", shortName: "Home Extensions", icon: "house" },
-  { slug: "loft-conversions", shortName: "Loft Conversions", icon: "roof" },
-  { slug: "garage-conversions", shortName: "Garage Conversions", icon: "garage" },
-  { slug: "conservatories", shortName: "Conservatories", icon: "conservatory" },
-  { slug: "change-of-use", shortName: "Change of Use Applications", icon: "scale" },
-  { slug: "hmos", shortName: "HMOs", icon: "document" },
-  { slug: "architectural-design", shortName: "Architectural Design", icon: "compass" },
-  { slug: "floor-plans", shortName: "Floor Plans", icon: "drawing" },
+  { slug: "home-extensions", shortName: "Home Extensions", icon: "house", href: "/extension-drawings" },
+  { slug: "loft-conversions", shortName: "Loft Conversions", icon: "roof", href: "/loft-conversion-drawings" },
+  { slug: "garage-conversions", shortName: "Garage Conversions", icon: "garage", href: "/planning-permission" },
+  { slug: "conservatories", shortName: "Conservatories", icon: "conservatory", href: "/planning-permission" },
+  { slug: "change-of-use", shortName: "Change of Use Applications", icon: "scale", href: "/planning-permission" },
+  { slug: "hmos", shortName: "HMOs", icon: "document", href: "/planning-permission" },
+  { slug: "architectural-design", shortName: "Architectural Design", icon: "compass", href: "/planning-permission" },
+  { slug: "floor-plans", shortName: "Floor Plans", icon: "drawing", href: "/planning-permission" },
 ];
 
 // London, then every traditional Home County — matches the "London and Home

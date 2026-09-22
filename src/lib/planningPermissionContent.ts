@@ -6,8 +6,7 @@ export const planningPermissionContent = {
   lede: "Whether you're exploring ideas or ready to apply, our planning expertise will help you move forward with confidence. From professional drawings to complete planning submissions, everything is tailored to your project and delivered at one fixed price.",
   heroCtaLabel: "Get A Free Project Assessment",
   heroCtaNote: {
-    line1: "Do I need planning? Will my project be approved? How long will it take and what will it cost? What are the next Steps?",
-    line2: "Find out for free directly from the company founder with a no obligation project assessment.",
+    line1: "Find out the type of permission you need, the likelihood of approval, how long it will take and how much it will cost, the potential next steps and any other questions you may have within hours directly from the company founder.",
   },
   servicesHeadline: "Planning Permission Doesn't Have to Be Complicated",
   servicesLedeParagraphs: [

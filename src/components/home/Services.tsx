@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 import { Section, SectionHead } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import {
@@ -74,12 +75,12 @@ export function Services({
           const Icon = iconMap[service.icon];
           return (
             <Reveal key={service.slug} delay={i * 60}>
-              <div className={styles.card}>
+              <Link href={service.href} className={styles.card}>
                 <span className={styles.iconWrap}>
                   <Icon width={14} height={14} />
                 </span>
                 <span className={styles.cardTitle}>{service.shortName}</span>
-              </div>
+              </Link>
             </Reveal>
           );
         })}

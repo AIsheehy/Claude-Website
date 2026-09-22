@@ -29,7 +29,7 @@ export function ServicePageContent({
   headline: ReactNode;
   lede: ReactNode;
   heroCtaLabel?: string;
-  heroCtaNote?: { line1: string; line2: string };
+  heroCtaNote?: { line1: string; line2?: string };
   servicesHeadline?: ReactNode;
   servicesEmphasis?: string;
   servicesLedeParagraphs?: ReactNode[];

@@ -19,7 +19,7 @@ export function Hero({
   headline?: ReactNode;
   lede?: ReactNode;
   primaryCtaLabel?: string;
-  ctaNote?: { line1: string; line2: string };
+  ctaNote?: { line1: string; line2?: string };
 }) {
   return (
     <PageHero
