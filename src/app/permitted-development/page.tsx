@@ -12,7 +12,7 @@ export default function PermittedDevelopmentPage() {
   return (
     <ServicePageContent
       eyebrow="Permitted Development advice, drawings and Lawful Development Certificates."
-      headline="Permitted Development, Made Simple"
+      headline="Permitted Development Handled Professionally"
       lede={planningPermissionContent.lede}
       heroCtaLabel={planningPermissionContent.heroCtaLabel}
       heroCtaNote={planningPermissionContent.heroCtaNote}

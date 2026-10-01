@@ -11,11 +11,12 @@ export default function ExtensionDrawingsPage() {
   return (
     <ServicePageContent
       eyebrow="Extension advice, drawings and complete application packages."
-      headline="Extensions, Made Simple"
+      headline="Extensions Handled Professionally"
       lede="Whether you're exploring ideas or ready to apply, our extension expertise will help you move forward with confidence. From professional drawings to complete extension submissions, everything is tailored to your project and delivered at one fixed price."
       heroCtaLabel="Get A Free Project Assessment"
       heroCtaNote={{
-        line1: "Find out the type of permission you need, the likelihood of approval, how long it will take and how much it will cost, the potential next steps and any other questions you may have within hours directly from the company founder.",
+        line1: "Find out the type of permission you need, how to move forward, specific recommendations and the likely costs and timescales.",
+        line2: "Advice delivered directly from the company founder within hours.",
       }}
       servicesHeadline="Extension Projects Don't Have to Be Complicated"
       servicesLedeParagraphs={[

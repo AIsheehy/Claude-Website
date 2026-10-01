@@ -400,5 +400,5 @@ export const faqs: FaqItem[] = [
 export const meetMichael = {
   name: "Michael",
   title: "Founder of Form & Function London",
-  bio: "I started Form & Function because planning a home project shouldn't feel confusing. I'll personally review your project, explain your options in plain English and manage the process through to the council decision.",
+  bio: "I started Form & Function to help homeowners easily navigate the labyrinth of planning requirements and cut through all the red tape to get their projects off the ground. I am passionate about helping my clients take an idea from their mind's eye to a finished product which improves their and their family's space, homes and happiness!",
 };

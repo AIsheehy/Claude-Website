@@ -113,24 +113,25 @@
   line-height: 1.3;
 }
 
+/* Mobile: stack into a single column with the icon left of the text
+   (matching the row layout desktop already uses) instead of a cramped
+   3-up grid — these labels are long enough that a narrow column would
+   force the font down to the point of illegibility. */
 @media (max-width: 640px) {
   .trustRow {
-    gap: 0.65rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     margin-top: 1.5rem;
     padding-top: 1.25rem;
   }
 
   .trustItem {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.4rem;
-    font-size: 0.6rem;
-    line-height: 1.3;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
   }
 
   .trustItem svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 }

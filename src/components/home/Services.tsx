@@ -15,7 +15,7 @@ import {
   IconGarage,
   IconConservatory,
   IconClock,
-  IconTag,
+  IconCheck,
 } from "@/components/icons";
 import { services, Service } from "@/lib/content";
 import styles from "./Services.module.css";
@@ -39,9 +39,9 @@ const defaultLedeParagraphs: ReactNode[] = [
 ];
 
 const trustItems = [
-  { icon: IconClock, line1: "5+ Years", line2: "Experience" },
-  { icon: IconShield, line1: "Full Professional", line2: "Indemnity Insurance" },
-  { icon: IconTag, line1: "Fixed Price", line2: "Packages" },
+  { icon: IconClock, label: "Deep Built Environment Experience" },
+  { icon: IconShield, label: "Full Professional Indemnity Insurance" },
+  { icon: IconCheck, label: "Applications Tailored For Approval" },
 ];
 
 export function Services({
@@ -88,13 +88,9 @@ export function Services({
 
       <div className={styles.trustRow}>
         {trustItems.map((item) => (
-          <div key={item.line1} className={styles.trustItem}>
+          <div key={item.label} className={styles.trustItem}>
             <item.icon width={20} height={20} />
-            <span className={styles.trustLabel}>
-              {item.line1}
-              <br />
-              {item.line2}
-            </span>
+            <span className={styles.trustLabel}>{item.label}</span>
           </div>
         ))}
       </div>

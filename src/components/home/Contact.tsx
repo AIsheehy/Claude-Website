@@ -12,6 +12,7 @@ const explainPoints = [
   "What the likely timeline will be",
   "What the likely costs will be",
   "How to get started",
+  "Answer any questions you may have",
 ];
 
 export function Contact({
@@ -28,7 +29,7 @@ export function Contact({
         <div className={styles.copy}>
           <p className={beige ? "eyebrow" : "eyebrow onDark"}>Ready when you are</p>
           <h2 className={[styles.title, beige && styles.titleBeige].filter(Boolean).join(" ")}>
-            Get Your Free Planning Assessment
+            Get Your Free Project Assessment
           </h2>
           <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
             Tell us a little about your project and we will explain:
@@ -39,8 +40,8 @@ export function Contact({
             ))}
           </ul>
           <p className={[styles.lede, beige && styles.ledeBeige].filter(Boolean).join(" ")}>
-            You&rsquo;ll receive clear, honest advice and a fixed quotation directly from the
-            person who&rsquo;ll manage your project from start to finish.
+            You&rsquo;ll receive clear, honest advice directly from the person who&rsquo;ll
+            manage your project from start to finish.
           </p>
         </div>
 
