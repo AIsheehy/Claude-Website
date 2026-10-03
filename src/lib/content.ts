@@ -113,8 +113,8 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Free initial assessment",
-    description: "Tell us what you're planning and we'll advise on the best route.",
+    title: "Detailed Feasibility Report",
+    description: "We review your plans and advise on the best route forward based on your local council's requirements.",
     icon: "compass",
   },
   {
@@ -169,10 +169,10 @@ export const testimonials: Testimonial[] = [
     image: "/images/testimonials/upfield-horley/existing.jpg",
     gallery: [
       {
-        src: "/images/testimonials/upfield-horley/approved-drawings.png",
-        alt: "The approved planning drawing sheet for Upfield, Horley, showing all proposed elevations",
-        label: "Approved Drawings",
-        fit: "contain",
+        src: "/images/testimonials/upfield-horley/visualisation.jpg",
+        alt: "The approved proposed extension at Upfield, Horley",
+        label: "Approved",
+        fit: "cover",
       },
       {
         src: "/images/testimonials/upfield-horley/existing.jpg",
@@ -181,11 +181,22 @@ export const testimonials: Testimonial[] = [
         fit: "cover",
       },
       {
-        src: "/images/testimonials/upfield-horley/visualisation.jpg",
-        alt: "An artist's visualisation of the proposed extension at Upfield, Horley",
-        label: "Proposed",
-        fit: "cover",
-        badge: "Artist's Visualisation",
+        src: "/images/testimonials/upfield-horley/approved-drawings.png",
+        alt: "The approved elevation drawings for Upfield, Horley, showing all proposed elevations",
+        label: "Elevation Drawings",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/upfield-horley/existing-floor-plans.png",
+        alt: "The existing ground and first floor plans for 4 Upfield, Horley",
+        label: "Existing Floor Plans",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/upfield-horley/site-plans.png",
+        alt: "The existing and proposed site plans for 4 Upfield, Horley",
+        label: "Site Plans",
+        fit: "contain",
       },
     ],
   },
@@ -196,10 +207,10 @@ export const testimonials: Testimonial[] = [
     image: "/images/testimonials/eveline-road/existing.jpg",
     gallery: [
       {
-        src: "/images/testimonials/eveline-road/approved-drawings.png",
-        alt: "The approved planning drawing sheet for 21 Eveline Road, showing all proposed elevations",
-        label: "Approved Drawings",
-        fit: "contain",
+        src: "/images/testimonials/eveline-road/visualisation.jpg",
+        alt: "The approved proposed rear extension at 21 Eveline Road",
+        label: "Approved",
+        fit: "cover",
       },
       {
         src: "/images/testimonials/eveline-road/existing.jpg",
@@ -208,11 +219,28 @@ export const testimonials: Testimonial[] = [
         fit: "cover",
       },
       {
-        src: "/images/testimonials/eveline-road/visualisation.jpg",
-        alt: "An artist's visualisation of the proposed rear extension at 21 Eveline Road",
-        label: "Proposed",
-        fit: "cover",
-        badge: "Artist's Visualisation",
+        src: "/images/testimonials/eveline-road/approved-drawings.png",
+        alt: "The approved elevation drawings for 21 Eveline Road, showing all proposed elevations",
+        label: "Elevation Drawings",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/eveline-road/proposed-floor-plans.png",
+        alt: "The proposed ground, first and loft floor plans for 21 Eveline Road",
+        label: "Proposed Floor Plans",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/eveline-road/cross-sections.png",
+        alt: "The existing and proposed cross sections for 21 Eveline Road",
+        label: "Cross Sections",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/eveline-road/roof-plans.png",
+        alt: "The existing and proposed roof plans for 21 Eveline Road",
+        label: "Roof Plans",
+        fit: "contain",
       },
     ],
   },

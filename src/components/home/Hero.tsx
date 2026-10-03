@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { PageHero } from "@/components/ui/PageHero";
 import { TrustList } from "@/components/ui/TrustList";
+import { EnquiryForm } from "./EnquiryForm";
 
 export function Hero({
   eyebrow,
@@ -29,6 +30,7 @@ export function Hero({
       primaryCtaLabel={primaryCtaLabel}
       ctaNote={ctaNote}
       trustSlot={<TrustList />}
+      formSlot={<EnquiryForm compact dense submitLabel={primaryCtaLabel} />}
       eyebrowAccent
       graphic
     />

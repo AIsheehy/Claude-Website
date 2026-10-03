@@ -4,6 +4,23 @@
   gap: 1.15rem;
 }
 
+/* Same fields as the default form, just trimmed vertical rhythm — used
+   where height is at a premium (the hero), not a different form. */
+.dense {
+  gap: 0.4rem;
+  --field-gap: 0.2rem;
+  --field-control-padding: 0.45em 0.75em;
+}
+
+.dense .submit {
+  margin-top: 0;
+  padding-block: 0.55em;
+}
+
+.denseTextarea {
+  min-height: 2.25rem;
+}
+
 .honeypot {
   position: absolute;
   left: -9999px;

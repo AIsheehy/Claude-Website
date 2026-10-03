@@ -14,6 +14,7 @@ export function PageHero({
   primaryCtaLabel = "Get in Touch",
   ctaNote,
   trustSlot,
+  formSlot,
   eyebrowAccent = false,
   graphic = false,
 }: {
@@ -23,13 +24,24 @@ export function PageHero({
   primaryCtaLabel?: string;
   ctaNote?: { line1: string; line2?: string };
   trustSlot?: ReactNode;
+  /** Renders the enquiry form inline, above the fold — stacked under the
+   *  cta note on mobile, and beside/under the graphic on desktop. */
+  formSlot?: ReactNode;
   eyebrowAccent?: boolean;
   graphic?: boolean;
 }) {
   return (
     <section className={styles.hero}>
       <Container size={graphic ? "wide" : "default"}>
-        <div className={[styles.layout, graphic && styles.layoutGraphic].filter(Boolean).join(" ")}>
+        <div
+          className={[
+            styles.layout,
+            graphic && styles.layoutGraphic,
+            formSlot && styles.layoutWithForm,
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        >
           <Reveal className={styles.content}>
             {eyebrow && (
               <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
@@ -49,6 +61,12 @@ export function PageHero({
               </a>
             </div>
 
+            {/* Mobile-only stand-in for the CTA button above — on a small
+                screen the form sits right below, so a full button here would
+                just duplicate it; a plain subheading carries the same copy
+                without implying a second, different action. */}
+            {formSlot && <p className={styles.ctaSubheading}>{primaryCtaLabel}</p>}
+
             {ctaNote && (
               <div className={styles.ctaNote}>
                 <p>{ctaNote.line1}</p>
@@ -57,8 +75,14 @@ export function PageHero({
             )}
           </Reveal>
 
+          {formSlot && (
+            <Reveal className={styles.formCol} delay={80}>
+              {formSlot}
+            </Reveal>
+          )}
+
           {graphic && (
-            <Reveal className={styles.graphicCol} delay={120}>
+            <Reveal className={styles.graphicCol} delay={160}>
               <Image
                 src="/images/hero/hero-illustration.jpg"
                 alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"

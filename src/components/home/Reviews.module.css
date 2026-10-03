@@ -67,7 +67,7 @@
 
 .quote {
   font-family: var(--font-display), Georgia, serif;
-  font-style: italic;
+  font-style: normal;
   font-weight: 700;
   font-size: var(--step-body-lg);
   line-height: 1.5;

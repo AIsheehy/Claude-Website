@@ -12,12 +12,22 @@
   }
 }
 
+/* With the form stacked under the graphic, the hero is already taller
+   than usual — trim a little of its own padding back on wide screens so
+   the form has the best chance of actually landing above the fold. */
+@media (min-width: 960px) {
+  .hero:has(.layoutWithForm) {
+    padding-top: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+    padding-bottom: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  }
+}
+
 .layout {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(2rem, 1.7rem + 1.5vw, 3.5rem);
-  align-items: center;
+  align-items: start;
 }
 
 @media (min-width: 960px) {
@@ -25,10 +35,44 @@
     grid-template-columns: 1fr 1.1fr;
     column-gap: clamp(2.5rem, 2rem + 2vw, 4.5rem);
   }
+
+  /* With a form in play, the right column carries both the graphic and
+     the form stacked on top of each other, while the text content spans
+     the full height of the left column alongside them. The graphic column
+     is narrower than the plain two-up layout above — it has to share its
+     column with the form, so it gives up some width (and with it, height,
+     since the image keeps its aspect ratio) to leave the form room to
+     fit as close to the fold as the content allows. */
+  .layoutGraphic.layoutWithForm {
+    grid-template-columns: 1.45fr 0.55fr;
+    grid-template-areas:
+      "content graphic"
+      "content form";
+    row-gap: 0.85rem;
+  }
+
+  .layoutGraphic.layoutWithForm .content {
+    grid-area: content;
+  }
+
+  .layoutGraphic.layoutWithForm .graphicCol {
+    grid-area: graphic;
+  }
+
+  .layoutGraphic.layoutWithForm .formCol {
+    grid-area: form;
+  }
 }
 
 .content {
   padding-top: 0.5rem;
+}
+
+.formCol {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: clamp(0.85rem, 0.75rem + 0.5vw, 1.15rem);
 }
 
 .graphicCol {
@@ -58,10 +102,17 @@
 
 /* When there's no eyebrow line above it, the headline becomes the first
    child of .content — on mobile, pull it up to close the gap the eyebrow
-   would otherwise have left above the fold. */
+   would otherwise have left above the fold. The 17ch cap that keeps the
+   desktop headline from crowding the graphic column also leaves wasted
+   space on the right on a narrow screen with no second column to balance
+   against, so drop it below the breakpoint where the graphic disappears. */
 @media (max-width: 899px) {
   .content > .headline:first-child {
     margin-top: 0;
+  }
+
+  .headline {
+    max-width: none;
   }
 }
 
@@ -78,6 +129,28 @@
   align-items: center;
   gap: 1.5rem;
   margin-top: 1.75rem;
+}
+
+.ctaSubheading {
+  display: none;
+}
+
+/* Below the breakpoint where the form moves inline (see .layoutWithForm),
+   the CTA button would just duplicate the form's own submit button one
+   screen down — swap it for plain text carrying the same copy instead. */
+@media (max-width: 959px) {
+  .layoutWithForm .ctaRow {
+    display: none;
+  }
+
+  .ctaSubheading {
+    display: block;
+    margin-top: 1.75rem;
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 700;
+    font-size: var(--step-h4);
+    color: var(--ink);
+  }
 }
 
 .phoneLink {

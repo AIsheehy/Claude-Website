@@ -6,12 +6,6 @@ import { IconArrowRight } from "@/components/icons";
 import { TestimonialGalleryImage } from "@/lib/content";
 import styles from "./ReviewGallery.module.css";
 
-const ARIA_LABELS = [
-  "View drawings",
-  "View existing property",
-  "View proposed visualisation",
-];
-
 export function ReviewGallery({
   images,
   overlay,
@@ -108,7 +102,7 @@ export function ReviewGallery({
             className={`${styles.navButton} ${i === active ? styles.navButtonActive : ""}`}
             onClick={() => goTo(i)}
             aria-current={i === active}
-            aria-label={ARIA_LABELS[i] ?? `View image ${i + 1}`}
+            aria-label={`View ${image.label}`}
           >
             {image.label}
           </button>

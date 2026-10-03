@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useId, useState } from "react";
 import { Field, controlClassName } from "@/components/ui/Field";
 import { Button } from "@/components/ui/Button";
 import { IconCheck } from "@/components/icons";
@@ -20,12 +20,19 @@ const helpOptions = [
 
 export function EnquiryForm({
   compact = false,
+  dense = false,
   submitLabel = "Get A Free Project Assessment",
 }: {
   compact?: boolean;
+  /** Tighter field spacing and a shorter message box — same fields, just
+   *  less vertical space, for contexts (e.g. the hero) where height is at
+   *  a premium. */
+  dense?: boolean;
   submitLabel?: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
+  const uid = useId();
+  const fieldId = (name: string) => `${uid}-${name}`;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -64,11 +71,11 @@ export function EnquiryForm({
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={[styles.form, dense && styles.dense].filter(Boolean).join(" ")} onSubmit={handleSubmit}>
       <input type="text" name="company" tabIndex={-1} autoComplete="off" className={styles.honeypot} aria-hidden="true" />
 
-      <Field label="What do you need help with?" htmlFor="service">
-        <select id="service" name="service" className={controlClassName} defaultValue="">
+      <Field label="What do you need help with?" htmlFor={fieldId("service")}>
+        <select id={fieldId("service")} name="service" className={controlClassName} defaultValue="">
           <option value="" disabled>
             Select an option
           </option>
@@ -80,18 +87,18 @@ export function EnquiryForm({
         </select>
       </Field>
 
-      <Field label={compact ? "Tell us how we can help" : "Tell us about your project"} htmlFor="message">
+      <Field label={compact ? "Tell us how we can help" : "Tell us about your project"} htmlFor={fieldId("message")}>
         <textarea
-          id="message"
+          id={fieldId("message")}
           name="message"
-          className={controlClassName}
+          className={[controlClassName, dense && styles.denseTextarea].filter(Boolean).join(" ")}
           placeholder="A few lines about the property and what you're hoping to do"
         />
       </Field>
 
-      <Field label="Property Address" htmlFor="address">
+      <Field label="Property Address" htmlFor={fieldId("address")}>
         <input
-          id="address"
+          id={fieldId("address")}
           name="address"
           type="text"
           className={controlClassName}
@@ -99,9 +106,9 @@ export function EnquiryForm({
         />
       </Field>
 
-      <Field label="Email address" htmlFor="email" required>
+      <Field label="Email address" htmlFor={fieldId("email")} required>
         <input
-          id="email"
+          id={fieldId("email")}
           name="email"
           type="email"
           required

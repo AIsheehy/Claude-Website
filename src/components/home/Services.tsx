@@ -39,7 +39,7 @@ const defaultLedeParagraphs: ReactNode[] = [
 ];
 
 const trustItems = [
-  { icon: IconClock, label: "Deep Built Environment Experience" },
+  { icon: IconClock, label: "Deep Experience With Local Requirements" },
   { icon: IconShield, label: "Full Professional Indemnity Insurance" },
   { icon: IconCheck, label: "Applications Tailored For Approval" },
 ];
