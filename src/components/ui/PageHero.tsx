@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -16,7 +15,6 @@ export function PageHero({
   trustSlot,
   formSlot,
   eyebrowAccent = false,
-  graphic = false,
 }: {
   eyebrow?: string;
   headline: ReactNode;
@@ -25,23 +23,14 @@ export function PageHero({
   ctaNote?: { line1: string; line2?: string };
   trustSlot?: ReactNode;
   /** Renders the enquiry form inline, above the fold — stacked under the
-   *  cta note on mobile, and beside/under the graphic on desktop. */
+   *  cta note on mobile, and beside the content on desktop. */
   formSlot?: ReactNode;
   eyebrowAccent?: boolean;
-  graphic?: boolean;
 }) {
   return (
     <section className={styles.hero}>
-      <Container size={graphic ? "wide" : "default"}>
-        <div
-          className={[
-            styles.layout,
-            graphic && styles.layoutGraphic,
-            formSlot && styles.layoutWithForm,
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
+      <Container size={formSlot ? "wide" : "default"}>
+        <div className={[styles.layout, formSlot && styles.layoutWithForm].filter(Boolean).join(" ")}>
           <Reveal className={styles.content}>
             {eyebrow && (
               <p className={["eyebrow", eyebrowAccent && styles.eyebrowAccent].filter(Boolean).join(" ")}>
@@ -78,19 +67,6 @@ export function PageHero({
           {formSlot && (
             <Reveal className={styles.formCol} delay={80}>
               {formSlot}
-            </Reveal>
-          )}
-
-          {graphic && (
-            <Reveal className={styles.graphicCol} delay={160}>
-              <Image
-                src="/images/hero/hero-illustration.jpg"
-                alt="Illustration of a house extension in cross-section, with proposed floor plan and rear elevation drawings"
-                width={1200}
-                height={1156}
-                className={styles.graphicSvg}
-                priority
-              />
             </Reveal>
           )}
         </div>

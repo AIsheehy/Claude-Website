@@ -12,9 +12,9 @@
   }
 }
 
-/* With the form stacked under the graphic, the hero is already taller
-   than usual — trim a little of its own padding back on wide screens so
-   the form has the best chance of actually landing above the fold. */
+/* With the form inline, the hero is already taller than usual — trim a
+   little of its own padding back on wide screens so the form has the
+   best chance of actually landing above the fold. */
 @media (min-width: 960px) {
   .hero:has(.layoutWithForm) {
     padding-top: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
@@ -31,36 +31,13 @@
 }
 
 @media (min-width: 960px) {
-  .layoutGraphic {
-    grid-template-columns: 1fr 1.1fr;
+  /* Content and form side by side, top-aligned — the form keeps its own
+     width rather than stretching with the content column, since a wider
+     form doesn't need the extra room and it keeps the two columns from
+     fighting for the same fold-fitting space. */
+  .layoutWithForm {
+    grid-template-columns: 1fr minmax(360px, 420px);
     column-gap: clamp(2.5rem, 2rem + 2vw, 4.5rem);
-  }
-
-  /* With a form in play, the right column carries both the graphic and
-     the form stacked on top of each other, while the text content spans
-     the full height of the left column alongside them. The graphic column
-     is narrower than the plain two-up layout above — it has to share its
-     column with the form, so it gives up some width (and with it, height,
-     since the image keeps its aspect ratio) to leave the form room to
-     fit as close to the fold as the content allows. */
-  .layoutGraphic.layoutWithForm {
-    grid-template-columns: 1.45fr 0.55fr;
-    grid-template-areas:
-      "content graphic"
-      "content form";
-    row-gap: 0.85rem;
-  }
-
-  .layoutGraphic.layoutWithForm .content {
-    grid-area: content;
-  }
-
-  .layoutGraphic.layoutWithForm .graphicCol {
-    grid-area: graphic;
-  }
-
-  .layoutGraphic.layoutWithForm .formCol {
-    grid-area: form;
   }
 }
 
@@ -73,22 +50,6 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   padding: clamp(0.85rem, 0.75rem + 0.5vw, 1.15rem);
-}
-
-.graphicCol {
-  display: none;
-}
-
-@media (min-width: 960px) {
-  .graphicCol {
-    display: block;
-  }
-}
-
-.graphicSvg {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
 }
 
 .eyebrowAccent {

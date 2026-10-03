@@ -189,7 +189,7 @@ export const testimonials: Testimonial[] = [
       {
         src: "/images/testimonials/upfield-horley/existing-floor-plans.png",
         alt: "The existing ground and first floor plans for 4 Upfield, Horley",
-        label: "Existing Floor Plans",
+        label: "Floor Plans",
         fit: "contain",
       },
       {
@@ -227,7 +227,7 @@ export const testimonials: Testimonial[] = [
       {
         src: "/images/testimonials/eveline-road/proposed-floor-plans.png",
         alt: "The proposed ground, first and loft floor plans for 21 Eveline Road",
-        label: "Proposed Floor Plans",
+        label: "Floor Plans",
         fit: "contain",
       },
       {
@@ -250,14 +250,18 @@ export const testimonials: Testimonial[] = [
     context: "House extension · South West London",
     image: "/images/testimonials/turvin-crescent/existing.jpg",
     // This application was not approved — the badge and gallery labels must
-    // not imply that it was.
+    // not imply that it was, unlike the Tasha/Irina galleries above (whose
+    // first image can honestly say "Approved"). The visualisation here
+    // keeps its "Proposed" label and "Artist's Visualisation" disclosure,
+    // since it's still a speculative, unbuilt design, not a real outcome.
     statusBadge: "Planning Application",
     gallery: [
       {
-        src: "/images/testimonials/turvin-crescent/proposed-drawings.png",
-        alt: "The proposed planning drawing sheet for 14 Turvin Crescent, showing all proposed elevations",
-        label: "Proposed Drawings",
-        fit: "contain",
+        src: "/images/testimonials/turvin-crescent/visualisation.jpg",
+        alt: "An artist's visualisation of the proposed extension and balcony at 14 Turvin Crescent",
+        label: "Proposed",
+        fit: "cover",
+        badge: "Artist's Visualisation",
       },
       {
         src: "/images/testimonials/turvin-crescent/existing.jpg",
@@ -266,11 +270,28 @@ export const testimonials: Testimonial[] = [
         fit: "cover",
       },
       {
-        src: "/images/testimonials/turvin-crescent/visualisation.jpg",
-        alt: "An artist's visualisation of the proposed extension and balcony at 14 Turvin Crescent",
-        label: "Proposed",
-        fit: "cover",
-        badge: "Artist's Visualisation",
+        src: "/images/testimonials/turvin-crescent/proposed-drawings.png",
+        alt: "The proposed elevation drawings for 14 Turvin Crescent, showing all proposed elevations",
+        label: "Elevation Drawings",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/turvin-crescent/floor-plans.png",
+        alt: "The proposed ground and first floor plans for 14 Turvin Crescent",
+        label: "Floor Plans",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/turvin-crescent/roof-plans.png",
+        alt: "The existing and proposed roof plans for 14 Turvin Crescent",
+        label: "Roof Plans",
+        fit: "contain",
+      },
+      {
+        src: "/images/testimonials/turvin-crescent/site-plans.png",
+        alt: "The existing and proposed site plans for 14 Turvin Crescent",
+        label: "Site Plans",
+        fit: "contain",
       },
     ],
   },

@@ -32,7 +32,6 @@ export function Hero({
       trustSlot={<TrustList />}
       formSlot={<EnquiryForm compact dense submitLabel={primaryCtaLabel} />}
       eyebrowAccent
-      graphic
     />
   );
 }
